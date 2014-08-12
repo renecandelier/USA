@@ -44,7 +44,7 @@
     MHYahooWeatherParallaxCell * ywCell = (MHYahooWeatherParallaxCell*)[parallaxView dequeueReusableCellWithReuseIdentifier:[MHYahooWeatherParallaxCell reuseIdentifier] forIndexPath:indexPath];
     ywCell.parallaxImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.jpg",indexPath.row]];
     
-    UIButton * informaion = [[UIButton alloc]initWithFrame:CGRectMake(40, 40, 20, 20)];
+    UIButton * informaion = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-40, 40, 20, 20)];
     
     informaion = [UIButton buttonWithType:UIButtonTypeInfoDark];
     [self.view addSubview:informaion];
