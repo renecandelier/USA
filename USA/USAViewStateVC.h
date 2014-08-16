@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface USAViewStateVC : UIViewController
 
+@property (nonatomic) NSNumber * indexForArray;
 @end

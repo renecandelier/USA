@@ -7,15 +7,22 @@
 //
 
 #import "USATBV.h"
+#import "StateClass.h"
+#import "DataStore.h"
+#import "NSArray+RandomSort.h"
+#import "USAViewStateVC.h"
 
 @interface USATBV ()
+@property NSMutableArray *stateArray;
+@property NSArray *RandomStates;
+
 
 @end
 
 @implementation USATBV{
     UITextField * searchTextbox;
     UIButton * backButton;
-
+   
     UIButton * searchButton;
     
 }
@@ -26,6 +33,11 @@
     if (self) {
         
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        
+        // Get current question
+        
+         //NSString * state =[NSString stringWithFormat:@"What is the capital of %@?",currentState.Statename];
+       // NSLog(@"%@", state);
 
         
         self.statesArray = [@[
@@ -53,10 +65,28 @@
     return self;
 }
 
+//-(NSDictionary *)getStateDictionary
+//{
+//    if (self.stateDictionary == nil)
+//    {
+//        self.stateDictionary = [[NSMutableDictionary alloc] init];
+//        
+//        for (int i=0; i < [self.stateArray count]; i++)
+//        {
+//            StateClass *state = self.stateArray[i];
+//            [self.stateDictionary setObject:state forKey:state.StateAbbreviation];
+//        }
+//    }
+//    
+//    return self.stateDictionary;
+//}
+
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
-    
+
     self.tableView.tableHeaderView = headerView;
     headerView.backgroundColor = [UIColor colorWithRed:0.976f green:0.098f blue:0.329f alpha:1.0f];
     //Setting the search box
@@ -160,7 +190,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.statesArray.count;
+    return 50;
 }
 
 
@@ -168,15 +198,31 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    
-    cell.textLabel.text = self.statesArray[indexPath.row][@"state"];
-    
+    self.RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
+    StateClass *currentState = self.RandomStates[indexPath.row];
+    //cell.textLabel.text = self.statesArray[indexPath.row][@"state"];
+    cell.textLabel.text = currentState.Statename;
+
     
     // Configure the cell...
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    USAViewStateVC * stateViewDetails = [[USAViewStateVC alloc] init];
+    self.RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
+    
+   // stateViewDetails.indexForArray = [[indexPath.row]intValue];
+    NSNumber *selRow = [[NSNumber alloc] initWithInteger:indexPath.row];
+    stateViewDetails.indexForArray = selRow;
+    
+    stateViewDetails.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:stateViewDetails animated:YES completion:nil];
+
+}
 
 /*
 // Override to support conditional editing of the table view.
