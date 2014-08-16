@@ -88,7 +88,10 @@
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
 
     self.tableView.tableHeaderView = headerView;
-    headerView.backgroundColor = [UIColor colorWithRed:0.976f green:0.098f blue:0.329f alpha:1.0f];
+    headerView.backgroundColor = [UIColor darkGrayColor];
+
+    
+    //headerView.backgroundColor = [UIColor colorWithRed:0.976f green:0.098f blue:0.329f alpha:1.0f];
     //Setting the search box
     searchTextbox = [[UITextField alloc]initWithFrame:CGRectMake(60, 15, 200, 40)];
     [searchTextbox setBorderStyle:UITextBorderStyleNone];
@@ -203,7 +206,7 @@
     //cell.textLabel.text = self.statesArray[indexPath.row][@"state"];
     cell.textLabel.text = currentState.Statename;
 
-    
+    cell.textLabel.textColor = [UIColor darkGrayColor];
     // Configure the cell...
     
     return cell;

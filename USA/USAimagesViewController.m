@@ -31,6 +31,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+       
+        
         // Custom initialization
         self.view.backgroundColor = [UIColor blackColor];
         // Do any additional setup after loading the view.
@@ -76,6 +79,9 @@
         [self.view addSubview:menuButton];
         [self.view addSubview:citiesLable];
         [self.view addSubview:searchButton];
+        
+        
+        
 
     }
     return self;
@@ -107,7 +113,17 @@
                     completion:NULL];
 }
 
+- (void) applicationWillResign{
+    NSLog(@"About to lose focus");
+}
 
+- (void) myVcInitMethod {
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(applicationWillResign)
+     name:UIApplicationWillResignActiveNotification
+     object:nil];
+}
 
 -(void) searchButtonClicked{
     

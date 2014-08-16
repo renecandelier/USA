@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @interface USAViewStateVC : UIViewController
+@property (nonatomic) NSString * link;
 
 @property (nonatomic) NSNumber * indexForArray;
 @end

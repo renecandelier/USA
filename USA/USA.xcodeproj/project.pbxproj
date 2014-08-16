@@ -51,6 +51,7 @@
 		8AFAD21E199FA75B0058F64E /* USA States.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD21D199FA75B0058F64E /* USA States.plist */; };
 		8AFAD222199FC9C00058F64E /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD221199FC9C00058F64E /* ImageViewController.m */; };
 		8AFAD225199FCA120058F64E /* MDCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD224199FCA120058F64E /* MDCParallaxView.m */; };
+		8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,17 +111,19 @@
 		8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewStateVC.h; sourceTree = "<group>"; };
 		8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAViewStateVC.m; sourceTree = "<group>"; };
 		8AFAD1FD199EEC0E0058F64E /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		8AFAD212199F18130058F64E /* DataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = USA/DataStore.h; sourceTree = "<group>"; };
-		8AFAD213199F18130058F64E /* DataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = USA/DataStore.m; sourceTree = "<group>"; };
-		8AFAD214199F18130058F64E /* StateClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StateClass.h; path = USA/StateClass.h; sourceTree = "<group>"; };
-		8AFAD215199F18130058F64E /* StateClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StateClass.m; path = USA/StateClass.m; sourceTree = "<group>"; };
-		8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RandomSort.h"; sourceTree = "<group>"; };
-		8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RandomSort.m"; sourceTree = "<group>"; };
+		8AFAD212199F18130058F64E /* DataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = ../USA/DataStore.h; sourceTree = "<group>"; };
+		8AFAD213199F18130058F64E /* DataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = ../USA/DataStore.m; sourceTree = "<group>"; };
+		8AFAD214199F18130058F64E /* StateClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StateClass.h; path = ../USA/StateClass.h; sourceTree = "<group>"; };
+		8AFAD215199F18130058F64E /* StateClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StateClass.m; path = ../USA/StateClass.m; sourceTree = "<group>"; };
+		8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RandomSort.h"; path = "../NSArray+RandomSort.h"; sourceTree = "<group>"; };
+		8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+RandomSort.m"; path = "../NSArray+RandomSort.m"; sourceTree = "<group>"; };
 		8AFAD21D199FA75B0058F64E /* USA States.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "USA States.plist"; path = "NAModalSheet/USA States.plist"; sourceTree = "<group>"; };
 		8AFAD220199FC9C00058F64E /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		8AFAD221199FC9C00058F64E /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		8AFAD223199FCA120058F64E /* MDCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCParallaxView.h; sourceTree = "<group>"; };
 		8AFAD224199FCA120058F64E /* MDCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCParallaxView.m; sourceTree = "<group>"; };
+		8AFAD228199FF5FC0058F64E /* MoreInfoWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoWebVC.h; sourceTree = "<group>"; };
+		8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoWebVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,23 +153,8 @@
 		8A67035719944771000037DF = {
 			isa = PBXGroup;
 			children = (
-				8AFAD21D199FA75B0058F64E /* USA States.plist */,
-				8AFAD212199F18130058F64E /* DataStore.h */,
-				8AFAD213199F18130058F64E /* DataStore.m */,
-				8AFAD214199F18130058F64E /* StateClass.h */,
-				8AFAD215199F18130058F64E /* StateClass.m */,
-				8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */,
-				8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */,
-				8AFAD21F199FC9C00058F64E /* Controllers */,
-				8AA7328D199E47FB00E2B83E /* icons */,
-				8AA73284199D9AFB00E2B83E /* City Pictures */,
-				8AA73273199D9AE900E2B83E /* NAModalSheet */,
-				8A6703961994488B000037DF /* Classes */,
 				8A6703921994477E000037DF /* Controllers */,
-				8A67036919944771000037DF /* USA */,
-				8A67038219944771000037DF /* USATests */,
-				8A67036219944771000037DF /* Frameworks */,
-				8A67036119944771000037DF /* Products */,
+				8AFAD227199FE0830058F64E /* Extras */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,15 +226,10 @@
 				8A354B18199EC23500A30CE0 /* USATBV.m */,
 				8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */,
 				8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */,
+				8AFAD228199FF5FC0058F64E /* MoreInfoWebVC.h */,
+				8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		8A6703961994488B000037DF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		8AA73273199D9AE900E2B83E /* NAModalSheet */ = {
@@ -259,7 +242,8 @@
 				8AA73279199D9AE900E2B83E /* UIImage+screenshot.h */,
 				8AA7327A199D9AE900E2B83E /* UIImage+screenshot.m */,
 			);
-			path = NAModalSheet;
+			name = NAModalSheet;
+			path = ../NAModalSheet;
 			sourceTree = "<group>";
 		};
 		8AA73284199D9AFB00E2B83E /* City Pictures */ = {
@@ -274,6 +258,7 @@
 				8AA73226199D392400E2B83E /* mia.jpg */,
 			);
 			name = "City Pictures";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8AA7328D199E47FB00E2B83E /* icons */ = {
@@ -290,11 +275,19 @@
 				8AA73290199E48FD00E2B83E /* settings.png */,
 			);
 			name = icons;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		8AFAD21F199FC9C00058F64E /* Controllers */ = {
+		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8AA73273199D9AE900E2B83E /* NAModalSheet */,
+				8AFAD212199F18130058F64E /* DataStore.h */,
+				8AFAD213199F18130058F64E /* DataStore.m */,
+				8AFAD214199F18130058F64E /* StateClass.h */,
+				8AFAD215199F18130058F64E /* StateClass.m */,
+				8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */,
+				8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */,
 				8AFAD223199FCA120058F64E /* MDCParallaxView.h */,
 				8AFAD224199FCA120058F64E /* MDCParallaxView.m */,
 				8AA7327B199D9AE900E2B83E /* SampleSheetViewController.h */,
@@ -303,7 +296,32 @@
 				8AFAD220199FC9C00058F64E /* ImageViewController.h */,
 				8AFAD221199FC9C00058F64E /* ImageViewController.m */,
 			);
+			name = "Controller Extras";
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8AFAD226199FE0530058F64E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8AA7328D199E47FB00E2B83E /* icons */,
+				8AA73284199D9AFB00E2B83E /* City Pictures */,
+			);
+			name = Images;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8AFAD227199FE0830058F64E /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD21D199FA75B0058F64E /* USA States.plist */,
+				8AFAD21F199FC9C00058F64E /* Controller Extras */,
+				8AFAD226199FE0530058F64E /* Images */,
+				8A67036919944771000037DF /* USA */,
+				8A67038219944771000037DF /* USATests */,
+				8A67036219944771000037DF /* Frameworks */,
+				8A67036119944771000037DF /* Products */,
+			);
+			name = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +452,7 @@
 				8A67037419944771000037DF /* USAAppDelegate.m in Sources */,
 				8AA7327F199D9AE900E2B83E /* NAModalSheet.m in Sources */,
 				8AFAD21C199F19020058F64E /* NSArray+RandomSort.m in Sources */,
+				8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */,
 				8AA73280199D9AE900E2B83E /* UIImage+BoxBlur.m in Sources */,
 				8A67037019944771000037DF /* main.m in Sources */,
 			);

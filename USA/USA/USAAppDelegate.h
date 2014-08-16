@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NAModalSheet;
 
 @interface USAAppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, weak) NAModalSheet *modalSheet;
 
 @end

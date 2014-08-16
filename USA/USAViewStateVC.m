@@ -12,14 +12,36 @@
 #import "StateClass.h"
 #import "DataStore.h"
 #import "NSArray+RandomSort.h"
+#import "MoreInfoWebVC.h"
 
 @interface USAViewStateVC ()<UIScrollViewDelegate>{
-    UILabel * stateNameLabel;
-    int intrNum;
-    NSArray *RandomStates;
-    UIButton * backButton;
-    UITextView *textView;
     
+    //Labels for the State Information TOP
+    UILabel * stateNameLabel;
+    
+    
+    //Lavbels for the State Information
+    UILabel *StateTree;
+    UILabel *StateCapitol;
+    UILabel *StateAbbreviation;
+    UILabel *StateFlower;
+    UILabel *StateBird;
+    UILabel *StateNickname;
+    
+    
+    
+    UIButton * moreInfoButton;
+    
+    
+    //Integer for the Specific state in the Array
+    int intrNum;
+    
+    //Array that has all the state information
+    NSArray *RandomStates;
+    //Back Button
+    UIButton * backButton;
+    
+    //View for STATE FACTS Information
     UIView * stateContentView;
 }
 
@@ -33,7 +55,7 @@
     if (self) {
         // Custom initialization
         
-        
+        //----------------------Top Label for the State Name
         [stateNameLabel sizeToFit];
         
         stateNameLabel= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-75, 15, 150, 40)];
@@ -41,25 +63,16 @@
         
         stateNameLabel.textColor = [UIColor whiteColor];
         stateNameLabel.textAlignment = NSTextAlignmentCenter;
-        
-        //stateNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, 100, 50)];
-        
         [self.view addSubview:stateNameLabel];
         
         
-        UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
-        
-        headerView.backgroundColor = [UIColor colorWithRed:0.976f green:0.098f blue:0.329f alpha:1.0f];
-        //[self.view addSubview:headerView];
-        
-        //Add image to search button
+        //----------------------Back button
         backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
         
         UIImage *backButtonImage = [UIImage imageNamed:@"back.png"];
         [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];
         [backButton addTarget:self action:@selector(backButtonClicked) forControlEvents:UIControlEventTouchUpInside
          ];
-        //Circle Radius
         backButton.layer.cornerRadius = 40.0/2.0;
 
         [self.view addSubview:backButton];
@@ -74,38 +87,34 @@
 }
 
 
-//
-//@property (nonatomic, strong) NSString *StateTree;
-//@property (nonatomic, strong) NSString *StateCapitol;
-//@property (nonatomic, strong) NSString *Statename;
-//@property (nonatomic, strong) NSString *StateAbbreviation;
-//@property (nonatomic, strong) NSString *StateFlower;
-//@property (nonatomic, strong) NSString *StateBird;
-//@property (nonatomic, strong) NSString *StateNickname;
-
 - (void)setIndexForArray:(NSNumber *)indexForArray{
     
     _indexForArray = indexForArray;
     
- intrNum = [indexForArray intValue];
+     intrNum = [indexForArray intValue];
     
     RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
     
     StateClass *currentState = RandomStates[intrNum];
+    
+    
+    //******************** SET THE TEXT FOR THE STATE FACTS ****************************************
+    
     stateNameLabel.text = currentState.Statename;
-    textView.text = stateNameLabel.text;
+    StateAbbreviation.text = [NSString stringWithFormat:@"Abbreviation: %@", currentState.StateAbbreviation];
+    StateBird.text = [NSString stringWithFormat:@"Bird: %@", currentState.StateBird];
+    StateCapitol.text = [NSString stringWithFormat:@"Capitol: %@", currentState.StateCapitol];
+    StateFlower.text = [NSString stringWithFormat:@"Flower: %@", currentState.StateFlower];
+    StateNickname.text = [NSString stringWithFormat:@"Nickname: %@", currentState.StateNickname];
+    StateTree.text = [NSString stringWithFormat:@"Tree: %@", currentState.StateTree];
+
 
 }
--(void)backButtonClicked{
-    [self dismissViewControllerAnimated:NO completion:nil];
-    
-}
+-(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // D any additional setup after loading the view.
-    
     ///----------------PARALLAx
     
     
@@ -119,26 +128,99 @@
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [backgroundImageView addGestureRecognizer:tapGesture];
     
-   
+   //------------View for the State Information
     stateContentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-200)];
-    stateContentView.backgroundColor = [UIColor blueColor];
-    //    textView.text = NSLocalizedString(@"Permission is hereby granted, free of charge, to any "
-    //                                      @"person obtaining a copy of this software and associated "
-    //                                      @"documentation files (the \"Software\"), to deal in the "
-    //                                      @"Software without restriction, including without limitation "
-    //                                      @"the rights to use, copy, modify, merge, publish, "
-    //                                      @"distribute, sublicense, and/or sell copies of the "
-    //                                      @"Software, and to permit persons to whom the Software is "
-    //                                      @"furnished to do so, subject to the following "
-    //                                      @"conditions...\"", nil);
-     textView = [[UITextView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-40, 0, 80, 40)];
-    textView.textAlignment = NSTextAlignmentCenter;
-    textView.font = [UIFont systemFontOfSize:14.0f];
-    textView.textColor = [UIColor darkTextColor];
-    textView.scrollsToTop = NO;
-    textView.editable = NO;
+    stateContentView.backgroundColor = [UIColor whiteColor];
     
-    [stateContentView addSubview:textView];
+    
+    //------More INFO BUTTON
+    
+    moreInfoButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-260, 200, 40)];
+    
+    //moreInfoButton.backgroundColor = [UIColor blueColor];
+    [moreInfoButton setTitle: @"MORE INFO" forState: UIControlStateNormal];
+    
+    [moreInfoButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+    
+    [moreInfoButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+
+    moreInfoButton.layer.borderWidth = 0.5f;
+    moreInfoButton.layer.cornerRadius = 5;
+    
+    
+    [moreInfoButton addTarget:self action:@selector(moreInfoButtonClicked) forControlEvents:UIControlEventTouchUpInside
+     ];
+    
+    
+    [stateContentView addSubview:moreInfoButton];
+
+    
+    //------------------- State FACTS
+    
+    StateAbbreviation = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, SCREEN_WIDTH, 20)];
+    StateAbbreviation.textAlignment = NSTextAlignmentLeft;
+    StateAbbreviation.font = [UIFont systemFontOfSize:14.0f];
+    StateAbbreviation.textColor = [UIColor darkGrayColor];
+    [StateAbbreviation setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+
+    
+    [stateContentView addSubview:StateAbbreviation];
+    
+    //BIRD
+    StateBird = [[UILabel alloc] initWithFrame:CGRectMake(5, 60, SCREEN_WIDTH, 20)];
+    StateBird.textAlignment = NSTextAlignmentLeft;
+    StateBird.font = [UIFont systemFontOfSize:14.0f];
+    StateBird.textColor = [UIColor darkGrayColor];
+    [StateBird setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    
+    
+    [stateContentView addSubview:StateBird];
+    
+    //Capitol
+    StateCapitol = [[UILabel alloc] initWithFrame:CGRectMake(5, 90, SCREEN_WIDTH, 20)];
+    StateCapitol.textAlignment = NSTextAlignmentLeft;
+    StateCapitol.font = [UIFont systemFontOfSize:14.0f];
+    StateCapitol.textColor = [UIColor darkGrayColor];
+    [StateCapitol setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    
+    
+    [stateContentView addSubview:StateCapitol];
+    
+    
+    //Nickname
+    StateNickname = [[UILabel alloc] initWithFrame:CGRectMake(5, 120, SCREEN_WIDTH, 20)];
+    StateNickname.textAlignment = NSTextAlignmentLeft;
+    StateNickname.font = [UIFont systemFontOfSize:14.0f];
+    StateNickname.textColor = [UIColor darkGrayColor];
+    [StateNickname setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    
+    
+    [stateContentView addSubview:StateNickname];
+    
+    //TREE
+    StateTree = [[UILabel alloc] initWithFrame:CGRectMake(5, 150, SCREEN_WIDTH, 20)];
+    StateTree.textAlignment = NSTextAlignmentLeft;
+    StateTree.font = [UIFont systemFontOfSize:14.0f];
+    StateTree.textColor = [UIColor darkGrayColor];
+    [StateTree setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    
+    
+    [stateContentView addSubview:StateTree];
+    
+    //FLOWER
+    StateFlower = [[UILabel alloc] initWithFrame:CGRectMake(5, 180, SCREEN_WIDTH, 20)];
+    StateFlower.textAlignment = NSTextAlignmentLeft;
+    StateFlower.font = [UIFont systemFontOfSize:14.0f];
+    StateFlower.textColor = [UIColor darkGrayColor];
+    [StateFlower setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    
+    
+    [stateContentView addSubview:StateFlower];
+    
+    
+    
+    
+    
     
     MDCParallaxView *parallaxView = [[MDCParallaxView alloc] initWithBackgroundView:backgroundImageView
                                                                      foregroundView:stateContentView];
@@ -150,6 +232,17 @@
     parallaxView.scrollViewDelegate = self;
     [self.view addSubview:parallaxView];
     
+}
+
+- (void) moreInfoButtonClicked{
+    
+    MoreInfoWebVC * sendLink = [[MoreInfoWebVC alloc]init];
+    
+    sendLink.link = [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@",stateNameLabel.text];
+    
+    sendLink.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:sendLink animated:YES completion:nil];
+
 }
 
 

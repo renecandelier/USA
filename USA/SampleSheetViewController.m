@@ -55,12 +55,11 @@
 
 - (IBAction)dismissButtonTouched:(id)sender
 {
-//  [self.modalSheet dismissWithCompletion:^{
-//    
-//  }];
+  [self.modalSheet dismissWithCompletion:^{
+    
+  }];
 
-    USATBV* itemsTVC = [[USATBV alloc]init];
-    [self.navigationController pushViewController:itemsTVC animated:YES];
+   
 }
 
 
