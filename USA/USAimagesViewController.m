@@ -7,11 +7,21 @@
 //
 
 #import "USAimagesViewController.h"
+#import "SampleSheetViewController.h"
+#import "NAModalSheet.h"
+#import "USATBV.h"
+#import "USAViewStateVC.h"
 
-#import "MHYahooParallaxView.h"
-#import "MHYahooWeatherParallaxCell.h"
 
-@interface USAimagesViewController ()<MHYahooParallaxViewDatasource,MHYahooParallaxViewDelegate>
+@interface USAimagesViewController (){
+
+    
+    int photoCount;
+    
+    UIImageView * imageView;
+    
+    UILabel * citiesLable;
+}
 
 @end
 
@@ -22,6 +32,51 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.view.backgroundColor = [UIColor blackColor];
+        // Do any additional setup after loading the view.
+       // UIButton * menuButton = [[UIButton alloc]initWithFrame:CGRectMake(20,20, 60, 60)];
+        UIButton * menuButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - 70, SCREEN_HEIGHT- 70, 80, 80)];
+        
+        [menuButton setBackgroundImage:[UIImage imageNamed:@"Row.png"] forState:UIControlStateNormal];
+        
+        [menuButton addTarget:self action:@selector(menuButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        
+        
+        UIButton * searchButton = [[UIButton alloc]initWithFrame:CGRectMake(-10, SCREEN_HEIGHT- 70, 80, 80)];
+        
+        [searchButton setBackgroundImage:[UIImage imageNamed:@"search.png"] forState:UIControlStateNormal];
+        
+        [searchButton addTarget:self action:@selector(searchButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        
+        imageView.contentMode  = UIViewContentModeScaleAspectFill;
+        imageView.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:imageView];
+        //Photo Array
+        self.welcomePhotos = [NSArray arrayWithObjects:@"Cali.jpg",@"mia.jpg", @"seattle.jpg",@"nyc.jpg", @"chicago.jpg",@"atl.jpg",  nil];
+        
+        
+        self.citiesArray = [NSArray arrayWithObjects:@"California",@"Miami", @"Seattle",@"New York", @"Chicago",@"Atlanta",  nil];
+        imageView.image = [UIImage imageNamed:[self.welcomePhotos objectAtIndex:0]];
+        [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(transitionPhotos) userInfo:nil repeats:YES];
+        [citiesLable sizeToFit];
+
+        citiesLable= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-75, SCREEN_HEIGHT- 70, 150, 80)];
+       // [citiesLable setCenter:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT- 120)];
+        [citiesLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
+        
+        citiesLable.textColor = [UIColor whiteColor];
+        citiesLable.textAlignment = NSTextAlignmentCenter;
+        citiesLable.text = self.citiesArray [photoCount];
+
+        
+        [self.view addSubview:menuButton];
+        [self.view addSubview:citiesLable];
+        [self.view addSubview:searchButton];
+
     }
     return self;
 }
@@ -29,53 +84,73 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    
-    MHYahooParallaxView * parallaxView = [[MHYahooParallaxView alloc]initWithFrame:CGRectMake(0.0f,0.0f, self.view.frame.size.width, self.view.frame.size.height)];
-    [parallaxView registerClass:[MHYahooWeatherParallaxCell class] forCellWithReuseIdentifier:[MHYahooWeatherParallaxCell reuseIdentifier]];
-    parallaxView.delegate = self;
-    parallaxView.datasource = self;
-    [self.view addSubview:parallaxView];
-
      }
 
-- (UICollectionViewCell*) parallaxView:(MHYahooParallaxView *)parallaxView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MHYahooWeatherParallaxCell * ywCell = (MHYahooWeatherParallaxCell*)[parallaxView dequeueReusableCellWithReuseIdentifier:[MHYahooWeatherParallaxCell reuseIdentifier] forIndexPath:indexPath];
-    ywCell.parallaxImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.jpg",indexPath.row]];
+-(void)transitionPhotos{
     
-    UIButton * informaion = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-40, 40, 20, 20)];
+    if (photoCount < [self.welcomePhotos count] - 1){
+        photoCount ++;
+    }else{
+        photoCount = 0;
+    }
     
-    informaion = [UIButton buttonWithType:UIButtonTypeInfoDark];
-    [self.view addSubview:informaion];
-    return ywCell;
+    
+    [UIView transitionWithView:imageView
+                      duration:2.0
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        
+                        citiesLable.text = self.citiesArray [photoCount];
+                        
+                        imageView.image = [UIImage imageNamed:[self.welcomePhotos objectAtIndex:photoCount]]; }
+                    completion:NULL];
 }
 
 
-- (NSInteger) numberOfRowsInParallaxView:(MHYahooParallaxView *)parallaxView {
-    return 5;
+
+-(void) searchButtonClicked{
+    
+  //  USATBV* USASearchStates = [[USATBV alloc]init];
+    //itemsTVC.groupInfo = self.groups[indexPath.row];
+    
+  //  [self.navigationController presentViewController:USASearchStates animated:YES completion:nil];
+    
+    
+    
+    
+    USATBV *searchViewController = [[USATBV alloc] init];
+    [self presentViewController:searchViewController animated:YES completion:nil];
+    
 }
 
-- (void)parallaxViewDidScrollHorizontally:(MHYahooParallaxView *)parallaxView leftIndex:(NSInteger)leftIndex leftImageLeftMargin:(CGFloat)leftImageLeftMargin leftImageWidth:(CGFloat)leftImageWidth rightIndex:(NSInteger)rightIndex rightImageLeftMargin:(CGFloat)rightImageLeftMargin rightImageWidth:(CGFloat)rightImageWidth {
+
+-(void) menuButtonClicked{
     
-    // leftIndex and Right Index should must be greater than or equal to zero
     
-    if(leftIndex >= 0){
-        MHYahooWeatherParallaxCell * leftCell = (MHYahooWeatherParallaxCell*)[parallaxView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:leftIndex inSection:0]];
+    
+    SampleSheetViewController *svc = [[SampleSheetViewController alloc] init];
+
+ self.PopUpForScore =svc;
+
+NAModalSheet *sheet = [[NAModalSheet alloc] initWithViewController:svc presentationStyle:NAModalSheetPresentationStyleFadeInCentered];
+sheet.cornerRadiusWhenCentered = 24.0;
+sheet.delegate = self;
+svc.modalSheet = sheet;
+
+[sheet presentWithCompletion:^{
+    
+}];
+}
+
+- (void)modalSheetTouchedOutsideContent:(NAModalSheet *)sheet
+{
+    
+    [sheet dismissWithCompletion:^{
         
-        CGRect frame = leftCell.parallaxImageView.frame;
-        frame.origin.x = leftImageLeftMargin;
-        frame.size.width = leftImageWidth;
-        leftCell.parallaxImageView.frame = frame;
-    }
-    if(rightIndex >= 0){
-        MHYahooWeatherParallaxCell * rightCell = (MHYahooWeatherParallaxCell*)[parallaxView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:rightIndex inSection:0]];
-        CGRect frame = rightCell.parallaxImageView.frame;
-        frame.origin.x = rightImageLeftMargin;
-        frame.size.width = rightImageWidth;
-        rightCell.parallaxImageView.frame = frame;
-    }
+    }];
     
 }
+
 
 @end

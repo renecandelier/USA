@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Abbreviation</key>
+		<string>AL</string>
+		<key>Bird</key>
+		<string>Yellowhammer</string>
+		<key>Capital</key>
+		<string>Montgomery</string>
+		<key>Flower</key>
+		<string>Camellia</string>
+		<key>Nickname</key>
+		<string>The Heart of Dixie</string>
+		<key>State</key>
+		<string>Alabama</string>
+		<key>Tree</key>
+		<string>Southern Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>AK</string>
+		<key>Bird</key>
+		<string>Willow Ptarmigan</string>
+		<key>Capital</key>
+		<string>Juneau</string>
+		<key>Flower</key>
+		<string>Forget-me-not</string>
+		<key>Nickname</key>
+		<string>The Last Frontier</string>
+		<key>State</key>
+		<string>Alaska</string>
+		<key>Tree</key>
+		<string>Sitka Spruce</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>AZ</string>
+		<key>Bird</key>
+		<string>Cactus Wren</string>
+		<key>Capital</key>
+		<string>Phoenix</string>
+		<key>Flower</key>
+		<string>Saguaro Cactus</string>
+		<key>Nickname</key>
+		<string>The Grand Canyon State</string>
+		<key>State</key>
+		<string>Arizona</string>
+		<key>Tree</key>
+		<string>Phoenix Paloverde</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>AR</string>
+		<key>Bird</key>
+		<string>Mockingbird</string>
+		<key>Capital</key>
+		<string>Little Rock</string>
+		<key>Flower</key>
+		<string>Apple Blossom</string>
+		<key>Nickname</key>
+		<string>The Land of Opportunity</string>
+		<key>State</key>
+		<string>Arkansas</string>
+		<key>Tree</key>
+		<string>Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>CA</string>
+		<key>Bird</key>
+		<string>Valley Quail</string>
+		<key>Capital</key>
+		<string>Sacramento</string>
+		<key>Flower</key>
+		<string>Golden Poppy</string>
+		<key>Nickname</key>
+		<string>The Golden State</string>
+		<key>State</key>
+		<string>California</string>
+		<key>Tree</key>
+		<string>California Redwood</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>CO</string>
+		<key>Bird</key>
+		<string>Lark Bunting</string>
+		<key>Capital</key>
+		<string>Denver</string>
+		<key>Flower</key>
+		<string>Rocky Mountain Columbine</string>
+		<key>Nickname</key>
+		<string>The Centennial State</string>
+		<key>State</key>
+		<string>Colorado</string>
+		<key>Tree</key>
+		<string>Blue Spruce</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>CT</string>
+		<key>Bird</key>
+		<string>American Robin</string>
+		<key>Capital</key>
+		<string>Hartford</string>
+		<key>Flower</key>
+		<string>Mountain Laurel</string>
+		<key>Nickname</key>
+		<string>The Constitution State</string>
+		<key>State</key>
+		<string>Conneticut</string>
+		<key>Tree</key>
+		<string>White Oak</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>DE</string>
+		<key>Bird</key>
+		<string>Blue Hen Chicken</string>
+		<key>Capital</key>
+		<string>Dover</string>
+		<key>Flower</key>
+		<string>Peach Blossom</string>
+		<key>Nickname</key>
+		<string>The Diamond State</string>
+		<key>State</key>
+		<string>Delaware</string>
+		<key>Tree</key>
+		<string>American Holly</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>FL</string>
+		<key>Bird</key>
+		<string>Mockingbird</string>
+		<key>Capital</key>
+		<string>Tallahassee</string>
+		<key>Flower</key>
+		<string>Orange Blossom</string>
+		<key>Nickname</key>
+		<string>The Sunshine State</string>
+		<key>State</key>
+		<string>Florida</string>
+		<key>Tree</key>
+		<string>Cabbage Palmetto</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>GA</string>
+		<key>Bird</key>
+		<string>Brown Thrasher</string>
+		<key>Capital</key>
+		<string>Atlanta</string>
+		<key>Flower</key>
+		<string>Cherokee Rose</string>
+		<key>Nickname</key>
+		<string>The Peach State</string>
+		<key>State</key>
+		<string>Georgia</string>
+		<key>Tree</key>
+		<string>Live Oak</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>HI</string>
+		<key>Bird</key>
+		<string>Nene</string>
+		<key>Capital</key>
+		<string>Honolulu</string>
+		<key>Flower</key>
+		<string>Yellow Hibiscus</string>
+		<key>Nickname</key>
+		<string>The Aloha State</string>
+		<key>State</key>
+		<string>Hawaii</string>
+		<key>Tree</key>
+		<string>Kukui</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>ID</string>
+		<key>Bird</key>
+		<string>Mountain Bluebird</string>
+		<key>Capital</key>
+		<string>Boise</string>
+		<key>Flower</key>
+		<string>Syringa</string>
+		<key>Nickname</key>
+		<string>The Gem State</string>
+		<key>State</key>
+		<string>Idaho</string>
+		<key>Tree</key>
+		<string>Western White Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>IL</string>
+		<key>Bird</key>
+		<string>Cardinal</string>
+		<key>Capital</key>
+		<string>Springfield</string>
+		<key>Flower</key>
+		<string>Violet</string>
+		<key>Nickname</key>
+		<string>The Land of Lincoln</string>
+		<key>State</key>
+		<string>Illinois</string>
+		<key>Tree</key>
+		<string>White Oak</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>IN</string>
+		<key>Bird</key>
+		<string>Cardinal</string>
+		<key>Capital</key>
+		<string>Indianapolis</string>
+		<key>Flower</key>
+		<string>Peony</string>
+		<key>Nickname</key>
+		<string>The Hoosier State</string>
+		<key>State</key>
+		<string>Indiana</string>
+		<key>Tree</key>
+		<string>Yellow Poplar</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>IA</string>
+		<key>Bird</key>
+		<string>Eastern Goldfinch</string>
+		<key>Capital</key>
+		<string>Des Moines</string>
+		<key>Flower</key>
+		<string>Wild Rose</string>
+		<key>Nickname</key>
+		<string>The Hawkeye State</string>
+		<key>State</key>
+		<string>Iowa</string>
+		<key>Tree</key>
+		<string>Oak</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>KS</string>
+		<key>Bird</key>
+		<string>Western Meadowlark</string>
+		<key>Capital</key>
+		<string>Topeka</string>
+		<key>Flower</key>
+		<string>Sunflower</string>
+		<key>Nickname</key>
+		<string>Sunflower State</string>
+		<key>State</key>
+		<string>Kansas</string>
+		<key>Tree</key>
+		<string>Cottonwood</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>KY</string>
+		<key>Bird</key>
+		<string>Kentucky cardinal</string>
+		<key>Capital</key>
+		<string>Frankfort</string>
+		<key>Flower</key>
+		<string>Goldenrod</string>
+		<key>Nickname</key>
+		<string>The Bluegrass State</string>
+		<key>State</key>
+		<string>Kentucky</string>
+		<key>Tree</key>
+		<string>Yellow Poplar</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>LA</string>
+		<key>Bird</key>
+		<string>Pelican</string>
+		<key>Capital</key>
+		<string>Baton Rouge</string>
+		<key>Flower</key>
+		<string>Magnolia</string>
+		<key>Nickname</key>
+		<string>The Pelican State</string>
+		<key>State</key>
+		<string>Louisiana</string>
+		<key>Tree</key>
+		<string>Baldcypress</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>ME</string>
+		<key>Bird</key>
+		<string>Chickadee</string>
+		<key>Capital</key>
+		<string>Augusta</string>
+		<key>Flower</key>
+		<string>White Pine cone and tassel</string>
+		<key>Nickname</key>
+		<string>The Pine Tree State</string>
+		<key>State</key>
+		<string>Maine</string>
+		<key>Tree</key>
+		<string>Eastern White Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MD</string>
+		<key>Bird</key>
+		<string>Baltimore Oriole</string>
+		<key>Capital</key>
+		<string>Annapolis</string>
+		<key>Flower</key>
+		<string>Black-eyed susan</string>
+		<key>Nickname</key>
+		<string>The Free State</string>
+		<key>State</key>
+		<string>Mayland</string>
+		<key>Tree</key>
+		<string>White Oak</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MA</string>
+		<key>Bird</key>
+		<string>Chickadee</string>
+		<key>Capital</key>
+		<string>Boston</string>
+		<key>Flower</key>
+		<string>Mayflower</string>
+		<key>Nickname</key>
+		<string>The Bay State</string>
+		<key>State</key>
+		<string>Massachusetts</string>
+		<key>Tree</key>
+		<string>American Elm</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MI</string>
+		<key>Bird</key>
+		<string>Robin</string>
+		<key>Capital</key>
+		<string>Lansing</string>
+		<key>Flower</key>
+		<string>Apple blossom</string>
+		<key>Nickname</key>
+		<string>The Wolverine State</string>
+		<key>State</key>
+		<string>Michigan</string>
+		<key>Tree</key>
+		<string>Eastern White Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MN</string>
+		<key>Bird</key>
+		<string>Common loon</string>
+		<key>Capital</key>
+		<string>St. Paul</string>
+		<key>Flower</key>
+		<string>Showy lady's slipper</string>
+		<key>Nickname</key>
+		<string>The North Star State</string>
+		<key>State</key>
+		<string>Minnesota</string>
+		<key>Tree</key>
+		<string>Red Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MS</string>
+		<key>Bird</key>
+		<string>Mockingbird</string>
+		<key>Capital</key>
+		<string>Jackson</string>
+		<key>Flower</key>
+		<string>evergreen magnolia</string>
+		<key>Nickname</key>
+		<string>The Magnolia State</string>
+		<key>State</key>
+		<string>Mississippi</string>
+		<key>Tree</key>
+		<string>Southern Magnolia</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MO</string>
+		<key>Bird</key>
+		<string>Bluebird</string>
+		<key>Capital</key>
+		<string>Jefferson City</string>
+		<key>Flower</key>
+		<string>Hawthorn</string>
+		<key>Nickname</key>
+		<string>The Show-me State</string>
+		<key>State</key>
+		<string>Missouri</string>
+		<key>Tree</key>
+		<string>Flowering Dogwood</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>MT</string>
+		<key>Bird</key>
+		<string>Western Meadowlark</string>
+		<key>Capital</key>
+		<string>Helena</string>
+		<key>Flower</key>
+		<string>Bitterroot</string>
+		<key>Nickname</key>
+		<string>The Treasure State</string>
+		<key>State</key>
+		<string>Montana</string>
+		<key>Tree</key>
+		<string>Ponderosa Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NE</string>
+		<key>Bird</key>
+		<string>Western Meadowlark</string>
+		<key>Capital</key>
+		<string>Lincoln</string>
+		<key>Flower</key>
+		<string>Goldenrod</string>
+		<key>Nickname</key>
+		<string>The Beef State</string>
+		<key>State</key>
+		<string>Nebraska</string>
+		<key>Tree</key>
+		<string>Cottonwood</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NV</string>
+		<key>Bird</key>
+		<string>Mountain Bluebird</string>
+		<key>Capital</key>
+		<string>Carson City</string>
+		<key>Flower</key>
+		<string>Sagebrush</string>
+		<key>Nickname</key>
+		<string>The Sagebrush State</string>
+		<key>State</key>
+		<string>Nevada</string>
+		<key>Tree</key>
+		<string>Bristlecone Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NH</string>
+		<key>Bird</key>
+		<string>Purple Finch</string>
+		<key>Capital</key>
+		<string>Concord</string>
+		<key>Flower</key>
+		<string>Purple Lilac</string>
+		<key>Nickname</key>
+		<string>The Granite State</string>
+		<key>State</key>
+		<string>New Hampshire</string>
+		<key>Tree</key>
+		<string>Paper Birch</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NJ</string>
+		<key>Bird</key>
+		<string>Eastern Goldfinch</string>
+		<key>Capital</key>
+		<string>Trenton</string>
+		<key>Flower</key>
+		<string>Purple Violet</string>
+		<key>Nickname</key>
+		<string>The Garden State</string>
+		<key>State</key>
+		<string>New Jersey</string>
+		<key>Tree</key>
+		<string>Northern Red Oak</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NM</string>
+		<key>Bird</key>
+		<string>Roadrunner</string>
+		<key>Capital</key>
+		<string>Santa Fe</string>
+		<key>Flower</key>
+		<string>Yucca</string>
+		<key>Nickname</key>
+		<string>Land of Enchantment</string>
+		<key>State</key>
+		<string>Mexico</string>
+		<key>Tree</key>
+		<string>Pinyon</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NY</string>
+		<key>Bird</key>
+		<string>Bluebird</string>
+		<key>Capital</key>
+		<string>Albany</string>
+		<key>Flower</key>
+		<string>Rose</string>
+		<key>Nickname</key>
+		<string>The Empire State</string>
+		<key>State</key>
+		<string>New York</string>
+		<key>Tree</key>
+		<string>Sugar Maple</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>NC</string>
+		<key>Bird</key>
+		<string>Cardinal</string>
+		<key>Capital</key>
+		<string>Raleigh</string>
+		<key>Flower</key>
+		<string>flowering dogwoodÊ</string>
+		<key>Nickname</key>
+		<string>The Tar Heel State</string>
+		<key>State</key>
+		<string>North Carolina</string>
+		<key>Tree</key>
+		<string>Pine</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>ND</string>
+		<key>Bird</key>
+		<string>Western meadowlark</string>
+		<key>Capital</key>
+		<string>Bismarck</string>
+		<key>Flower</key>
+		<string>Wild prairie rose</string>
+		<key>Nickname</key>
+		<string>The Peace Garden State</string>
+		<key>State</key>
+		<string>North Dakota</string>
+		<key>Tree</key>
+		<string>American Elm</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>OH</string>
+		<key>Bird</key>
+		<string>Cardinal</string>
+		<key>Capital</key>
+		<string>Columbus</string>
+		<key>Flower</key>
+		<string>Scarlet carnation</string>
+		<key>Nickname</key>
+		<string>The Buckeye State</string>
+		<key>State</key>
+		<string>Ohio</string>
+		<key>Tree</key>
+		<string>Ohio Buckeye</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>OK</string>
+		<key>Bird</key>
+		<string>Scissor-tailed flycatcher</string>
+		<key>Capital</key>
+		<string>Oklahoma City</string>
+		<key>Flower</key>
+		<string>Oklahoma Rose</string>
+		<key>Nickname</key>
+		<string>The Sooner State</string>
+		<key>State</key>
+		<string>Oklahoma</string>
+		<key>Tree</key>
+		<string>Eastern Redbud</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>OR</string>
+		<key>Bird</key>
+		<string>Meadowlark</string>
+		<key>Capital</key>
+		<string>Salem</string>
+		<key>Flower</key>
+		<string>Oregon Grape</string>
+		<key>Nickname</key>
+		<string>The Beaver State</string>
+		<key>State</key>
+		<string>Oregon</string>
+		<key>Tree</key>
+		<string>Douglas- fir</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>PA</string>
+		<key>Bird</key>
+		<string>Ruffed Grouse</string>
+		<key>Capital</key>
+		<string>Harrisburg</string>
+		<key>Flower</key>
+		<string>Mountain Laurel</string>
+		<key>Nickname</key>
+		<string>The Keystone State</string>
+		<key>State</key>
+		<string>Pennsylvania</string>
+		<key>Tree</key>
+		<string>Eastern Hemlock</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>RI</string>
+		<key>Bird</key>
+		<string>Rhode Island Red</string>
+		<key>Capital</key>
+		<string>Providence</string>
+		<key>Flower</key>
+		<string>Violet</string>
+		<key>Nickname</key>
+		<string>The Ocean State</string>
+		<key>State</key>
+		<string>Rhode Island</string>
+		<key>Tree</key>
+		<string>Red Maple</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>SC</string>
+		<key>Bird</key>
+		<string>Carolina Wren</string>
+		<key>Capital</key>
+		<string>Columbia</string>
+		<key>Flower</key>
+		<string>Carolina Yellow Jessamine</string>
+		<key>Nickname</key>
+		<string>The Palmetto State</string>
+		<key>State</key>
+		<string>South Carolina</string>
+		<key>Tree</key>
+		<string>Cabbage Palmetto</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>SD</string>
+		<key>Bird</key>
+		<string>Ring- Necked Pheasant</string>
+		<key>Capital</key>
+		<string>Pierre</string>
+		<key>Flower</key>
+		<string>American Pasque</string>
+		<key>Nickname</key>
+		<string>The Mount Rushmore State</string>
+		<key>State</key>
+		<string>South Dakota</string>
+		<key>Tree</key>
+		<string>Black Hills Spruce</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>TN</string>
+		<key>Bird</key>
+		<string>Mockingbird</string>
+		<key>Capital</key>
+		<string>Nashville</string>
+		<key>Flower</key>
+		<string>Iris</string>
+		<key>Nickname</key>
+		<string>The Volunteer State</string>
+		<key>State</key>
+		<string>Tennesee</string>
+		<key>Tree</key>
+		<string>Tulip poplar</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>TX</string>
+		<key>Bird</key>
+		<string>Mockingbird</string>
+		<key>Capital</key>
+		<string>Austin</string>
+		<key>Flower</key>
+		<string>Blue bonnet</string>
+		<key>Nickname</key>
+		<string>The Lone Star State</string>
+		<key>State</key>
+		<string>Texas</string>
+		<key>Tree</key>
+		<string>Pecan Tree</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>UT</string>
+		<key>Bird</key>
+		<string>California Gull</string>
+		<key>Capital</key>
+		<string>Salt Lake City</string>
+		<key>Flower</key>
+		<string>Sego Lily</string>
+		<key>Nickname</key>
+		<string>The Beehive State</string>
+		<key>State</key>
+		<string>Utah</string>
+		<key>Tree</key>
+		<string>Blue Spruce</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>VT</string>
+		<key>Bird</key>
+		<string>Hermit Thrush</string>
+		<key>Capital</key>
+		<string>Mount Pelier</string>
+		<key>Flower</key>
+		<string>Red Clover</string>
+		<key>Nickname</key>
+		<string>The Green Mountain State</string>
+		<key>State</key>
+		<string>Vermont</string>
+		<key>Tree</key>
+		<string>Sugar Maple</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>VA</string>
+		<key>Bird</key>
+		<string>Cardinal</string>
+		<key>Capital</key>
+		<string>Richmond</string>
+		<key>Flower</key>
+		<string>American Dogwood</string>
+		<key>Nickname</key>
+		<string>The Mother of States</string>
+		<key>State</key>
+		<string>Virginia</string>
+		<key>Tree</key>
+		<string>Flowering Dogwood</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>WA</string>
+		<key>Bird</key>
+		<string>Willow Goldfinch</string>
+		<key>Capital</key>
+		<string>Olympia</string>
+		<key>Flower</key>
+		<string>Coast Rhododendron</string>
+		<key>Nickname</key>
+		<string>The Evergreen State</string>
+		<key>State</key>
+		<string>Washington</string>
+		<key>Tree</key>
+		<string>Western Hemlock</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>WV</string>
+		<key>Bird</key>
+		<string>Cardinal</string>
+		<key>Capital</key>
+		<string>Charleston</string>
+		<key>Flower</key>
+		<string>Rhododendron</string>
+		<key>Nickname</key>
+		<string>The Mountain State</string>
+		<key>State</key>
+		<string>West Virginia </string>
+		<key>Tree</key>
+		<string>Sugar Maple</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>WI</string>
+		<key>Bird</key>
+		<string>Robin</string>
+		<key>Capital</key>
+		<string>Madison</string>
+		<key>Flower</key>
+		<string>Wood Violet</string>
+		<key>Nickname</key>
+		<string>The Badger State</string>
+		<key>State</key>
+		<string>Wisconsin</string>
+		<key>Tree</key>
+		<string>Sugar Maple</string>
+	</dict>
+	<dict>
+		<key>Abbreviation</key>
+		<string>WY</string>
+		<key>Bird</key>
+		<string>Meadowlark</string>
+		<key>Capital</key>
+		<string>Cheyenne</string>
+		<key>Flower</key>
+		<string>Indian Paintbrush</string>
+		<key>Nickname</key>
+		<string>The Equality State</string>
+		<key>State</key>
+		<string>Wyoming</string>
+		<key>Tree</key>
+		<string>Plains Cottonwood</string>
+	</dict>
+</array>
+</plist>
