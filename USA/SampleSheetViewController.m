@@ -10,6 +10,8 @@
 #import "NAModalSheet.h"
 #import "USATBV.h"
 #import "USATBV.h"
+#import "GamePlayVC.h"
+
 
 @interface SampleSheetViewController ()
 {
@@ -64,9 +66,14 @@
 
 
 
+- (IBAction)learnButton:(id)sender {
+    USATBV *searchViewController = [[USATBV alloc] init];
+    [self presentViewController:searchViewController animated:YES completion:nil];
+}
+
 - (IBAction)playButton:(id)sender {
     
-    USATBV *searchViewController = [[USATBV alloc] init];
+    GamePlayVC *searchViewController = [[GamePlayVC alloc] init];
     [self presentViewController:searchViewController animated:YES completion:nil];
 }
 @end

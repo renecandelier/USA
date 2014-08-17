@@ -28,7 +28,7 @@
     UILabel *StateBird;
     UILabel *StateNickname;
     
-    
+    UIImage *backgroundImage;
     
     UIButton * moreInfoButton;
     
@@ -58,7 +58,7 @@
         //----------------------Top Label for the State Name
         [stateNameLabel sizeToFit];
         
-        stateNameLabel= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-75, 15, 150, 40)];
+        stateNameLabel= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-125, 15, 250, 40)];
         [stateNameLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
         
         stateNameLabel.textColor = [UIColor whiteColor];
@@ -85,7 +85,10 @@
     }
     return self;
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
 
+}
 
 - (void)setIndexForArray:(NSNumber *)indexForArray{
     
@@ -101,6 +104,9 @@
     //******************** SET THE TEXT FOR THE STATE FACTS ****************************************
     
     stateNameLabel.text = currentState.Statename;
+    //backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]];
+
+    
     StateAbbreviation.text = [NSString stringWithFormat:@"Abbreviation: %@", currentState.StateAbbreviation];
     StateBird.text = [NSString stringWithFormat:@"Bird: %@", currentState.StateBird];
     StateCapitol.text = [NSString stringWithFormat:@"Capitol: %@", currentState.StateCapitol];
@@ -108,6 +114,9 @@
     StateNickname.text = [NSString stringWithFormat:@"Nickname: %@", currentState.StateNickname];
     StateTree.text = [NSString stringWithFormat:@"Tree: %@", currentState.StateTree];
 
+//Load Image
+    
+    
 
 }
 -(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
@@ -116,9 +125,10 @@
 {
     [super viewDidLoad];
     ///----------------PARALLAx
-    
-    
-    UIImage *backgroundImage = [UIImage imageNamed:@"mia.jpg"];
+   // backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]];
+    backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"Georgia.jpg"]];
+
+    NSLog(@"%@",[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]);
     CGRect backgroundRect = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:backgroundRect];
     backgroundImageView.image = backgroundImage;
@@ -231,6 +241,7 @@
     parallaxView.backgroundInteractionEnabled = YES;
     parallaxView.scrollViewDelegate = self;
     [self.view addSubview:parallaxView];
+    
     
 }
 

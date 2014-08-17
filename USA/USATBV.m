@@ -85,6 +85,20 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
+    
+    UINavigationBar * tableViewNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)];
+    
+//	UIImage *image = [UIImage imageNamed:@"synyx_150_no_os.png"];
+//	imageView = [ [ UIImageView alloc ] initWithFrame:CGRectMake(84.0, 1.0, image.size.width, image.size.height) ];
+//	[imageView setImage:image];
+    
+	//[tableViewNavigationBar addSubview:imageView];
+    
+	[super.tableView addSubview:tableViewNavigationBar];
+
+    
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
 
     self.tableView.tableHeaderView = headerView;
@@ -199,19 +213,38 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+ 
     self.RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
     StateClass *currentState = self.RandomStates[indexPath.row];
-    //cell.textLabel.text = self.statesArray[indexPath.row][@"state"];
-    cell.textLabel.text = currentState.Statename;
-
+ 
     cell.textLabel.textColor = [UIColor darkGrayColor];
+    cell.textLabel.text = currentState.Statename;
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@",currentState.StateCapitol, currentState.StateAbbreviation];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:20];
+    cell.detailTextLabel.textColor = [UIColor darkGrayColor];
+    
+    
+    
     // Configure the cell...
     
     return cell;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    return 100;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     

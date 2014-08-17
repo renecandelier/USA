@@ -12,5 +12,6 @@
 @interface USAAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, weak) NAModalSheet *modalSheet;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

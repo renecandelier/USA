@@ -10,6 +10,7 @@
 #import "USAimagesViewController.h"
 #import "USATBV.h"
 #import "NAModalSheet.h"
+#import "ViewController.h"
 
 @implementation USAAppDelegate
 
@@ -19,7 +20,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[USAimagesViewController alloc]init];
+		self.navigationController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil]];
+	
+  //  self.window.rootViewController = self.navigationController;
+  
+      self.window.rootViewController = [[USAimagesViewController alloc]init];
+
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -11,6 +11,7 @@
 @class NAModalSheet;
 
 @interface SampleSheetViewController : UIViewController
+- (IBAction)learnButton:(id)sender;
 
 - (IBAction)playButton:(id)sender;
 @property (nonatomic, weak) NAModalSheet *modalSheet;

@@ -22,12 +22,12 @@
 		8A67038719944771000037DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A67038519944771000037DF /* InfoPlist.strings */; };
 		8A67038919944771000037DF /* USATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A67038819944771000037DF /* USATests.m */; };
 		8A670395199447C3000037DF /* USAimagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A670394199447C3000037DF /* USAimagesViewController.m */; };
-		8AA7321F199D14C200E2B83E /* Cali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7321E199D14C200E2B83E /* Cali.jpg */; };
-		8AA73223199D339F00E2B83E /* seattle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73222199D339F00E2B83E /* seattle.jpg */; };
-		8AA73225199D376000E2B83E /* nyc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73224199D376000E2B83E /* nyc.jpg */; };
-		8AA73227199D392400E2B83E /* mia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73226199D392400E2B83E /* mia.jpg */; };
-		8AA73229199D39B100E2B83E /* chicago.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73228199D39B100E2B83E /* chicago.jpg */; };
-		8AA7326C199D415C00E2B83E /* atl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7326B199D415C00E2B83E /* atl.jpg */; };
+		8AA7321F199D14C200E2B83E /* California.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7321E199D14C200E2B83E /* California.jpg */; };
+		8AA73223199D339F00E2B83E /* Washington.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73222199D339F00E2B83E /* Washington.jpg */; };
+		8AA73225199D376000E2B83E /* New York.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73224199D376000E2B83E /* New York.jpg */; };
+		8AA73227199D392400E2B83E /* Florida.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73226199D392400E2B83E /* Florida.jpg */; };
+		8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73228199D39B100E2B83E /* Illinois.jpg */; };
+		8AA7326C199D415C00E2B83E /* Georgia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7326B199D415C00E2B83E /* Georgia.jpg */; };
 		8AA73270199D988B00E2B83E /* Data.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7326F199D988B00E2B83E /* Data.png */; };
 		8AA73272199D98C800E2B83E /* Row.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73271199D98C800E2B83E /* Row.png */; };
 		8AA7327F199D9AE900E2B83E /* NAModalSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA73276199D9AE900E2B83E /* NAModalSheet.m */; };
@@ -52,6 +52,15 @@
 		8AFAD222199FC9C00058F64E /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD221199FC9C00058F64E /* ImageViewController.m */; };
 		8AFAD225199FCA120058F64E /* MDCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD224199FCA120058F64E /* MDCParallaxView.m */; };
 		8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */; };
+		8AFAD22C19A03EE30058F64E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAD22B19A03EE30058F64E /* CoreText.framework */; };
+		8AFAD23219A03F430058F64E /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD22E19A03F430058F64E /* stately.ttf */; };
+		8AFAD23319A03F430058F64E /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD23019A03F430058F64E /* USStatesColorMap.m */; };
+		8AFAD23919A045980058F64E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD23619A045980058F64E /* ViewController.m */; };
+		8AFAD23B19A045980058F64E /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD23819A045980058F64E /* ViewController_iPhone.xib */; };
+		8AFAD24119A045D40058F64E /* MapCustomizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD23E19A045D40058F64E /* MapCustomizationViewController.m */; };
+		8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */; };
+		8AFAD24619A12FA10058F64E /* GamePlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD24519A12FA10058F64E /* GamePlayVC.m */; };
+		8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD24819A1409F0058F64E /* StatesGameVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,12 +94,12 @@
 		8A67038819944771000037DF /* USATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USATests.m; sourceTree = "<group>"; };
 		8A670393199447C3000037DF /* USAimagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAimagesViewController.h; sourceTree = "<group>"; };
 		8A670394199447C3000037DF /* USAimagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAimagesViewController.m; sourceTree = "<group>"; };
-		8AA7321E199D14C200E2B83E /* Cali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Cali.jpg; path = ../../../Desktop/Cali.jpg; sourceTree = "<group>"; };
-		8AA73222199D339F00E2B83E /* seattle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seattle.jpg; sourceTree = "<group>"; };
-		8AA73224199D376000E2B83E /* nyc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nyc.jpg; sourceTree = "<group>"; };
-		8AA73226199D392400E2B83E /* mia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mia.jpg; sourceTree = "<group>"; };
-		8AA73228199D39B100E2B83E /* chicago.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicago.jpg; sourceTree = "<group>"; };
-		8AA7326B199D415C00E2B83E /* atl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atl.jpg; sourceTree = "<group>"; };
+		8AA7321E199D14C200E2B83E /* California.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = California.jpg; path = ../../../Desktop/California.jpg; sourceTree = "<group>"; };
+		8AA73222199D339F00E2B83E /* Washington.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Washington.jpg; sourceTree = "<group>"; };
+		8AA73224199D376000E2B83E /* New York.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New York.jpg"; sourceTree = "<group>"; };
+		8AA73226199D392400E2B83E /* Florida.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Florida.jpg; sourceTree = "<group>"; };
+		8AA73228199D39B100E2B83E /* Illinois.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Illinois.jpg; sourceTree = "<group>"; };
+		8AA7326B199D415C00E2B83E /* Georgia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Georgia.jpg; sourceTree = "<group>"; };
 		8AA7326F199D988B00E2B83E /* Data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Data.png; sourceTree = "<group>"; };
 		8AA73271199D98C800E2B83E /* Row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Row.png; sourceTree = "<group>"; };
 		8AA73275199D9AE900E2B83E /* NAModalSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAModalSheet.h; sourceTree = "<group>"; };
@@ -124,6 +133,21 @@
 		8AFAD224199FCA120058F64E /* MDCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCParallaxView.m; sourceTree = "<group>"; };
 		8AFAD228199FF5FC0058F64E /* MoreInfoWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoWebVC.h; sourceTree = "<group>"; };
 		8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoWebVC.m; sourceTree = "<group>"; };
+		8AFAD22B19A03EE30058F64E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8AFAD22E19A03F430058F64E /* stately.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stately.ttf; sourceTree = "<group>"; };
+		8AFAD22F19A03F430058F64E /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
+		8AFAD23019A03F430058F64E /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
+		8AFAD23119A03F430058F64E /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
+		8AFAD23519A045980058F64E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8AFAD23619A045980058F64E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AFAD23819A045980058F64E /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		8AFAD23D19A045D40058F64E /* MapCustomizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomizationViewController.h; sourceTree = "<group>"; };
+		8AFAD23E19A045D40058F64E /* MapCustomizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCustomizationViewController.m; sourceTree = "<group>"; };
+		8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapCustomizationViewController_iPhone.xib; sourceTree = "<group>"; };
+		8AFAD24419A12FA00058F64E /* GamePlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayVC.h; sourceTree = "<group>"; };
+		8AFAD24519A12FA10058F64E /* GamePlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayVC.m; sourceTree = "<group>"; };
+		8AFAD24719A1409F0058F64E /* StatesGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesGameVC.h; sourceTree = "<group>"; };
+		8AFAD24819A1409F0058F64E /* StatesGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesGameVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFAD22C19A03EE30058F64E /* CoreText.framework in Frameworks */,
 				8A67036619944771000037DF /* CoreGraphics.framework in Frameworks */,
 				8A67036819944771000037DF /* UIKit.framework in Frameworks */,
 				8A67036419944771000037DF /* Foundation.framework in Frameworks */,
@@ -170,6 +195,7 @@
 		8A67036219944771000037DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AFAD22B19A03EE30058F64E /* CoreText.framework */,
 				8A67036319944771000037DF /* Foundation.framework */,
 				8A67036519944771000037DF /* CoreGraphics.framework */,
 				8A67036719944771000037DF /* UIKit.framework */,
@@ -222,6 +248,10 @@
 			children = (
 				8A670393199447C3000037DF /* USAimagesViewController.h */,
 				8A670394199447C3000037DF /* USAimagesViewController.m */,
+				8AFAD24419A12FA00058F64E /* GamePlayVC.h */,
+				8AFAD24519A12FA10058F64E /* GamePlayVC.m */,
+				8AFAD24719A1409F0058F64E /* StatesGameVC.h */,
+				8AFAD24819A1409F0058F64E /* StatesGameVC.m */,
 				8A354B17199EC23500A30CE0 /* USATBV.h */,
 				8A354B18199EC23500A30CE0 /* USATBV.m */,
 				8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */,
@@ -249,13 +279,12 @@
 		8AA73284199D9AFB00E2B83E /* City Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				8AA73289199E3C1A00E2B83E /* close.png */,
-				8AA73224199D376000E2B83E /* nyc.jpg */,
-				8AA73222199D339F00E2B83E /* seattle.jpg */,
-				8AA73228199D39B100E2B83E /* chicago.jpg */,
-				8AA7326B199D415C00E2B83E /* atl.jpg */,
-				8AA7321E199D14C200E2B83E /* Cali.jpg */,
-				8AA73226199D392400E2B83E /* mia.jpg */,
+				8AA73224199D376000E2B83E /* New York.jpg */,
+				8AA73222199D339F00E2B83E /* Washington.jpg */,
+				8AA73228199D39B100E2B83E /* Illinois.jpg */,
+				8AA7326B199D415C00E2B83E /* Georgia.jpg */,
+				8AA7321E199D14C200E2B83E /* California.jpg */,
+				8AA73226199D392400E2B83E /* Florida.jpg */,
 			);
 			name = "City Pictures";
 			path = ..;
@@ -264,6 +293,7 @@
 		8AA7328D199E47FB00E2B83E /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				8AA73289199E3C1A00E2B83E /* close.png */,
 				8AFAD1FD199EEC0E0058F64E /* back.png */,
 				8AFAD1F8199EDEE40058F64E /* searchButton.png */,
 				8AA73285199DB6CD00E2B83E /* search.png */,
@@ -281,6 +311,8 @@
 		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8AFAD23C19A045D40058F64E /* MapCustomizationViewController */,
+				8AFAD23419A045980058F64E /* ViewController */,
 				8AA73273199D9AE900E2B83E /* NAModalSheet */,
 				8AFAD212199F18130058F64E /* DataStore.h */,
 				8AFAD213199F18130058F64E /* DataStore.m */,
@@ -313,6 +345,7 @@
 		8AFAD227199FE0830058F64E /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8AFAD22D19A03F430058F64E /* USStatesColorMap */,
 				8AFAD21D199FA75B0058F64E /* USA States.plist */,
 				8AFAD21F199FC9C00058F64E /* Controller Extras */,
 				8AFAD226199FE0530058F64E /* Images */,
@@ -322,6 +355,37 @@
 				8A67036119944771000037DF /* Products */,
 			);
 			name = Extras;
+			sourceTree = "<group>";
+		};
+		8AFAD22D19A03F430058F64E /* USStatesColorMap */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD22E19A03F430058F64E /* stately.ttf */,
+				8AFAD22F19A03F430058F64E /* USStatesColorMap.h */,
+				8AFAD23019A03F430058F64E /* USStatesColorMap.m */,
+				8AFAD23119A03F430058F64E /* USStatesColorMapHeader.h */,
+			);
+			path = USStatesColorMap;
+			sourceTree = "<group>";
+		};
+		8AFAD23419A045980058F64E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD23519A045980058F64E /* ViewController.h */,
+				8AFAD23619A045980058F64E /* ViewController.m */,
+				8AFAD23819A045980058F64E /* ViewController_iPhone.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8AFAD23C19A045D40058F64E /* MapCustomizationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD23D19A045D40058F64E /* MapCustomizationViewController.h */,
+				8AFAD23E19A045D40058F64E /* MapCustomizationViewController.m */,
+				8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */,
+			);
+			path = MapCustomizationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,25 +464,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA7321F199D14C200E2B83E /* Cali.jpg in Resources */,
+				8AA7321F199D14C200E2B83E /* California.jpg in Resources */,
 				8AA7328F199E484E00E2B83E /* play.png in Resources */,
 				8A354B16199E4AF900A30CE0 /* learn.png in Resources */,
+				8AFAD23B19A045980058F64E /* ViewController_iPhone.xib in Resources */,
 				8AA73291199E48FD00E2B83E /* settings.png in Resources */,
 				8AFAD21E199FA75B0058F64E /* USA States.plist in Resources */,
 				8AA7328A199E3C1A00E2B83E /* close.png in Resources */,
 				8AA73286199DB6CD00E2B83E /* search.png in Resources */,
 				8AA73270199D988B00E2B83E /* Data.png in Resources */,
+				8AFAD23219A03F430058F64E /* stately.ttf in Resources */,
+				8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */,
 				8AA73283199D9AE900E2B83E /* SampleSheetViewController.xib in Resources */,
 				8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */,
-				8AA7326C199D415C00E2B83E /* atl.jpg in Resources */,
-				8AA73225199D376000E2B83E /* nyc.jpg in Resources */,
+				8AA7326C199D415C00E2B83E /* Georgia.jpg in Resources */,
+				8AA73225199D376000E2B83E /* New York.jpg in Resources */,
 				8AA73272199D98C800E2B83E /* Row.png in Resources */,
-				8AA73223199D339F00E2B83E /* seattle.jpg in Resources */,
-				8AA73227199D392400E2B83E /* mia.jpg in Resources */,
+				8AA73223199D339F00E2B83E /* Washington.jpg in Resources */,
+				8AA73227199D392400E2B83E /* Florida.jpg in Resources */,
 				8AA73288199DBC7900E2B83E /* rate.png in Resources */,
 				8AFAD1FE199EEC0E0058F64E /* back.png in Resources */,
 				8A67036E19944771000037DF /* InfoPlist.strings in Resources */,
-				8AA73229199D39B100E2B83E /* chicago.jpg in Resources */,
+				8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */,
 				8A67037619944771000037DF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFAD23319A03F430058F64E /* USStatesColorMap.m in Sources */,
 				8AFAD225199FCA120058F64E /* MDCParallaxView.m in Sources */,
 				8AFAD222199FC9C00058F64E /* ImageViewController.m in Sources */,
 				8AFAD216199F18130058F64E /* DataStore.h in Sources */,
@@ -445,11 +513,15 @@
 				8AFAD218199F18130058F64E /* StateClass.h in Sources */,
 				8AFAD219199F18130058F64E /* StateClass.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
+				8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */,
+				8AFAD23919A045980058F64E /* ViewController.m in Sources */,
 				8AA73282199D9AE900E2B83E /* SampleSheetViewController.m in Sources */,
 				8A670395199447C3000037DF /* USAimagesViewController.m in Sources */,
 				8AA73281199D9AE900E2B83E /* UIImage+screenshot.m in Sources */,
 				8AFAD1FC199EE2AB0058F64E /* USAViewStateVC.m in Sources */,
+				8AFAD24619A12FA10058F64E /* GamePlayVC.m in Sources */,
 				8A67037419944771000037DF /* USAAppDelegate.m in Sources */,
+				8AFAD24119A045D40058F64E /* MapCustomizationViewController.m in Sources */,
 				8AA7327F199D9AE900E2B83E /* NAModalSheet.m in Sources */,
 				8AFAD21C199F19020058F64E /* NSArray+RandomSort.m in Sources */,
 				8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */,
