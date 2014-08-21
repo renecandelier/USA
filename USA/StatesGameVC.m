@@ -283,50 +283,89 @@
     questionLable.text =[NSString stringWithFormat:@"What is the capital of %@?", currentState.Statename];
     
     int randomLabel = arc4random_uniform(4);
-    falseOption1 =arc4random_uniform(4);
-    falseOption2 =arc4random_uniform(4);
-    falseOption3 =arc4random_uniform(4);
+//    falseOption1 =arc4random_uniform(49);
+//    falseOption2 =arc4random_uniform(49);
+//    falseOption3 =arc4random_uniform(49);
+//    
+   
     
-    while (randomLabel!=falseOption1&&falseOption1!=falseOption2&&falseOption3!=randomLabel) {
-        randomLabel = arc4random_uniform(4);
-        falseOption1 =arc4random_uniform(4);
-        falseOption2 =arc4random_uniform(4);
-        falseOption3 =arc4random_uniform(4);
-    }
-
-    currentState = self.RandomStates[randomLabel];
-    lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
-    currentState = self.RandomStates[falseOption1];
-
-    lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
-    currentState = self.RandomStates[falseOption2];
-
-    lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
-    currentState = self.RandomStates[falseOption3];
-
-    lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+//    if (falseOption3 != randomLabel || falseOption3 != falseOption1 || falseOption3 != falseOption2)
+//    {
+//        falseOption3 = (arc4random() % 50);
+//    }
     
+  
+//    while (randomLabel!=falseOption1&&falseOption1!=falseOption2&&falseOption3!=randomLabel) {
+//        randomLabel = arc4random_uniform(4);
+//        falseOption1 =arc4random_uniform(4);
+//        falseOption2 =arc4random_uniform(4);
+//        falseOption3 =arc4random_uniform(4);
+//    }
 
     
     switch (randomLabel) {
         case 0:
             lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+1];
             
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+2];
             
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+3];
+            
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            return;
             break;
             
         case 1:
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+1];
+            
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+2];
+            
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+3];
+            
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            return;
+
+            
             break;
             
             
         case 2:
             lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+1];
+            
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+2];
+            
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+3];
+            
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            return;
+
+            
             break;
             
             
         case 3:
             lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+1];
+            
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+2];
+            
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            currentState = self.RandomStates[randomLabel+3];
+            
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+           
+            return;
+
             break;
             
         default:
