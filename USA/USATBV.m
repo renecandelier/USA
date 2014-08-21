@@ -16,7 +16,6 @@
 @property NSMutableArray *stateArray;
 @property NSArray *RandomStates;
 
-
 @end
 
 @implementation USATBV{
@@ -86,17 +85,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
-    
-    UINavigationBar * tableViewNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)];
-    
-//	UIImage *image = [UIImage imageNamed:@"synyx_150_no_os.png"];
-//	imageView = [ [ UIImageView alloc ] initWithFrame:CGRectMake(84.0, 1.0, image.size.width, image.size.height) ];
-//	[imageView setImage:image];
-    
-	//[tableViewNavigationBar addSubview:imageView];
-    
-	[super.tableView addSubview:tableViewNavigationBar];
+
 
     
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
@@ -222,7 +211,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
  
-    self.RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
+    self.RandomStates = [[DataStore sharedInstance] getStates];
     StateClass *currentState = self.RandomStates[indexPath.row];
  
     cell.textLabel.textColor = [UIColor darkGrayColor];

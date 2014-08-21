@@ -65,9 +65,7 @@ static DataStore *_instance = nil;
 -(void)loadStates
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"USA States" ofType:@"plist"];
-    
-//    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    
+        
     self.stateArray = [[NSMutableArray alloc]init];
     
     NSArray *StateArrayDic = [[NSArray alloc] initWithContentsOfFile:path];

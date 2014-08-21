@@ -10,6 +10,6 @@
 
 @interface NSArray (RandomSort)
 
--(NSArray *)shuffle;
+-(NSMutableArray *)shuffle;
 
 @end

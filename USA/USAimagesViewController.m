@@ -62,7 +62,7 @@
         self.welcomePhotos = [NSArray arrayWithObjects:@"Cali.jpg",@"mia.jpg", @"seattle.jpg",@"nyc.jpg", @"chicago.jpg",@"atl.jpg",  nil];
         
         
-        self.citiesArray = [NSArray arrayWithObjects:@"California",@"Miami", @"Seattle",@"New York", @"Chicago",@"Atlanta",  nil];
+        self.citiesArray = [NSArray arrayWithObjects:@"California",@"Florida", @"Washington",@"New York", @"Illinois",@"Georgia",  nil];
         imageView.image = [UIImage imageNamed:[self.welcomePhotos objectAtIndex:0]];
         [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(transitionPhotos) userInfo:nil repeats:YES];
         [citiesLable sizeToFit];

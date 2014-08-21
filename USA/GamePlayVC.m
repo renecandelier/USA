@@ -28,8 +28,6 @@
     UIButton * capitalGame;
     
     UIButton * topScores;
-
-
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,7 +49,6 @@
          ];
         backButton.layer.cornerRadius = 40.0/2.0;
         
-        
         UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
         
         [self.view addSubview:headerView];
@@ -67,8 +64,6 @@
         
         [headerView addSubview:letsPlayLable];
         [self.view addSubview:backButton];
-        
-        
         
         //--------------------------------Main Content
         //------States Game Button

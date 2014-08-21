@@ -22,7 +22,6 @@
 		8A67038719944771000037DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A67038519944771000037DF /* InfoPlist.strings */; };
 		8A67038919944771000037DF /* USATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A67038819944771000037DF /* USATests.m */; };
 		8A670395199447C3000037DF /* USAimagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A670394199447C3000037DF /* USAimagesViewController.m */; };
-		8AA7321F199D14C200E2B83E /* California.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7321E199D14C200E2B83E /* California.jpg */; };
 		8AA73223199D339F00E2B83E /* Washington.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73222199D339F00E2B83E /* Washington.jpg */; };
 		8AA73225199D376000E2B83E /* New York.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73224199D376000E2B83E /* New York.jpg */; };
 		8AA73227199D392400E2B83E /* Florida.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73226199D392400E2B83E /* Florida.jpg */; };
@@ -40,6 +39,10 @@
 		8AA7328A199E3C1A00E2B83E /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73289199E3C1A00E2B83E /* close.png */; };
 		8AA7328F199E484E00E2B83E /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7328E199E484E00E2B83E /* play.png */; };
 		8AA73291199E48FD00E2B83E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73290199E48FD00E2B83E /* settings.png */; };
+		8AE0225719A41A71003BD003 /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225619A41A71003BD003 /* swipe_button.png */; };
+		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
+		8AE0225B19A4D40E003BD003 /* select2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225A19A4D40E003BD003 /* select2.png */; };
+		8AE0225D19A4DAA3003BD003 /* select3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225C19A4DAA3003BD003 /* select3.png */; };
 		8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1F8199EDEE40058F64E /* searchButton.png */; };
 		8AFAD1FC199EE2AB0058F64E /* USAViewStateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */; };
 		8AFAD1FE199EEC0E0058F64E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FD199EEC0E0058F64E /* back.png */; };
@@ -61,6 +64,7 @@
 		8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */; };
 		8AFAD24619A12FA10058F64E /* GamePlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD24519A12FA10058F64E /* GamePlayVC.m */; };
 		8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD24819A1409F0058F64E /* StatesGameVC.m */; };
+		8AFAD24B19A231A10058F64E /* California.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD24A19A231A10058F64E /* California.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +98,6 @@
 		8A67038819944771000037DF /* USATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USATests.m; sourceTree = "<group>"; };
 		8A670393199447C3000037DF /* USAimagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAimagesViewController.h; sourceTree = "<group>"; };
 		8A670394199447C3000037DF /* USAimagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAimagesViewController.m; sourceTree = "<group>"; };
-		8AA7321E199D14C200E2B83E /* California.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = California.jpg; path = ../../../Desktop/California.jpg; sourceTree = "<group>"; };
 		8AA73222199D339F00E2B83E /* Washington.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Washington.jpg; sourceTree = "<group>"; };
 		8AA73224199D376000E2B83E /* New York.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New York.jpg"; sourceTree = "<group>"; };
 		8AA73226199D392400E2B83E /* Florida.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Florida.jpg; sourceTree = "<group>"; };
@@ -116,6 +119,10 @@
 		8AA73289199E3C1A00E2B83E /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		8AA7328E199E484E00E2B83E /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		8AA73290199E48FD00E2B83E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		8AE0225619A41A71003BD003 /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
+		8AE0225819A4D07A003BD003 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		8AE0225A19A4D40E003BD003 /* select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select2.png; sourceTree = "<group>"; };
+		8AE0225C19A4DAA3003BD003 /* select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select3.png; sourceTree = "<group>"; };
 		8AFAD1F8199EDEE40058F64E /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
 		8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewStateVC.h; sourceTree = "<group>"; };
 		8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAViewStateVC.m; sourceTree = "<group>"; };
@@ -148,6 +155,7 @@
 		8AFAD24519A12FA10058F64E /* GamePlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayVC.m; sourceTree = "<group>"; };
 		8AFAD24719A1409F0058F64E /* StatesGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesGameVC.h; sourceTree = "<group>"; };
 		8AFAD24819A1409F0058F64E /* StatesGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesGameVC.m; sourceTree = "<group>"; };
+		8AFAD24A19A231A10058F64E /* California.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = California.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,10 @@
 		8A67035719944771000037DF = {
 			isa = PBXGroup;
 			children = (
+				8AE0225619A41A71003BD003 /* swipe_button.png */,
+				8AE0225819A4D07A003BD003 /* select.png */,
+				8AE0225A19A4D40E003BD003 /* select2.png */,
+				8AE0225C19A4DAA3003BD003 /* select3.png */,
 				8A6703921994477E000037DF /* Controllers */,
 				8AFAD227199FE0830058F64E /* Extras */,
 			);
@@ -283,7 +295,7 @@
 				8AA73222199D339F00E2B83E /* Washington.jpg */,
 				8AA73228199D39B100E2B83E /* Illinois.jpg */,
 				8AA7326B199D415C00E2B83E /* Georgia.jpg */,
-				8AA7321E199D14C200E2B83E /* California.jpg */,
+				8AFAD24A19A231A10058F64E /* California.jpg */,
 				8AA73226199D392400E2B83E /* Florida.jpg */,
 			);
 			name = "City Pictures";
@@ -464,28 +476,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA7321F199D14C200E2B83E /* California.jpg in Resources */,
 				8AA7328F199E484E00E2B83E /* play.png in Resources */,
 				8A354B16199E4AF900A30CE0 /* learn.png in Resources */,
 				8AFAD23B19A045980058F64E /* ViewController_iPhone.xib in Resources */,
 				8AA73291199E48FD00E2B83E /* settings.png in Resources */,
+				8AFAD24B19A231A10058F64E /* California.jpg in Resources */,
 				8AFAD21E199FA75B0058F64E /* USA States.plist in Resources */,
 				8AA7328A199E3C1A00E2B83E /* close.png in Resources */,
 				8AA73286199DB6CD00E2B83E /* search.png in Resources */,
 				8AA73270199D988B00E2B83E /* Data.png in Resources */,
 				8AFAD23219A03F430058F64E /* stately.ttf in Resources */,
 				8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */,
+				8AE0225D19A4DAA3003BD003 /* select3.png in Resources */,
 				8AA73283199D9AE900E2B83E /* SampleSheetViewController.xib in Resources */,
 				8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */,
 				8AA7326C199D415C00E2B83E /* Georgia.jpg in Resources */,
+				8AE0225919A4D07A003BD003 /* select.png in Resources */,
 				8AA73225199D376000E2B83E /* New York.jpg in Resources */,
 				8AA73272199D98C800E2B83E /* Row.png in Resources */,
 				8AA73223199D339F00E2B83E /* Washington.jpg in Resources */,
 				8AA73227199D392400E2B83E /* Florida.jpg in Resources */,
 				8AA73288199DBC7900E2B83E /* rate.png in Resources */,
+				8AE0225B19A4D40E003BD003 /* select2.png in Resources */,
 				8AFAD1FE199EEC0E0058F64E /* back.png in Resources */,
 				8A67036E19944771000037DF /* InfoPlist.strings in Resources */,
 				8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */,
+				8AE0225719A41A71003BD003 /* swipe_button.png in Resources */,
 				8A67037619944771000037DF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
