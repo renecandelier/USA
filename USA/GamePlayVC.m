@@ -100,7 +100,7 @@
         capitalGame.layer.cornerRadius = 5;
         
         
-        [capitalGame addTarget:self action:@selector(statesGamePlay) forControlEvents:UIControlEventTouchUpInside
+        [capitalGame addTarget:self action:@selector(capitalGamePlay) forControlEvents:UIControlEventTouchUpInside
          ];
         
         
@@ -178,8 +178,18 @@
     return self;
 }
 
+-(void) capitalGamePlay{
+    StatesGameVC *stateGameViewController = [[StatesGameVC alloc] init];
+    
+    stateGameViewController.kindOfGame = @"CapitalGame";
+    [self presentViewController:stateGameViewController animated:YES completion:nil];
+}
+
+
 -(void) statesGamePlay{
     StatesGameVC *stateGameViewController = [[StatesGameVC alloc] init];
+    stateGameViewController.kindOfGame = @"StateGame";
+
     [self presentViewController:stateGameViewController animated:YES completion:nil];
 }
 

@@ -9,6 +9,28 @@
 /* Begin PBXBuildFile section */
 		8A354B16199E4AF900A30CE0 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A354B15199E4AF900A30CE0 /* learn.png */; };
 		8A354B19199EC23500A30CE0 /* USATBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A354B18199EC23500A30CE0 /* USATBV.m */; };
+		8A5BB2D719AA590B00B0ABB3 /* Massachusetts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2D419AA590B00B0ABB3 /* Massachusetts.jpg */; };
+		8A5BB2D819AA590B00B0ABB3 /* Arizona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2D519AA590B00B0ABB3 /* Arizona.jpg */; };
+		8A5BB2D919AA590B00B0ABB3 /* New York City.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2D619AA590B00B0ABB3 /* New York City.jpg */; };
+		8A5BB2DB19AA9EFE00B0ABB3 /* North Carolina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2DA19AA9EFE00B0ABB3 /* North Carolina.jpg */; };
+		8A5BB2DD19AAA01500B0ABB3 /* Hawaii.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2DC19AAA01500B0ABB3 /* Hawaii.jpg */; };
+		8A5BB2DF19AAA05F00B0ABB3 /* Wyoming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2DE19AAA05F00B0ABB3 /* Wyoming.jpg */; };
+		8A5BB2E119AAA1DD00B0ABB3 /* Kentucky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2E019AAA1DD00B0ABB3 /* Kentucky.jpg */; };
+		8A5BB2E319AAD5B900B0ABB3 /* Colorado.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2E219AAD5B900B0ABB3 /* Colorado.jpg */; };
+		8A5BB2E519AAD62700B0ABB3 /* Alabama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2E419AAD62700B0ABB3 /* Alabama.jpg */; };
+		8A5BB2E719AAD66C00B0ABB3 /* Alaska.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2E619AAD66C00B0ABB3 /* Alaska.jpg */; };
+		8A5BB2E919AAD6C200B0ABB3 /* Tennessee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2E819AAD6C200B0ABB3 /* Tennessee.jpg */; };
+		8A5BB2EB19AAD70E00B0ABB3 /* Texas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2EA19AAD70E00B0ABB3 /* Texas.jpg */; };
+		8A5BB2ED19AAD7C400B0ABB3 /* North Dakota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2EC19AAD7C400B0ABB3 /* North Dakota.jpg */; };
+		8A5BB2EF19AAD80800B0ABB3 /* South Dakota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2EE19AAD80800B0ABB3 /* South Dakota.jpg */; };
+		8A5BB2F119AAD85500B0ABB3 /* Montana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F019AAD85500B0ABB3 /* Montana.jpg */; };
+		8A5BB2F319AAD87A00B0ABB3 /* Ohio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F219AAD87A00B0ABB3 /* Ohio.jpg */; };
+		8A5BB2F519AADB1300B0ABB3 /* Oregon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F419AADB1300B0ABB3 /* Oregon.jpg */; };
+		8A5BB2F719AADBFC00B0ABB3 /* Pennsylvania.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F619AADBFC00B0ABB3 /* Pennsylvania.jpg */; };
+		8A5BB2F919AADC3A00B0ABB3 /* Mississippi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F819AADC3A00B0ABB3 /* Mississippi.jpg */; };
+		8A5BB2FB19AADD6600B0ABB3 /* Michigan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2FA19AADD6600B0ABB3 /* Michigan.jpg */; };
+		8A5BB2FD19AADE1700B0ABB3 /* Oklahoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2FC19AADE1700B0ABB3 /* Oklahoma.jpg */; };
+		8A5BB2FF19AADE9C00B0ABB3 /* Utah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2FE19AADE9C00B0ABB3 /* Utah.jpg */; };
 		8A67036419944771000037DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A67036319944771000037DF /* Foundation.framework */; };
 		8A67036619944771000037DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A67036519944771000037DF /* CoreGraphics.framework */; };
 		8A67036819944771000037DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A67036719944771000037DF /* UIKit.framework */; };
@@ -39,6 +61,7 @@
 		8AA7328A199E3C1A00E2B83E /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73289199E3C1A00E2B83E /* close.png */; };
 		8AA7328F199E484E00E2B83E /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7328E199E484E00E2B83E /* play.png */; };
 		8AA73291199E48FD00E2B83E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73290199E48FD00E2B83E /* settings.png */; };
+		8AAE965319A7661A009090AA /* ScoreSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE965219A7661A009090AA /* ScoreSummary.m */; };
 		8AE0225719A41A71003BD003 /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225619A41A71003BD003 /* swipe_button.png */; };
 		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
 		8AE0225B19A4D40E003BD003 /* select2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225A19A4D40E003BD003 /* select2.png */; };
@@ -81,6 +104,28 @@
 		8A354B15199E4AF900A30CE0 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		8A354B17199EC23500A30CE0 /* USATBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATBV.h; sourceTree = "<group>"; };
 		8A354B18199EC23500A30CE0 /* USATBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATBV.m; sourceTree = "<group>"; };
+		8A5BB2D419AA590B00B0ABB3 /* Massachusetts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Massachusetts.jpg; sourceTree = "<group>"; };
+		8A5BB2D519AA590B00B0ABB3 /* Arizona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arizona.jpg; sourceTree = "<group>"; };
+		8A5BB2D619AA590B00B0ABB3 /* New York City.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New York City.jpg"; sourceTree = "<group>"; };
+		8A5BB2DA19AA9EFE00B0ABB3 /* North Carolina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "North Carolina.jpg"; sourceTree = "<group>"; };
+		8A5BB2DC19AAA01500B0ABB3 /* Hawaii.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hawaii.jpg; sourceTree = "<group>"; };
+		8A5BB2DE19AAA05F00B0ABB3 /* Wyoming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wyoming.jpg; sourceTree = "<group>"; };
+		8A5BB2E019AAA1DD00B0ABB3 /* Kentucky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kentucky.jpg; sourceTree = "<group>"; };
+		8A5BB2E219AAD5B900B0ABB3 /* Colorado.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Colorado.jpg; sourceTree = "<group>"; };
+		8A5BB2E419AAD62700B0ABB3 /* Alabama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alabama.jpg; sourceTree = "<group>"; };
+		8A5BB2E619AAD66C00B0ABB3 /* Alaska.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alaska.jpg; sourceTree = "<group>"; };
+		8A5BB2E819AAD6C200B0ABB3 /* Tennessee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tennessee.jpg; sourceTree = "<group>"; };
+		8A5BB2EA19AAD70E00B0ABB3 /* Texas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Texas.jpg; sourceTree = "<group>"; };
+		8A5BB2EC19AAD7C400B0ABB3 /* North Dakota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "North Dakota.jpg"; sourceTree = "<group>"; };
+		8A5BB2EE19AAD80800B0ABB3 /* South Dakota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "South Dakota.jpg"; sourceTree = "<group>"; };
+		8A5BB2F019AAD85500B0ABB3 /* Montana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Montana.jpg; sourceTree = "<group>"; };
+		8A5BB2F219AAD87A00B0ABB3 /* Ohio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ohio.jpg; sourceTree = "<group>"; };
+		8A5BB2F419AADB1300B0ABB3 /* Oregon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Oregon.jpg; sourceTree = "<group>"; };
+		8A5BB2F619AADBFC00B0ABB3 /* Pennsylvania.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pennsylvania.jpg; sourceTree = "<group>"; };
+		8A5BB2F819AADC3A00B0ABB3 /* Mississippi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mississippi.jpg; sourceTree = "<group>"; };
+		8A5BB2FA19AADD6600B0ABB3 /* Michigan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Michigan.jpg; sourceTree = "<group>"; };
+		8A5BB2FC19AADE1700B0ABB3 /* Oklahoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Oklahoma.jpg; sourceTree = "<group>"; };
+		8A5BB2FE19AADE9C00B0ABB3 /* Utah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Utah.jpg; sourceTree = "<group>"; };
 		8A67036019944771000037DF /* USA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A67036319944771000037DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A67036519944771000037DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +164,8 @@
 		8AA73289199E3C1A00E2B83E /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		8AA7328E199E484E00E2B83E /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		8AA73290199E48FD00E2B83E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		8AAE965119A7661A009090AA /* ScoreSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreSummary.h; sourceTree = "<group>"; };
+		8AAE965219A7661A009090AA /* ScoreSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreSummary.m; sourceTree = "<group>"; };
 		8AE0225619A41A71003BD003 /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
 		8AE0225819A4D07A003BD003 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		8AE0225A19A4D40E003BD003 /* select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select2.png; sourceTree = "<group>"; };
@@ -183,6 +230,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A5BB2D119AA312B00B0ABB3 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				8A354B17199EC23500A30CE0 /* USATBV.h */,
+				8A354B18199EC23500A30CE0 /* USATBV.m */,
+				8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */,
+				8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */,
+				8AFAD228199FF5FC0058F64E /* MoreInfoWebVC.h */,
+				8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */,
+			);
+			name = Learn;
+			sourceTree = "<group>";
+		};
+		8A5BB2D219AA315D00B0ABB3 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD24419A12FA00058F64E /* GamePlayVC.h */,
+				8AFAD24519A12FA10058F64E /* GamePlayVC.m */,
+				8AFAD24719A1409F0058F64E /* StatesGameVC.h */,
+				8AFAD24819A1409F0058F64E /* StatesGameVC.m */,
+				8AAE965119A7661A009090AA /* ScoreSummary.h */,
+				8AAE965219A7661A009090AA /* ScoreSummary.m */,
+			);
+			name = Play;
+			sourceTree = "<group>";
+		};
+		8A5BB2D319AA318800B0ABB3 /* MENU */ = {
+			isa = PBXGroup;
+			children = (
+				8A670393199447C3000037DF /* USAimagesViewController.h */,
+				8A670394199447C3000037DF /* USAimagesViewController.m */,
+			);
+			name = MENU;
+			sourceTree = "<group>";
+		};
 		8A67035719944771000037DF = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +272,7 @@
 				8AE0225819A4D07A003BD003 /* select.png */,
 				8AE0225A19A4D40E003BD003 /* select2.png */,
 				8AE0225C19A4DAA3003BD003 /* select3.png */,
+				8A5BB2D619AA590B00B0ABB3 /* New York City.jpg */,
 				8A6703921994477E000037DF /* Controllers */,
 				8AFAD227199FE0830058F64E /* Extras */,
 			);
@@ -258,18 +341,9 @@
 		8A6703921994477E000037DF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8A670393199447C3000037DF /* USAimagesViewController.h */,
-				8A670394199447C3000037DF /* USAimagesViewController.m */,
-				8AFAD24419A12FA00058F64E /* GamePlayVC.h */,
-				8AFAD24519A12FA10058F64E /* GamePlayVC.m */,
-				8AFAD24719A1409F0058F64E /* StatesGameVC.h */,
-				8AFAD24819A1409F0058F64E /* StatesGameVC.m */,
-				8A354B17199EC23500A30CE0 /* USATBV.h */,
-				8A354B18199EC23500A30CE0 /* USATBV.m */,
-				8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */,
-				8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */,
-				8AFAD228199FF5FC0058F64E /* MoreInfoWebVC.h */,
-				8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */,
+				8A5BB2D219AA315D00B0ABB3 /* Play */,
+				8A5BB2D119AA312B00B0ABB3 /* Learn */,
+				8A5BB2D319AA318800B0ABB3 /* MENU */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,9 +365,30 @@
 		8AA73284199D9AFB00E2B83E /* City Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				8A5BB2FE19AADE9C00B0ABB3 /* Utah.jpg */,
+				8A5BB2F819AADC3A00B0ABB3 /* Mississippi.jpg */,
+				8A5BB2FA19AADD6600B0ABB3 /* Michigan.jpg */,
+				8A5BB2F619AADBFC00B0ABB3 /* Pennsylvania.jpg */,
+				8A5BB2F419AADB1300B0ABB3 /* Oregon.jpg */,
+				8A5BB2EA19AAD70E00B0ABB3 /* Texas.jpg */,
+				8A5BB2FC19AADE1700B0ABB3 /* Oklahoma.jpg */,
+				8A5BB2EE19AAD80800B0ABB3 /* South Dakota.jpg */,
+				8A5BB2E619AAD66C00B0ABB3 /* Alaska.jpg */,
+				8A5BB2E819AAD6C200B0ABB3 /* Tennessee.jpg */,
+				8A5BB2F019AAD85500B0ABB3 /* Montana.jpg */,
+				8A5BB2E419AAD62700B0ABB3 /* Alabama.jpg */,
+				8A5BB2EC19AAD7C400B0ABB3 /* North Dakota.jpg */,
+				8A5BB2E219AAD5B900B0ABB3 /* Colorado.jpg */,
+				8A5BB2E019AAA1DD00B0ABB3 /* Kentucky.jpg */,
+				8A5BB2DE19AAA05F00B0ABB3 /* Wyoming.jpg */,
+				8A5BB2DC19AAA01500B0ABB3 /* Hawaii.jpg */,
+				8A5BB2DA19AA9EFE00B0ABB3 /* North Carolina.jpg */,
+				8A5BB2D419AA590B00B0ABB3 /* Massachusetts.jpg */,
+				8A5BB2D519AA590B00B0ABB3 /* Arizona.jpg */,
 				8AA73224199D376000E2B83E /* New York.jpg */,
 				8AA73222199D339F00E2B83E /* Washington.jpg */,
 				8AA73228199D39B100E2B83E /* Illinois.jpg */,
+				8A5BB2F219AAD87A00B0ABB3 /* Ohio.jpg */,
 				8AA7326B199D415C00E2B83E /* Georgia.jpg */,
 				8AFAD24A19A231A10058F64E /* California.jpg */,
 				8AA73226199D392400E2B83E /* Florida.jpg */,
@@ -476,33 +571,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5BB2EB19AAD70E00B0ABB3 /* Texas.jpg in Resources */,
 				8AA7328F199E484E00E2B83E /* play.png in Resources */,
 				8A354B16199E4AF900A30CE0 /* learn.png in Resources */,
 				8AFAD23B19A045980058F64E /* ViewController_iPhone.xib in Resources */,
+				8A5BB2E719AAD66C00B0ABB3 /* Alaska.jpg in Resources */,
 				8AA73291199E48FD00E2B83E /* settings.png in Resources */,
+				8A5BB2ED19AAD7C400B0ABB3 /* North Dakota.jpg in Resources */,
+				8A5BB2FB19AADD6600B0ABB3 /* Michigan.jpg in Resources */,
+				8A5BB2F719AADBFC00B0ABB3 /* Pennsylvania.jpg in Resources */,
 				8AFAD24B19A231A10058F64E /* California.jpg in Resources */,
+				8A5BB2F119AAD85500B0ABB3 /* Montana.jpg in Resources */,
+				8A5BB2E519AAD62700B0ABB3 /* Alabama.jpg in Resources */,
 				8AFAD21E199FA75B0058F64E /* USA States.plist in Resources */,
 				8AA7328A199E3C1A00E2B83E /* close.png in Resources */,
 				8AA73286199DB6CD00E2B83E /* search.png in Resources */,
 				8AA73270199D988B00E2B83E /* Data.png in Resources */,
 				8AFAD23219A03F430058F64E /* stately.ttf in Resources */,
+				8A5BB2F519AADB1300B0ABB3 /* Oregon.jpg in Resources */,
 				8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */,
 				8AE0225D19A4DAA3003BD003 /* select3.png in Resources */,
+				8A5BB2DD19AAA01500B0ABB3 /* Hawaii.jpg in Resources */,
 				8AA73283199D9AE900E2B83E /* SampleSheetViewController.xib in Resources */,
 				8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */,
+				8A5BB2E319AAD5B900B0ABB3 /* Colorado.jpg in Resources */,
+				8A5BB2D719AA590B00B0ABB3 /* Massachusetts.jpg in Resources */,
 				8AA7326C199D415C00E2B83E /* Georgia.jpg in Resources */,
 				8AE0225919A4D07A003BD003 /* select.png in Resources */,
 				8AA73225199D376000E2B83E /* New York.jpg in Resources */,
 				8AA73272199D98C800E2B83E /* Row.png in Resources */,
 				8AA73223199D339F00E2B83E /* Washington.jpg in Resources */,
+				8A5BB2FF19AADE9C00B0ABB3 /* Utah.jpg in Resources */,
+				8A5BB2F319AAD87A00B0ABB3 /* Ohio.jpg in Resources */,
 				8AA73227199D392400E2B83E /* Florida.jpg in Resources */,
 				8AA73288199DBC7900E2B83E /* rate.png in Resources */,
+				8A5BB2DB19AA9EFE00B0ABB3 /* North Carolina.jpg in Resources */,
 				8AE0225B19A4D40E003BD003 /* select2.png in Resources */,
+				8A5BB2E119AAA1DD00B0ABB3 /* Kentucky.jpg in Resources */,
 				8AFAD1FE199EEC0E0058F64E /* back.png in Resources */,
 				8A67036E19944771000037DF /* InfoPlist.strings in Resources */,
+				8A5BB2EF19AAD80800B0ABB3 /* South Dakota.jpg in Resources */,
+				8A5BB2FD19AADE1700B0ABB3 /* Oklahoma.jpg in Resources */,
+				8A5BB2D819AA590B00B0ABB3 /* Arizona.jpg in Resources */,
+				8A5BB2F919AADC3A00B0ABB3 /* Mississippi.jpg in Resources */,
+				8A5BB2D919AA590B00B0ABB3 /* New York City.jpg in Resources */,
 				8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */,
+				8A5BB2DF19AAA05F00B0ABB3 /* Wyoming.jpg in Resources */,
 				8AE0225719A41A71003BD003 /* swipe_button.png in Resources */,
 				8A67037619944771000037DF /* Images.xcassets in Resources */,
+				8A5BB2E919AAD6C200B0ABB3 /* Tennessee.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AAE965319A7661A009090AA /* ScoreSummary.m in Sources */,
 				8AFAD23319A03F430058F64E /* USStatesColorMap.m in Sources */,
 				8AFAD225199FCA120058F64E /* MDCParallaxView.m in Sources */,
 				8AFAD222199FC9C00058F64E /* ImageViewController.m in Sources */,

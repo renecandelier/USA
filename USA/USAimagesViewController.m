@@ -12,6 +12,11 @@
 #import "USATBV.h"
 #import "USAViewStateVC.h"
 
+//Get Random States
+#import "StateClass.h"
+#import "DataStore.h"
+#import "NSArray+RandomSort.h"
+
 
 @interface USAimagesViewController (){
 
@@ -21,6 +26,15 @@
     UIImageView * imageView;
     
     UILabel * citiesLable;
+    
+    //Class to get the array
+    StateClass *currentState;
+    
+    //Array for random states
+    NSArray*  randomStatesArray;
+    
+
+    
 }
 
 @end
@@ -32,6 +46,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
        
         
         // Custom initialization
@@ -59,29 +74,23 @@
         imageView.backgroundColor = [UIColor blackColor];
         [self.view addSubview:imageView];
         //Photo Array
-        self.welcomePhotos = [NSArray arrayWithObjects:@"Cali.jpg",@"mia.jpg", @"seattle.jpg",@"nyc.jpg", @"chicago.jpg",@"atl.jpg",  nil];
-        
-        
-        self.citiesArray = [NSArray arrayWithObjects:@"California",@"Florida", @"Washington",@"New York", @"Illinois",@"Georgia",  nil];
+      
         imageView.image = [UIImage imageNamed:[self.welcomePhotos objectAtIndex:0]];
+        
+        [self transitionPhotos];
         [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(transitionPhotos) userInfo:nil repeats:YES];
         [citiesLable sizeToFit];
 
-        citiesLable= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-75, SCREEN_HEIGHT- 70, 150, 80)];
-       // [citiesLable setCenter:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT- 120)];
+        citiesLable= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT- 70, 200, 80)];
         [citiesLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
         
         citiesLable.textColor = [UIColor whiteColor];
         citiesLable.textAlignment = NSTextAlignmentCenter;
-        citiesLable.text = self.citiesArray [photoCount];
-
+        citiesLable.text = currentState.Statename;
         
         [self.view addSubview:menuButton];
         [self.view addSubview:citiesLable];
         [self.view addSubview:searchButton];
-        
-        
-        
 
     }
     return self;
@@ -95,21 +104,25 @@
 
 -(void)transitionPhotos{
     
-    if (photoCount < [self.welcomePhotos count] - 1){
+    if (photoCount < [randomStatesArray count] - 1){
         photoCount ++;
     }else{
         photoCount = 0;
     }
     
-    
+    //Get the current
+    currentState = randomStatesArray[photoCount];
+
     [UIView transitionWithView:imageView
                       duration:2.0
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                         
-                        citiesLable.text = self.citiesArray [photoCount];
-                        
-                        imageView.image = [UIImage imageNamed:[self.welcomePhotos objectAtIndex:photoCount]]; }
+                        //citiesLable.text = self.citiesArray [photoCount];
+                        citiesLable.text = currentState.Statename;
+                        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",citiesLable.text]]; }
+     
+     
                     completion:NULL];
 }
 

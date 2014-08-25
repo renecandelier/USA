@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StatesGameVC : UIViewController
-
+@property (nonatomic) NSString * kindOfGame;
 
 @end
