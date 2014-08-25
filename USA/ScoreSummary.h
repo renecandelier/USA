@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ScoreSummary : UIViewController
-@property (nonatomic) int score;
+@property (nonatomic) NSString * score;
 @end

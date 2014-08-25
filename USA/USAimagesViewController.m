@@ -87,7 +87,7 @@
         citiesLable.textColor = [UIColor whiteColor];
         citiesLable.textAlignment = NSTextAlignmentCenter;
         citiesLable.text = currentState.Statename;
-        
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",citiesLable.text]];
         [self.view addSubview:menuButton];
         [self.view addSubview:citiesLable];
         [self.view addSubview:searchButton];

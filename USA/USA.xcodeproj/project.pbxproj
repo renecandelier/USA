@@ -28,9 +28,9 @@
 		8A5BB2F519AADB1300B0ABB3 /* Oregon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F419AADB1300B0ABB3 /* Oregon.jpg */; };
 		8A5BB2F719AADBFC00B0ABB3 /* Pennsylvania.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F619AADBFC00B0ABB3 /* Pennsylvania.jpg */; };
 		8A5BB2F919AADC3A00B0ABB3 /* Mississippi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2F819AADC3A00B0ABB3 /* Mississippi.jpg */; };
-		8A5BB2FB19AADD6600B0ABB3 /* Michigan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2FA19AADD6600B0ABB3 /* Michigan.jpg */; };
 		8A5BB2FD19AADE1700B0ABB3 /* Oklahoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2FC19AADE1700B0ABB3 /* Oklahoma.jpg */; };
 		8A5BB2FF19AADE9C00B0ABB3 /* Utah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5BB2FE19AADE9C00B0ABB3 /* Utah.jpg */; };
+		8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5BB30119AB60D000B0ABB3 /* CapitalGame.m */; };
 		8A67036419944771000037DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A67036319944771000037DF /* Foundation.framework */; };
 		8A67036619944771000037DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A67036519944771000037DF /* CoreGraphics.framework */; };
 		8A67036819944771000037DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A67036719944771000037DF /* UIKit.framework */; };
@@ -44,6 +44,7 @@
 		8A67038719944771000037DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A67038519944771000037DF /* InfoPlist.strings */; };
 		8A67038919944771000037DF /* USATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A67038819944771000037DF /* USATests.m */; };
 		8A670395199447C3000037DF /* USAimagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A670394199447C3000037DF /* USAimagesViewController.m */; };
+		8A7E21CA19AB793E001C16F9 /* Michigan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A7E21C919AB793E001C16F9 /* Michigan.jpg */; };
 		8AA73223199D339F00E2B83E /* Washington.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73222199D339F00E2B83E /* Washington.jpg */; };
 		8AA73225199D376000E2B83E /* New York.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73224199D376000E2B83E /* New York.jpg */; };
 		8AA73227199D392400E2B83E /* Florida.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73226199D392400E2B83E /* Florida.jpg */; };
@@ -123,9 +124,10 @@
 		8A5BB2F419AADB1300B0ABB3 /* Oregon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Oregon.jpg; sourceTree = "<group>"; };
 		8A5BB2F619AADBFC00B0ABB3 /* Pennsylvania.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pennsylvania.jpg; sourceTree = "<group>"; };
 		8A5BB2F819AADC3A00B0ABB3 /* Mississippi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mississippi.jpg; sourceTree = "<group>"; };
-		8A5BB2FA19AADD6600B0ABB3 /* Michigan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Michigan.jpg; sourceTree = "<group>"; };
 		8A5BB2FC19AADE1700B0ABB3 /* Oklahoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Oklahoma.jpg; sourceTree = "<group>"; };
 		8A5BB2FE19AADE9C00B0ABB3 /* Utah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Utah.jpg; sourceTree = "<group>"; };
+		8A5BB30019AB60D000B0ABB3 /* CapitalGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapitalGame.h; sourceTree = "<group>"; };
+		8A5BB30119AB60D000B0ABB3 /* CapitalGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapitalGame.m; sourceTree = "<group>"; };
 		8A67036019944771000037DF /* USA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A67036319944771000037DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A67036519944771000037DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +145,7 @@
 		8A67038819944771000037DF /* USATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USATests.m; sourceTree = "<group>"; };
 		8A670393199447C3000037DF /* USAimagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAimagesViewController.h; sourceTree = "<group>"; };
 		8A670394199447C3000037DF /* USAimagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAimagesViewController.m; sourceTree = "<group>"; };
+		8A7E21C919AB793E001C16F9 /* Michigan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Michigan.jpg; sourceTree = "<group>"; };
 		8AA73222199D339F00E2B83E /* Washington.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Washington.jpg; sourceTree = "<group>"; };
 		8AA73224199D376000E2B83E /* New York.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New York.jpg"; sourceTree = "<group>"; };
 		8AA73226199D392400E2B83E /* Florida.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Florida.jpg; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				8AFAD24519A12FA10058F64E /* GamePlayVC.m */,
 				8AFAD24719A1409F0058F64E /* StatesGameVC.h */,
 				8AFAD24819A1409F0058F64E /* StatesGameVC.m */,
+				8A5BB30019AB60D000B0ABB3 /* CapitalGame.h */,
+				8A5BB30119AB60D000B0ABB3 /* CapitalGame.m */,
 				8AAE965119A7661A009090AA /* ScoreSummary.h */,
 				8AAE965219A7661A009090AA /* ScoreSummary.m */,
 			);
@@ -366,8 +371,8 @@
 			isa = PBXGroup;
 			children = (
 				8A5BB2FE19AADE9C00B0ABB3 /* Utah.jpg */,
+				8A7E21C919AB793E001C16F9 /* Michigan.jpg */,
 				8A5BB2F819AADC3A00B0ABB3 /* Mississippi.jpg */,
-				8A5BB2FA19AADD6600B0ABB3 /* Michigan.jpg */,
 				8A5BB2F619AADBFC00B0ABB3 /* Pennsylvania.jpg */,
 				8A5BB2F419AADB1300B0ABB3 /* Oregon.jpg */,
 				8A5BB2EA19AAD70E00B0ABB3 /* Texas.jpg */,
@@ -578,7 +583,6 @@
 				8A5BB2E719AAD66C00B0ABB3 /* Alaska.jpg in Resources */,
 				8AA73291199E48FD00E2B83E /* settings.png in Resources */,
 				8A5BB2ED19AAD7C400B0ABB3 /* North Dakota.jpg in Resources */,
-				8A5BB2FB19AADD6600B0ABB3 /* Michigan.jpg in Resources */,
 				8A5BB2F719AADBFC00B0ABB3 /* Pennsylvania.jpg in Resources */,
 				8AFAD24B19A231A10058F64E /* California.jpg in Resources */,
 				8A5BB2F119AAD85500B0ABB3 /* Montana.jpg in Resources */,
@@ -617,6 +621,7 @@
 				8A5BB2D919AA590B00B0ABB3 /* New York City.jpg in Resources */,
 				8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */,
 				8A5BB2DF19AAA05F00B0ABB3 /* Wyoming.jpg in Resources */,
+				8A7E21CA19AB793E001C16F9 /* Michigan.jpg in Resources */,
 				8AE0225719A41A71003BD003 /* swipe_button.png in Resources */,
 				8A67037619944771000037DF /* Images.xcassets in Resources */,
 				8A5BB2E919AAD6C200B0ABB3 /* Tennessee.jpg in Resources */,
@@ -646,6 +651,7 @@
 				8AFAD217199F18130058F64E /* DataStore.m in Sources */,
 				8AFAD218199F18130058F64E /* StateClass.h in Sources */,
 				8AFAD219199F18130058F64E /* StateClass.m in Sources */,
+				8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
 				8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */,
 				8AFAD23919A045980058F64E /* ViewController.m in Sources */,

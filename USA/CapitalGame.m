@@ -1,24 +1,22 @@
 //
-//  StatesGameVC.m
+//  CapitalGame.m
 //  USA
 //
-//  Created by Rene Candelier on 8/17/14.
+//  Created by Rene Candelier on 8/25/14.
 //  Copyright (c) 2014 Novus Mobile. All rights reserved.
 //
 
-#import "StatesGameVC.h"
+#import "CapitalGame.h"
 #import "StateClass.h"
 #import "DataStore.h"
 #import "NSArray+RandomSort.h"
 #import "ScoreSummary.h"
-
-@interface StatesGameVC ()
+@interface CapitalGame ()
 @property NSMutableArray *stateArray;
-
 
 @end
 
-@implementation StatesGameVC{
+@implementation CapitalGame{
     
     //TOP ITEMS
     UIButton * backButton;
@@ -33,7 +31,7 @@
     UILabel * lableforAnswerB;
     UILabel * lableforAnswerC;
     UILabel * lableforAnswerD;
-  
+    
     //Score Label
     UILabel * scoreLabel;
     
@@ -63,10 +61,10 @@
     //Right Answer
     
     NSString * rightAnswer;
-   
+    
     
     int currentQuestion;
-
+    
     //Array for random states
     NSArray*  randomStatesArray;
     
@@ -77,14 +75,17 @@
     StateClass *currentState;
     
     
- 
+    
+    NSString * capital;
+    
+    NSString * state;
 }
 
 
 -(void)viewDidLoad{
     
     [super viewDidLoad];
-
+    
 }
 
 
@@ -95,10 +96,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
+        
         score=0;
         
-        
+        self.view.backgroundColor = [UIColor whiteColor];
+
         
         
         randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
@@ -111,13 +113,13 @@
         
         
         //Getting the array
-
+        
         //--------------------------------TOP CONTENT
         
         
         
-       
-   
+        
+        
         //Adding the Swipe view
         
         swipeImageView =[[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30,150,60,60)];
@@ -131,7 +133,7 @@
         
         UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
         headerView.backgroundColor = [UIColor darkGrayColor];
-       // headerView = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
+        //headerView = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
         [self.view addSubview:headerView];
         
         // Add top label for Title
@@ -140,9 +142,8 @@
         [headerLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
         headerLabel.textColor = [UIColor whiteColor];
         headerLabel.textAlignment = NSTextAlignmentCenter;
-        headerLabel.text = @"States";
+        headerLabel.text = @"Capitals";
         [self.view addSubview:headerLabel];
-        
         
         
         //Button To go Back
@@ -155,7 +156,6 @@
         backButton.layer.cornerRadius = 40.0/2.0;
         
         [self.view addSubview:backButton];
-        
         //--------------------------------Question
         //------Question Label
         
@@ -178,15 +178,15 @@
         [self.view addSubview:lableforAnswerB];
         [self.view addSubview:lableforAnswerC];
         [self.view addSubview:lableforAnswerD];
-
+        
         [questionLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
-         questionLable.textAlignment = NSTextAlignmentCenter;
+        questionLable.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:questionLable];
-
         
-       
         
-       
+        
+        
+        
         
         //--------------BUTTONS fo ANSWERS
         
@@ -196,7 +196,7 @@
         optionA.layer.cornerRadius = optionA.bounds.size.width/2;
         optionA.backgroundColor = [UIColor darkGrayColor];
         [self.view addSubview:optionA];
-
+        
         //Make the Option B Circle
         optionB = [[UIView alloc] initWithFrame:CGRectMake(20, 290, 60, 60)];
         optionB.layer.masksToBounds = YES;
@@ -220,7 +220,7 @@
         [self.view addSubview:optionD];
         
         [self.view addSubview:swipeImageView];
-
+        
         
         
         //Score Label
@@ -233,8 +233,7 @@
         scoreLabel.text = @"Score: 0";
         [self.view addSubview:scoreLabel];
         
-        self.view.backgroundColor = [UIColor whiteColor];
-
+        
     }
     return self;
 }
@@ -242,7 +241,7 @@
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches allObjects] [0];
     swipeImageView.center = [touch locationInView:self.view];
-    }
+}
 
 
 
@@ -250,17 +249,17 @@
 - (void) getStateName{
     //Setting the Question
     currentState = randomStatesArray[currentQuestion];
-
     
-        questionLable.text =[NSString stringWithFormat:@"%@ is the capital of?", currentState.StateCapitol];
+    
+             questionLable.text =[NSString stringWithFormat:@"Capital of %@?", currentState.Statename];
         
         
-       
+    
     //right
     randomLabel = arc4random_uniform(4);
     
     //Setting the Rigt Answer with the Capitol
-    rightAnswer = currentState.Statename;
+    rightAnswer = currentState.StateCapitol;
     
     
     //CurrentQuestion is Right Ansewr ALL INT 0-49
@@ -273,17 +272,16 @@
     
     // COMPARING INTS   RIght answer to false options
     
-    
-    
-    while (currentQuestion==falseOption1)
+       while (currentQuestion==falseOption1)
         
     {
         falseOption1 =arc4random_uniform(49);
         
         currentState = randomStatesArray[falseOption1];
         
+        
     };
-
+    
     
     while (falseOption2==falseOption1||falseOption2==currentQuestion)
         
@@ -308,32 +306,32 @@
             
             //Right Answer A
             
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             
             currentState = randomStatesArray[falseOption1];
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
-            
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+
             currentState = randomStatesArray[falseOption2];
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             
             currentState = randomStatesArray[falseOption3];
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             return;
             break;
             
         case 1:
             //Right Answer B
-
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             currentState = randomStatesArray[falseOption1];
             
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             currentState = randomStatesArray[falseOption2];
             
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             currentState = randomStatesArray[falseOption3];
             
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             return;
             break;
             
@@ -342,16 +340,16 @@
             
             //Right Answer C
             
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
-           
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            
             currentState = randomStatesArray[falseOption1];
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
-           
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            
             currentState = randomStatesArray[falseOption2];
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
-           
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            
             currentState = randomStatesArray[falseOption3];
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             return;
             break;
             
@@ -359,17 +357,17 @@
         case 3:
             
             //Right Answer D
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             
             currentState = randomStatesArray[falseOption1];
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             
             currentState = randomStatesArray[falseOption2];
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
             
             currentState = randomStatesArray[falseOption3];
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
-           
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            
             return;
             break;
             
@@ -377,14 +375,14 @@
             break;
             
     }
-
+    
     
     
 }
 
 -(void) nextButtonClicked{
     currentQuestion++;
-        [self getStateName];
+    [self getStateName];
     
     [self checkForGameOver];
 }
@@ -410,7 +408,7 @@
     NSLog(@"Label :%@      Right Answer: %@",lableforAnswerA.text,rightAnswer);
     if (resultforOptionA) {
         
-      
+        
         if ([lableforAnswerA.text isEqual:rightAnswer]) {
             NSLog(@"A is correct");
             
@@ -420,9 +418,9 @@
         
         
         [self returnSwitchToOriginalLocation];
-
+        
         [self nextButtonClicked];
-
+        
         return;
         
         
@@ -430,30 +428,30 @@
         
         if ([lableforAnswerB.text isEqual:rightAnswer]) {
             [self inscreaseScore];
-
+            
             NSLog(@"B is correct");
         }
         
-
+        
         [self returnSwitchToOriginalLocation];
         [self nextButtonClicked];
-
+        
         return;
     }  else if (resultforOptionC) {
-    
+        
         if ([lableforAnswerC.text isEqual:rightAnswer]) {
             [self inscreaseScore];
-
+            
             NSLog(@"C is correct");
         }
         
         
         [self returnSwitchToOriginalLocation];
         [self nextButtonClicked];
-
+        
         return;
     } else if (resultForOptionD) {
-    
+        
         if ([lableforAnswerD.text isEqual:rightAnswer]) {
             [self inscreaseScore];
             NSLog(@"D is correct");
@@ -461,9 +459,9 @@
         
         [self returnSwitchToOriginalLocation];
         [self nextButtonClicked];
-
+        
         return;
-    
+        
     }
     
     else{[self returnSwitchToOriginalLocation];}
@@ -486,7 +484,7 @@
     
     score++;
     scoreLabel.text = [NSString stringWithFormat:@"Score: %d",score*10];
-
+    
 }
 
 
@@ -523,3 +521,4 @@
 -(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
 
 @end
+

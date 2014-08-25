@@ -9,7 +9,7 @@
 #import "GamePlayVC.h"
 
 #import "StatesGameVC.h"
-
+#import "CapitalGame.h"
 @interface GamePlayVC ()
 
 @end
@@ -179,16 +179,14 @@
 }
 
 -(void) capitalGamePlay{
-    StatesGameVC *stateGameViewController = [[StatesGameVC alloc] init];
+    CapitalGame *capitalGameViewController = [[CapitalGame alloc] init];
     
-    stateGameViewController.kindOfGame = @"CapitalGame";
-    [self presentViewController:stateGameViewController animated:YES completion:nil];
+    [self presentViewController:capitalGameViewController animated:YES completion:nil];
 }
 
 
 -(void) statesGamePlay{
     StatesGameVC *stateGameViewController = [[StatesGameVC alloc] init];
-    stateGameViewController.kindOfGame = @"StateGame";
 
     [self presentViewController:stateGameViewController animated:YES completion:nil];
 }

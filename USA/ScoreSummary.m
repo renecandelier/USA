@@ -8,12 +8,14 @@
 
 #import "ScoreSummary.h"
 #import "StatesGameVC.h"
+#import "GamePlayVC.h"
+#import "USAimagesViewController.h"
 @interface ScoreSummary ()
 
 @end
 
 @implementation ScoreSummary{
-    UILabel * questionLable;
+    UILabel * scoreLabel;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -23,7 +25,7 @@
         // Custom initialization
         
         
-        //------More INFO BUTTON
+        //------Retry Button
         
         UIButton * retryButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-260, 200, 40)];
         
@@ -43,16 +45,44 @@
         
         
         [self.view addSubview:retryButton];
-
         
+        //-------------Main Menu
+        UIButton * mainMenuButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-160, 200, 40)];
+        
+        //moreInfoButton.backgroundColor = [UIColor blueColor];
+        [mainMenuButton setTitle: @"HOME" forState: UIControlStateNormal];
+        
+        [mainMenuButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+        
+        [mainMenuButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        
+        mainMenuButton.layer.borderWidth = 0.5f;
+        mainMenuButton.layer.cornerRadius = 5;
+        
+        
+        [mainMenuButton addTarget:self action:@selector(menuButtonclicked) forControlEvents:UIControlEventTouchUpInside
+         ];
+        
+        
+        [self.view addSubview:mainMenuButton];
     }
     return self;
 }
 
-- (void) retryButtonclicked{
-    StatesGameVC *startGameAgain= [[StatesGameVC alloc] init];
+- (void) menuButtonclicked{
+    USAimagesViewController *mainMenu= [[USAimagesViewController alloc] init];
     
-    [self presentViewController:startGameAgain animated:YES completion:nil];
+    [self presentViewController:mainMenu animated:YES completion:nil];
+}
+
+- (void) retryButtonclicked{
+    //StatesGameVC *startGameAgain= [[StatesGameVC alloc] init];
+    
+    //[self presentViewController:startGameAgain animated:YES completion:nil];
+
+GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
+
+[self presentViewController:gameMenu animated:YES completion:nil];
 }
 
 
@@ -64,15 +94,27 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    //Question Label
-    questionLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-150, 100, 300, 40)];
     
-    [questionLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
-    questionLable.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:questionLable];
-    questionLable.text =[NSString stringWithFormat:@"Score: %d",self.score];
 
 }
+
+
+-(void)setScore:(NSString *)score{
+    _score = score;
+    //Score Label
+
+    scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-150, 100, 300, 40)];
+    
+    [scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
+    scoreLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:scoreLabel];
+    scoreLabel.text =[NSString stringWithFormat:@"Score: %@",self.score];
+
+
+
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
