@@ -126,16 +126,11 @@
                     completion:NULL];
 }
 
-- (void) applicationWillResign{
-    NSLog(@"About to lose focus");
-}
 
-- (void) myVcInitMethod {
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(applicationWillResign)
-     name:UIApplicationWillResignActiveNotification
-     object:nil];
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self transitionPhotos];
+    
 }
 
 -(void) searchButtonClicked{

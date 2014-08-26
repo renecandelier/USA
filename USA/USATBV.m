@@ -238,11 +238,14 @@
     
     
     USAViewStateVC * stateViewDetails = [[USAViewStateVC alloc] init];
-    self.RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
+    self.RandomStates = [[DataStore sharedInstance] getStates];
     
    // stateViewDetails.indexForArray = [[indexPath.row]intValue];
     NSNumber *selRow = [[NSNumber alloc] initWithInteger:indexPath.row];
     stateViewDetails.indexForArray = selRow;
+    StateClass *currentState = self.RandomStates[indexPath.row];
+    self.stateName = currentState.Statename;
+    stateViewDetails.stateName =currentState.Statename;
     
     stateViewDetails.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:stateViewDetails animated:YES completion:nil];

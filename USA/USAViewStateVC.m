@@ -14,6 +14,9 @@
 #import "NSArray+RandomSort.h"
 #import "MoreInfoWebVC.h"
 
+#import "USATBV.h"
+
+
 @interface USAViewStateVC ()<UIScrollViewDelegate>{
     
     //Labels for the State Information TOP
@@ -43,7 +46,15 @@
     
     //View for STATE FACTS Information
     UIView * stateContentView;
+
+
+
+    MDCParallaxView *parallaxView;
+    UIImageView *backgroundImageView;
 }
+
+
+
 
 @end
 
@@ -55,33 +66,15 @@
     if (self) {
         // Custom initialization
         
-        //----------------------Top Label for the State Name
-        [stateNameLabel sizeToFit];
-        
-        stateNameLabel= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-125, 15, 250, 40)];
-        [stateNameLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
-        
-        stateNameLabel.textColor = [UIColor whiteColor];
-        stateNameLabel.textAlignment = NSTextAlignmentCenter;
-        [self.view addSubview:stateNameLabel];
         
         
-        //----------------------Back button
-        backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
-        
-        UIImage *backButtonImage = [UIImage imageNamed:@"back.png"];
-        [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];
-        [backButton addTarget:self action:@selector(backButtonClicked) forControlEvents:UIControlEventTouchUpInside
-         ];
-        backButton.layer.cornerRadius = 40.0/2.0;
-
-        [self.view addSubview:backButton];
         
         
         self.view.backgroundColor = [UIColor whiteColor];
-        
-        
-        
+        USATBV * state = [[USATBV alloc]init];
+       NSLog(@"%@",[NSString stringWithFormat:@"%@.jpg",state.stateName]);
+
+
     }
     return self;
 }
@@ -96,14 +89,13 @@
     
      intrNum = [indexForArray intValue];
     
-    RandomStates = [[[DataStore sharedInstance] getStates] shuffle];
+    RandomStates = [[DataStore sharedInstance] getStates] ;
     
     StateClass *currentState = RandomStates[intrNum];
     
     
     //******************** SET THE TEXT FOR THE STATE FACTS ****************************************
     
-    stateNameLabel.text = currentState.Statename;
     //backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]];
 
     
@@ -115,28 +107,69 @@
     StateTree.text = [NSString stringWithFormat:@"Tree: %@", currentState.StateTree];
 
 //Load Image
-    
+
     
 
 }
--(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    ///----------------PARALLAx
-   // backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]];
-    backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"Georgia.jpg"]];
-
-    NSLog(@"%@",[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]);
+-(void)setStateName:(NSString *)stateName{
+    _stateName = stateName;
+    NSLog(@"%@",[NSString stringWithFormat:@"%@.jpg",self.stateName]);
+    
+    backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.stateName]];
+    
     CGRect backgroundRect = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:backgroundRect];
+    backgroundImageView = [[UIImageView alloc] initWithFrame:backgroundRect];
     backgroundImageView.image = backgroundImage;
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [backgroundImageView addGestureRecognizer:tapGesture];
+    
+    parallaxView = [[MDCParallaxView alloc] initWithBackgroundView:backgroundImageView
+                                                    foregroundView:stateContentView];
+    parallaxView.frame = self.view.bounds;
+    parallaxView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    parallaxView.backgroundHeight = 250.0f;
+    parallaxView.scrollView.scrollsToTop = YES;
+    parallaxView.backgroundInteractionEnabled = YES;
+    parallaxView.scrollViewDelegate = self;
+    [self.view addSubview:parallaxView];
+    
+    //----------------------Back button
+    backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
+    
+    UIImage *backButtonImage = [UIImage imageNamed:@"back.png"];
+    [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backButtonClicked) forControlEvents:UIControlEventTouchUpInside
+     ];
+    backButton.layer.cornerRadius = 40.0/2.0;
+    
+    [self.view addSubview:backButton];
+
+    //----------------------Top Label for the State Name
+    [stateNameLabel sizeToFit];
+    
+    stateNameLabel= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-125, 15, 250, 40)];
+    [stateNameLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
+    
+    stateNameLabel.textColor = [UIColor whiteColor];
+    stateNameLabel.textAlignment = NSTextAlignmentCenter;
+    stateNameLabel.text = self.stateName;
+
+    [self.view addSubview:stateNameLabel];
+
+}
+
+-(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+
+    ///----------------PARALLAx
     
    //------------View for the State Information
     stateContentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-200)];
@@ -224,25 +257,11 @@
     StateFlower.textColor = [UIColor darkGrayColor];
     [StateFlower setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
     
-    
     [stateContentView addSubview:StateFlower];
     
+   
     
-    
-    
-    
-    
-    MDCParallaxView *parallaxView = [[MDCParallaxView alloc] initWithBackgroundView:backgroundImageView
-                                                                     foregroundView:stateContentView];
-    parallaxView.frame = self.view.bounds;
-    parallaxView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    parallaxView.backgroundHeight = 250.0f;
-    parallaxView.scrollView.scrollsToTop = YES;
-    parallaxView.backgroundInteractionEnabled = YES;
-    parallaxView.scrollViewDelegate = self;
-    [self.view addSubview:parallaxView];
-    
-    
+
 }
 
 - (void) moreInfoButtonClicked{

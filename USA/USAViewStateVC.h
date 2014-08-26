@@ -11,4 +11,6 @@
 @property (nonatomic) NSString * link;
 
 @property (nonatomic) NSNumber * indexForArray;
+
+@property(nonatomic) NSString * stateName;
 @end

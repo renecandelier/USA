@@ -84,6 +84,7 @@
 -(void)viewDidLoad{
     
     [super viewDidLoad];
+    
 
 }
 
@@ -95,8 +96,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
-        score=0;
+        
+        
+      
         
         
         
@@ -509,15 +511,25 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    swipeImageView.center = CGPointMake(x-450, y);
     
-    [UIView animateWithDuration:3.0 animations:^{
+    
+    //// CODE FOR SWIPE
+    
+    swipeImageView.center = CGPointMake(x-200, y);
+    //        [UIView animateWithDuration:3.0 animations:^{
+    //            swipeImageView.center = CGPointMake(x, y);
+    //        }];
+    
+    
+    [UIView animateWithDuration:0.4 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         swipeImageView.center = CGPointMake(x, y);
-    }];
-    
+    } completion:nil];
     
     //Get the first Question
     [self getStateName];
+    
+    score=0;
+    
 }
 
 -(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
