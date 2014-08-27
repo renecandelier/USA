@@ -17,6 +17,12 @@
 		8A02876919ACFBF900829188 /* Connecticut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02876819ACFBF900829188 /* Connecticut.jpg */; };
 		8A02876B19ACFD3400829188 /* Delaware.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02876A19ACFD3400829188 /* Delaware.jpg */; };
 		8A02876D19ACFDD300829188 /* Virginia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02876C19ACFDD300829188 /* Virginia.jpg */; };
+		8A02876F19AD021700829188 /* Washington.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02876E19AD021700829188 /* Washington.jpg */; };
+		8A02877119AD043200829188 /* New Hampshire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877019AD043200829188 /* New Hampshire.jpg */; };
+		8A02877319AD05CC00829188 /* Vermont.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877219AD05CC00829188 /* Vermont.jpg */; };
+		8A02877519AD068700829188 /* West Virginia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877419AD068700829188 /* West Virginia.jpg */; };
+		8A02877719AD07AF00829188 /* Iowa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877619AD07AF00829188 /* Iowa.jpg */; };
+		8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2410B919AD0D7700A172C4 /* Maryland.jpg */; };
 		8A354B16199E4AF900A30CE0 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A354B15199E4AF900A30CE0 /* learn.png */; };
 		8A354B19199EC23500A30CE0 /* USATBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A354B18199EC23500A30CE0 /* USATBV.m */; };
 		8A3EAFB319ABA93C00551539 /* Wisconsin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFB219ABA93C00551539 /* Wisconsin.jpg */; };
@@ -24,7 +30,6 @@
 		8A3EAFB819ABA99700551539 /* New Mexico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFB419ABA96500551539 /* New Mexico.jpg */; };
 		8A3EAFBA19ABA9BB00551539 /* Maine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFB919ABA9BB00551539 /* Maine.jpg */; };
 		8A3EAFC019ABAA1600551539 /* South Carolina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFBF19ABAA1600551539 /* South Carolina.jpg */; };
-		8A3EAFC419ABAA5900551539 /* West Virginia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFC319ABAA5900551539 /* West Virginia.jpg */; };
 		8A3EAFC619ABAAA800551539 /* Indiana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFC519ABAAA800551539 /* Indiana.jpg */; };
 		8A3EAFC819ABAAC100551539 /* Nevada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFC719ABAAC100551539 /* Nevada.jpg */; };
 		8A3EAFCC19ABAB9400551539 /* Kentucky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFCB19ABAB9400551539 /* Kentucky.jpg */; };
@@ -74,7 +79,7 @@
 		8A7E21CA19AB793E001C16F9 /* Michigan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A7E21C919AB793E001C16F9 /* Michigan.jpg */; };
 		8A9BCA9019ACD26C00A6C316 /* California.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BCA8E19ACD26C00A6C316 /* California.jpg */; };
 		8A9BCA9119ACD26C00A6C316 /* Florida.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BCA8F19ACD26C00A6C316 /* Florida.jpg */; };
-		8AA73223199D339F00E2B83E /* Washington.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73222199D339F00E2B83E /* Washington.jpg */; };
+		8AA73223199D339F00E2B83E /* Washington2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73222199D339F00E2B83E /* Washington2.jpg */; };
 		8AA73225199D376000E2B83E /* New York.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73224199D376000E2B83E /* New York.jpg */; };
 		8AA73227199D392400E2B83E /* Florida.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73226199D392400E2B83E /* Florida.jpg */; };
 		8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73228199D39B100E2B83E /* Illinois.jpg */; };
@@ -96,6 +101,7 @@
 		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
 		8AE0225B19A4D40E003BD003 /* select2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225A19A4D40E003BD003 /* select2.png */; };
 		8AE0225D19A4DAA3003BD003 /* select3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225C19A4DAA3003BD003 /* select3.png */; };
+		8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEFDC8F19AD797B000A43FE /* MapGame.m */; };
 		8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1F8199EDEE40058F64E /* searchButton.png */; };
 		8AFAD1FC199EE2AB0058F64E /* USAViewStateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */; };
 		8AFAD1FE199EEC0E0058F64E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FD199EEC0E0058F64E /* back.png */; };
@@ -141,6 +147,12 @@
 		8A02876819ACFBF900829188 /* Connecticut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Connecticut.jpg; sourceTree = "<group>"; };
 		8A02876A19ACFD3400829188 /* Delaware.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Delaware.jpg; sourceTree = "<group>"; };
 		8A02876C19ACFDD300829188 /* Virginia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Virginia.jpg; sourceTree = "<group>"; };
+		8A02876E19AD021700829188 /* Washington.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Washington.jpg; sourceTree = "<group>"; };
+		8A02877019AD043200829188 /* New Hampshire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New Hampshire.jpg"; sourceTree = "<group>"; };
+		8A02877219AD05CC00829188 /* Vermont.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vermont.jpg; sourceTree = "<group>"; };
+		8A02877419AD068700829188 /* West Virginia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "West Virginia.jpg"; sourceTree = "<group>"; };
+		8A02877619AD07AF00829188 /* Iowa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Iowa.jpg; sourceTree = "<group>"; };
+		8A2410B919AD0D7700A172C4 /* Maryland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maryland.jpg; sourceTree = "<group>"; };
 		8A354B15199E4AF900A30CE0 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		8A354B17199EC23500A30CE0 /* USATBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATBV.h; sourceTree = "<group>"; };
 		8A354B18199EC23500A30CE0 /* USATBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATBV.m; sourceTree = "<group>"; };
@@ -149,7 +161,6 @@
 		8A3EAFB619ABA97500551539 /* New Jersey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New Jersey.jpg"; sourceTree = "<group>"; };
 		8A3EAFB919ABA9BB00551539 /* Maine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maine.jpg; sourceTree = "<group>"; };
 		8A3EAFBF19ABAA1600551539 /* South Carolina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "South Carolina.jpg"; sourceTree = "<group>"; };
-		8A3EAFC319ABAA5900551539 /* West Virginia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "West Virginia.jpg"; sourceTree = "<group>"; };
 		8A3EAFC519ABAAA800551539 /* Indiana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Indiana.jpg; sourceTree = "<group>"; };
 		8A3EAFC719ABAAC100551539 /* Nevada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nevada.jpg; sourceTree = "<group>"; };
 		8A3EAFCB19ABAB9400551539 /* Kentucky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kentucky.jpg; sourceTree = "<group>"; };
@@ -204,7 +215,7 @@
 		8A7E21C919AB793E001C16F9 /* Michigan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Michigan.jpg; sourceTree = "<group>"; };
 		8A9BCA8E19ACD26C00A6C316 /* California.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = California.jpg; sourceTree = "<group>"; };
 		8A9BCA8F19ACD26C00A6C316 /* Florida.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Florida.jpg; sourceTree = "<group>"; };
-		8AA73222199D339F00E2B83E /* Washington.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Washington.jpg; sourceTree = "<group>"; };
+		8AA73222199D339F00E2B83E /* Washington2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Washington2.jpg; sourceTree = "<group>"; };
 		8AA73224199D376000E2B83E /* New York.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New York.jpg"; sourceTree = "<group>"; };
 		8AA73226199D392400E2B83E /* Florida.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Florida.jpg; sourceTree = "<group>"; };
 		8AA73228199D39B100E2B83E /* Illinois.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Illinois.jpg; sourceTree = "<group>"; };
@@ -231,6 +242,8 @@
 		8AE0225819A4D07A003BD003 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		8AE0225A19A4D40E003BD003 /* select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select2.png; sourceTree = "<group>"; };
 		8AE0225C19A4DAA3003BD003 /* select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select3.png; sourceTree = "<group>"; };
+		8AEFDC8E19AD797B000A43FE /* MapGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGame.h; sourceTree = "<group>"; };
+		8AEFDC8F19AD797B000A43FE /* MapGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGame.m; sourceTree = "<group>"; };
 		8AFAD1F8199EDEE40058F64E /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
 		8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewStateVC.h; sourceTree = "<group>"; };
 		8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAViewStateVC.m; sourceTree = "<group>"; };
@@ -315,6 +328,8 @@
 				8A5BB30119AB60D000B0ABB3 /* CapitalGame.m */,
 				8AAE965119A7661A009090AA /* ScoreSummary.h */,
 				8AAE965219A7661A009090AA /* ScoreSummary.m */,
+				8AEFDC8E19AD797B000A43FE /* MapGame.h */,
+				8AEFDC8F19AD797B000A43FE /* MapGame.m */,
 			);
 			name = Play;
 			sourceTree = "<group>";
@@ -429,11 +444,14 @@
 		8AA73284199D9AFB00E2B83E /* City Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				8A2410B919AD0D7700A172C4 /* Maryland.jpg */,
 				8A02876819ACFBF900829188 /* Connecticut.jpg */,
 				8A3EAFCB19ABAB9400551539 /* Kentucky.jpg */,
+				8A02877619AD07AF00829188 /* Iowa.jpg */,
 				8A3EAFC719ABAAC100551539 /* Nevada.jpg */,
 				8A02876A19ACFD3400829188 /* Delaware.jpg */,
-				8A3EAFC319ABAA5900551539 /* West Virginia.jpg */,
+				8A02877419AD068700829188 /* West Virginia.jpg */,
+				8A02877219AD05CC00829188 /* Vermont.jpg */,
 				8A3EAFBF19ABAA1600551539 /* South Carolina.jpg */,
 				8A3EAFC519ABAAA800551539 /* Indiana.jpg */,
 				8A3EAFCF19ABABFC00551539 /* Idaho.jpg */,
@@ -466,7 +484,9 @@
 				8A02876419ACFA2E00829188 /* Wyoming.jpg */,
 				8A5BB2E419AAD62700B0ABB3 /* Alabama.jpg */,
 				8A02876019ACE4E600829188 /* Mississippi.jpg */,
+				8A02877019AD043200829188 /* New Hampshire.jpg */,
 				8A02876619ACFB0700829188 /* Rhode Island.jpg */,
+				8A02876E19AD021700829188 /* Washington.jpg */,
 				8A5BB2EC19AAD7C400B0ABB3 /* North Dakota.jpg */,
 				8A5BB2E219AAD5B900B0ABB3 /* Colorado.jpg */,
 				8A5BB2E019AAA1DD00B0ABB3 /* Kentucky.jpg */,
@@ -476,7 +496,7 @@
 				8A5BB2D419AA590B00B0ABB3 /* Massachusetts.jpg */,
 				8A5BB2D519AA590B00B0ABB3 /* Arizona.jpg */,
 				8AA73224199D376000E2B83E /* New York.jpg */,
-				8AA73222199D339F00E2B83E /* Washington.jpg */,
+				8AA73222199D339F00E2B83E /* Washington2.jpg */,
 				8AA73228199D39B100E2B83E /* Illinois.jpg */,
 				8A5BB2F219AAD87A00B0ABB3 /* Ohio.jpg */,
 				8AA7326B199D415C00E2B83E /* Georgia.jpg */,
@@ -689,9 +709,10 @@
 				8AA73286199DB6CD00E2B83E /* search.png in Resources */,
 				8AA73270199D988B00E2B83E /* Data.png in Resources */,
 				8AFAD23219A03F430058F64E /* stately.ttf in Resources */,
+				8A02876F19AD021700829188 /* Washington.jpg in Resources */,
 				8A5BB2F519AADB1300B0ABB3 /* Oregon.jpg in Resources */,
 				8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */,
-				8A3EAFC419ABAA5900551539 /* West Virginia.jpg in Resources */,
+				8A02877119AD043200829188 /* New Hampshire.jpg in Resources */,
 				8A02876119ACE4E600829188 /* Mississippi.jpg in Resources */,
 				8A3EAFD419ABACCD00551539 /* Missouri.jpg in Resources */,
 				8AE0225D19A4DAA3003BD003 /* select3.png in Resources */,
@@ -706,7 +727,8 @@
 				8AE0225919A4D07A003BD003 /* select.png in Resources */,
 				8AA73225199D376000E2B83E /* New York.jpg in Resources */,
 				8AA73272199D98C800E2B83E /* Row.png in Resources */,
-				8AA73223199D339F00E2B83E /* Washington.jpg in Resources */,
+				8A02877719AD07AF00829188 /* Iowa.jpg in Resources */,
+				8AA73223199D339F00E2B83E /* Washington2.jpg in Resources */,
 				8A02875B19ACDFFF00829188 /* Tennessee.jpg in Resources */,
 				8A5BB2FF19AADE9C00B0ABB3 /* Utah.jpg in Resources */,
 				8A5BB2F319AAD87A00B0ABB3 /* Ohio.jpg in Resources */,
@@ -735,7 +757,9 @@
 				8A5BB2D919AA590B00B0ABB3 /* New York City.jpg in Resources */,
 				8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */,
 				8A3EAFBA19ABA9BB00551539 /* Maine.jpg in Resources */,
+				8A02877519AD068700829188 /* West Virginia.jpg in Resources */,
 				8A02876919ACFBF900829188 /* Connecticut.jpg in Resources */,
+				8A02877319AD05CC00829188 /* Vermont.jpg in Resources */,
 				8A5BB2DF19AAA05F00B0ABB3 /* Wyoming2.jpg in Resources */,
 				8A7E21CA19AB793E001C16F9 /* Michigan.jpg in Resources */,
 				8A3EAFDC19ABAE4A00551539 /* Indiana.jpg in Resources */,
@@ -743,6 +767,7 @@
 				8A3EAFC019ABAA1600551539 /* South Carolina.jpg in Resources */,
 				8A67037619944771000037DF /* Images.xcassets in Resources */,
 				8A3EAFD619ABAD1100551539 /* Maine.jpg in Resources */,
+				8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */,
 				8A3EAFE019ABAF6800551539 /* Louisiana.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,6 +798,7 @@
 				8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
 				8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */,
+				8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */,
 				8AFAD23919A045980058F64E /* ViewController.m in Sources */,
 				8AA73282199D9AE900E2B83E /* SampleSheetViewController.m in Sources */,
 				8A670395199447C3000037DF /* USAimagesViewController.m in Sources */,

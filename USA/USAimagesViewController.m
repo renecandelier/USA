@@ -33,6 +33,7 @@
     //Array for random states
     NSArray*  randomStatesArray;
     
+    
 
     
 }
@@ -45,6 +46,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        
+      
+
+        
+        
+        
+        
         
         randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
        

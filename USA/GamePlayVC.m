@@ -10,6 +10,8 @@
 
 #import "StatesGameVC.h"
 #import "CapitalGame.h"
+#import "ViewController.h"
+
 @interface GamePlayVC ()
 
 @end
@@ -122,7 +124,7 @@
         mapGame.layer.cornerRadius = 5;
         
         
-        [mapGame addTarget:self action:@selector(statesGamePlay) forControlEvents:UIControlEventTouchUpInside
+        [mapGame addTarget:self action:@selector(mapGameButtonClicked) forControlEvents:UIControlEventTouchUpInside
          ];
         
         
@@ -176,6 +178,13 @@
         
     }
     return self;
+}
+
+-(void) mapGameButtonClicked{
+    
+  
+ViewController *mapVC= [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
+    [self presentViewController:mapVC animated:YES completion:nil];
 }
 
 -(void) capitalGamePlay{

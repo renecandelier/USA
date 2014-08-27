@@ -76,7 +76,10 @@
     //Class to get the array
     StateClass *currentState;
     
-    
+    //For color buttons
+    NSArray *colors;
+    NSMutableArray * arrayofButtons;
+    UIButton * chooseColor;
  
 }
 
@@ -88,6 +91,75 @@
 
 }
 
+//++++++++++++++++++
+
+//-(void) hideColorChoices{
+//    for (UIButton * colorButton in colorButtons) {
+//        NSInteger index = [colorButtons indexOfObject:colorButton];
+//        
+//        [UIView animateWithDuration:0.2 delay:0.05 * index options:UIViewAnimationOptionAllowUserInteraction animations:^{
+//            colorButton.center = chooseColor.center;
+//        } completion:^(BOOL finished) {
+//            [colorButton removeFromSuperview];
+//        }];
+//    }
+//    
+//    [colorButtons removeAllObjects];
+//    
+//}
+
+-(void) showColorChoice{
+    
+  
+    arrayofButtons = [@[] mutableCopy];
+
+    colors = @[[UIColor redColor], [UIColor cyanColor], [UIColor yellowColor], [UIColor blackColor], [UIColor greenColor], [UIColor brownColor], [UIColor orangeColor], [UIColor magentaColor], [UIColor purpleColor], [UIColor blueColor]];
+    
+    chooseColor = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-10)/2.0, SCREEN_HEIGHT-40, 10, 10)];
+    
+    chooseColor.layer.cornerRadius = 5;
+    
+    chooseColor.backgroundColor = [UIColor whiteColor];
+    
+    
+    for(int col = 0; col<=9; col++){
+        
+        float radius = 22;
+        float mpi = M_PI/180;
+        float angle = 360/10;
+        float radians = angle * mpi;
+        
+        float moveX = chooseColor.center.x + sinf(radians * col)* radius;
+        float moveY = chooseColor.center.y + cosf(radians * col)* radius;
+
+        
+        UILabel * colorButton = [[UILabel alloc]initWithFrame:CGRectMake(moveX, moveY, 10, 10)];
+        colorButton.tag =col;
+        
+        [arrayofButtons addObject:colorButton];
+        
+        
+        colorButton.center = chooseColor.center;
+        colorButton.backgroundColor = [UIColor darkGrayColor];
+        
+        colorButton.layer.cornerRadius = 5;
+        colorButton.layer.masksToBounds = YES;
+        
+        
+        [UIView animateWithDuration:0.2 delay:0.05*col options:UIViewAnimationOptionAllowUserInteraction animations:^{
+            colorButton.center = CGPointMake(moveX, moveY);
+        }completion:^(BOOL finished){
+            
+        }];
+        
+        [self.view addSubview:colorButton];
+        
+    
+    }
+    
+    
+}
+
 
 
 
@@ -97,7 +169,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        [self showColorChoice];
+        //[chooseColor addTarget:self action:@selector(showColorChoice) forControlEvents:UIControlEventTouchUpInside];
         
+        
+        
+        //++++++++++++++++++++
       
         
         
@@ -162,7 +239,7 @@
         //------Question Label
         
         //Question Label
-        questionLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-150, 100, 300, 40)];
+        questionLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-150, 90, 300, 40)];
         
         //Random Answers.
         lableforAnswerA = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, 230, 250, 40)];
@@ -233,9 +310,10 @@
         scoreLabel.textColor = [UIColor darkGrayColor];
         scoreLabel.textAlignment = NSTextAlignmentCenter;
         scoreLabel.text = @"Score: 0";
-        [self.view addSubview:scoreLabel];
+        //[self.view addSubview:scoreLabel];
         
         self.view.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:chooseColor];
 
     }
     return self;
@@ -418,6 +496,9 @@
             
             
             [self inscreaseScore];
+        }else{
+            [self decreaseScore];
+
         }
         
         
@@ -434,6 +515,9 @@
             [self inscreaseScore];
 
             NSLog(@"B is correct");
+        }else{
+            [self decreaseScore];
+
         }
         
 
@@ -447,6 +531,9 @@
             [self inscreaseScore];
 
             NSLog(@"C is correct");
+        }else{
+            [self decreaseScore];
+
         }
         
         
@@ -459,6 +546,8 @@
         if ([lableforAnswerD.text isEqual:rightAnswer]) {
             [self inscreaseScore];
             NSLog(@"D is correct");
+        }else{
+            [self decreaseScore];
         }
         
         [self returnSwitchToOriginalLocation];
@@ -475,7 +564,7 @@
 
 
 -(void) checkForGameOver{
-    if (currentQuestion ==9) {
+    if (currentQuestion ==10) {
         ScoreSummary *summaryVC= [[ScoreSummary alloc] init];
         
         summaryVC.score =scoreLabel.text;
@@ -484,10 +573,34 @@
     }
 }
 
+
+-(void) decreaseScore{
+    
+    
+    
+    
+    for (UILabel * circle in arrayofButtons) {
+        if (circle.tag ==currentQuestion){
+            circle.backgroundColor = [UIColor redColor];
+        }
+        
+    }
+    
+}
+
+
 -(void) inscreaseScore{
     
     score++;
     scoreLabel.text = [NSString stringWithFormat:@"Score: %d",score*10];
+    
+    
+    for (UILabel * circle in arrayofButtons) {
+        if (circle.tag ==currentQuestion){
+            circle.backgroundColor = [UIColor greenColor];
+        }
+        
+    }
 
 }
 

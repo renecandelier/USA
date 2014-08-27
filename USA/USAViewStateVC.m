@@ -101,7 +101,7 @@
     
     StateAbbreviation.text = [NSString stringWithFormat:@"Abbreviation: %@", currentState.StateAbbreviation];
     StateBird.text = [NSString stringWithFormat:@"Bird: %@", currentState.StateBird];
-    StateCapitol.text = [NSString stringWithFormat:@"Capitol: %@", currentState.StateCapitol];
+    StateCapitol.text = [NSString stringWithFormat:@"Capital: %@", currentState.StateCapitol];
     StateFlower.text = [NSString stringWithFormat:@"Flower: %@", currentState.StateFlower];
     StateNickname.text = [NSString stringWithFormat:@"Nickname: %@", currentState.StateNickname];
     StateTree.text = [NSString stringWithFormat:@"Tree: %@", currentState.StateTree];
@@ -135,8 +135,15 @@
     parallaxView.scrollView.scrollsToTop = YES;
     parallaxView.backgroundInteractionEnabled = YES;
     parallaxView.scrollViewDelegate = self;
+    parallaxView.scrollView.showsHorizontalScrollIndicator = NO;
+    parallaxView.scrollView.showsVerticalScrollIndicator = NO;
+    
     [self.view addSubview:parallaxView];
     
+    
+    
+
+
     //----------------------Back button
     backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
     

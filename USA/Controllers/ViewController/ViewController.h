@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet USStatesColorMap *statesMap;
 
+- (IBAction)customizeMap:(id)sender;
 
 @end
