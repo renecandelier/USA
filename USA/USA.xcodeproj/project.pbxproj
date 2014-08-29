@@ -101,6 +101,12 @@
 		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
 		8AE0225B19A4D40E003BD003 /* select2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225A19A4D40E003BD003 /* select2.png */; };
 		8AE0225D19A4DAA3003BD003 /* select3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225C19A4DAA3003BD003 /* select3.png */; };
+		8AE87DCA19B0BEC500EC93F0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAD22B19A03EE30058F64E /* CoreText.framework */; };
+		8AE87DD119B0D65C00EC93F0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */; };
+		8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DD019B0D65C00EC93F0 /* ViewController.m */; };
+		8AE87DD819B0D66700EC93F0 /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AE87DD419B0D66700EC93F0 /* stately.ttf */; };
+		8AE87DD919B0D66700EC93F0 /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DD619B0D66700EC93F0 /* USStatesColorMap.m */; };
+		8AE87DDC19B0D6E900EC93F0 /* MapCustomizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */; };
 		8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEFDC8F19AD797B000A43FE /* MapGame.m */; };
 		8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1F8199EDEE40058F64E /* searchButton.png */; };
 		8AFAD1FC199EE2AB0058F64E /* USAViewStateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */; };
@@ -114,13 +120,6 @@
 		8AFAD222199FC9C00058F64E /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD221199FC9C00058F64E /* ImageViewController.m */; };
 		8AFAD225199FCA120058F64E /* MDCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD224199FCA120058F64E /* MDCParallaxView.m */; };
 		8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */; };
-		8AFAD22C19A03EE30058F64E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAD22B19A03EE30058F64E /* CoreText.framework */; };
-		8AFAD23219A03F430058F64E /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD22E19A03F430058F64E /* stately.ttf */; };
-		8AFAD23319A03F430058F64E /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD23019A03F430058F64E /* USStatesColorMap.m */; };
-		8AFAD23919A045980058F64E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD23619A045980058F64E /* ViewController.m */; };
-		8AFAD23B19A045980058F64E /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD23819A045980058F64E /* ViewController_iPhone.xib */; };
-		8AFAD24119A045D40058F64E /* MapCustomizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD23E19A045D40058F64E /* MapCustomizationViewController.m */; };
-		8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */; };
 		8AFAD24619A12FA10058F64E /* GamePlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD24519A12FA10058F64E /* GamePlayVC.m */; };
 		8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD24819A1409F0058F64E /* StatesGameVC.m */; };
 		8AFAD24B19A231A10058F64E /* California.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD24A19A231A10058F64E /* California.jpg */; };
@@ -242,36 +241,35 @@
 		8AE0225819A4D07A003BD003 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		8AE0225A19A4D40E003BD003 /* select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select2.png; sourceTree = "<group>"; };
 		8AE0225C19A4DAA3003BD003 /* select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select3.png; sourceTree = "<group>"; };
+		8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		8AE87DCF19B0D65C00EC93F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8AE87DD019B0D65C00EC93F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AE87DD419B0D66700EC93F0 /* stately.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stately.ttf; sourceTree = "<group>"; };
+		8AE87DD519B0D66700EC93F0 /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
+		8AE87DD619B0D66700EC93F0 /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
+		8AE87DD719B0D66700EC93F0 /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
+		8AE87DDA19B0D6E900EC93F0 /* MapCustomizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomizationViewController.h; sourceTree = "<group>"; };
+		8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCustomizationViewController.m; sourceTree = "<group>"; };
 		8AEFDC8E19AD797B000A43FE /* MapGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGame.h; sourceTree = "<group>"; };
 		8AEFDC8F19AD797B000A43FE /* MapGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGame.m; sourceTree = "<group>"; };
 		8AFAD1F8199EDEE40058F64E /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
 		8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewStateVC.h; sourceTree = "<group>"; };
 		8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAViewStateVC.m; sourceTree = "<group>"; };
 		8AFAD1FD199EEC0E0058F64E /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		8AFAD212199F18130058F64E /* DataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = ../USA/DataStore.h; sourceTree = "<group>"; };
-		8AFAD213199F18130058F64E /* DataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = ../USA/DataStore.m; sourceTree = "<group>"; };
-		8AFAD214199F18130058F64E /* StateClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StateClass.h; path = ../USA/StateClass.h; sourceTree = "<group>"; };
-		8AFAD215199F18130058F64E /* StateClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StateClass.m; path = ../USA/StateClass.m; sourceTree = "<group>"; };
-		8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RandomSort.h"; path = "../NSArray+RandomSort.h"; sourceTree = "<group>"; };
-		8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+RandomSort.m"; path = "../NSArray+RandomSort.m"; sourceTree = "<group>"; };
+		8AFAD212199F18130058F64E /* DataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = USA/DataStore.h; sourceTree = "<group>"; };
+		8AFAD213199F18130058F64E /* DataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = USA/DataStore.m; sourceTree = "<group>"; };
+		8AFAD214199F18130058F64E /* StateClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StateClass.h; path = USA/StateClass.h; sourceTree = "<group>"; };
+		8AFAD215199F18130058F64E /* StateClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StateClass.m; path = USA/StateClass.m; sourceTree = "<group>"; };
+		8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RandomSort.h"; sourceTree = "<group>"; };
+		8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RandomSort.m"; sourceTree = "<group>"; };
 		8AFAD21D199FA75B0058F64E /* USA States.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "USA States.plist"; path = "NAModalSheet/USA States.plist"; sourceTree = "<group>"; };
-		8AFAD220199FC9C00058F64E /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
-		8AFAD221199FC9C00058F64E /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
-		8AFAD223199FCA120058F64E /* MDCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCParallaxView.h; sourceTree = "<group>"; };
-		8AFAD224199FCA120058F64E /* MDCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCParallaxView.m; sourceTree = "<group>"; };
+		8AFAD220199FC9C00058F64E /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = ../Controllers/ImageViewController.h; sourceTree = "<group>"; };
+		8AFAD221199FC9C00058F64E /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = ../Controllers/ImageViewController.m; sourceTree = "<group>"; };
+		8AFAD223199FCA120058F64E /* MDCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDCParallaxView.h; path = ../Controllers/MDCParallaxView.h; sourceTree = "<group>"; };
+		8AFAD224199FCA120058F64E /* MDCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDCParallaxView.m; path = ../Controllers/MDCParallaxView.m; sourceTree = "<group>"; };
 		8AFAD228199FF5FC0058F64E /* MoreInfoWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoWebVC.h; sourceTree = "<group>"; };
 		8AFAD229199FF5FC0058F64E /* MoreInfoWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoWebVC.m; sourceTree = "<group>"; };
 		8AFAD22B19A03EE30058F64E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		8AFAD22E19A03F430058F64E /* stately.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stately.ttf; sourceTree = "<group>"; };
-		8AFAD22F19A03F430058F64E /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
-		8AFAD23019A03F430058F64E /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
-		8AFAD23119A03F430058F64E /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
-		8AFAD23519A045980058F64E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8AFAD23619A045980058F64E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8AFAD23819A045980058F64E /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
-		8AFAD23D19A045D40058F64E /* MapCustomizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomizationViewController.h; sourceTree = "<group>"; };
-		8AFAD23E19A045D40058F64E /* MapCustomizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCustomizationViewController.m; sourceTree = "<group>"; };
-		8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapCustomizationViewController_iPhone.xib; sourceTree = "<group>"; };
 		8AFAD24419A12FA00058F64E /* GamePlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayVC.h; sourceTree = "<group>"; };
 		8AFAD24519A12FA10058F64E /* GamePlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayVC.m; sourceTree = "<group>"; };
 		8AFAD24719A1409F0058F64E /* StatesGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesGameVC.h; sourceTree = "<group>"; };
@@ -284,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFAD22C19A03EE30058F64E /* CoreText.framework in Frameworks */,
+				8AE87DCA19B0BEC500EC93F0 /* CoreText.framework in Frameworks */,
 				8A67036619944771000037DF /* CoreGraphics.framework in Frameworks */,
 				8A67036819944771000037DF /* UIKit.framework in Frameworks */,
 				8A67036419944771000037DF /* Foundation.framework in Frameworks */,
@@ -527,25 +525,60 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
+		8AE87DCB19B0D5D100EC93F0 /* Menu Pop Up */ = {
 			isa = PBXGroup;
 			children = (
-				8AFAD23C19A045D40058F64E /* MapCustomizationViewController */,
-				8AFAD23419A045980058F64E /* ViewController */,
-				8AA73273199D9AE900E2B83E /* NAModalSheet */,
-				8AFAD212199F18130058F64E /* DataStore.h */,
-				8AFAD213199F18130058F64E /* DataStore.m */,
-				8AFAD214199F18130058F64E /* StateClass.h */,
-				8AFAD215199F18130058F64E /* StateClass.m */,
-				8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */,
-				8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */,
-				8AFAD223199FCA120058F64E /* MDCParallaxView.h */,
-				8AFAD224199FCA120058F64E /* MDCParallaxView.m */,
 				8AA7327B199D9AE900E2B83E /* SampleSheetViewController.h */,
 				8AA7327C199D9AE900E2B83E /* SampleSheetViewController.m */,
 				8AA7327D199D9AE900E2B83E /* SampleSheetViewController.xib */,
+			);
+			name = "Menu Pop Up";
+			path = ../NAModalSheet;
+			sourceTree = "<group>";
+		};
+		8AE87DCC19B0D5E600EC93F0 /* Info Scroll Parallax */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD223199FCA120058F64E /* MDCParallaxView.h */,
+				8AFAD224199FCA120058F64E /* MDCParallaxView.m */,
 				8AFAD220199FC9C00058F64E /* ImageViewController.h */,
 				8AFAD221199FC9C00058F64E /* ImageViewController.m */,
+			);
+			name = "Info Scroll Parallax";
+			path = ../NAModalSheet;
+			sourceTree = "<group>";
+		};
+		8AE87DCD19B0D64B00EC93F0 /* Color MAP */ = {
+			isa = PBXGroup;
+			children = (
+				8AE87DD319B0D66700EC93F0 /* USStatesColorMap */,
+				8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */,
+				8AE87DDA19B0D6E900EC93F0 /* MapCustomizationViewController.h */,
+				8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */,
+				8AE87DCF19B0D65C00EC93F0 /* ViewController.h */,
+				8AE87DD019B0D65C00EC93F0 /* ViewController.m */,
+			);
+			name = "Color MAP";
+			sourceTree = "<group>";
+		};
+		8AE87DD319B0D66700EC93F0 /* USStatesColorMap */ = {
+			isa = PBXGroup;
+			children = (
+				8AE87DD419B0D66700EC93F0 /* stately.ttf */,
+				8AE87DD519B0D66700EC93F0 /* USStatesColorMap.h */,
+				8AE87DD619B0D66700EC93F0 /* USStatesColorMap.m */,
+				8AE87DD719B0D66700EC93F0 /* USStatesColorMapHeader.h */,
+			);
+			path = USStatesColorMap;
+			sourceTree = "<group>";
+		};
+		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
+			isa = PBXGroup;
+			children = (
+				8AE87DCD19B0D64B00EC93F0 /* Color MAP */,
+				8AA73273199D9AE900E2B83E /* NAModalSheet */,
+				8AE87DCC19B0D5E600EC93F0 /* Info Scroll Parallax */,
+				8AE87DCB19B0D5D100EC93F0 /* Menu Pop Up */,
 			);
 			name = "Controller Extras";
 			path = Controllers;
@@ -564,8 +597,13 @@
 		8AFAD227199FE0830058F64E /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				8AFAD22D19A03F430058F64E /* USStatesColorMap */,
 				8AFAD21D199FA75B0058F64E /* USA States.plist */,
+				8AFAD212199F18130058F64E /* DataStore.h */,
+				8AFAD213199F18130058F64E /* DataStore.m */,
+				8AFAD214199F18130058F64E /* StateClass.h */,
+				8AFAD215199F18130058F64E /* StateClass.m */,
+				8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */,
+				8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */,
 				8AFAD21F199FC9C00058F64E /* Controller Extras */,
 				8AFAD226199FE0530058F64E /* Images */,
 				8A67036919944771000037DF /* USA */,
@@ -574,37 +612,6 @@
 				8A67036119944771000037DF /* Products */,
 			);
 			name = Extras;
-			sourceTree = "<group>";
-		};
-		8AFAD22D19A03F430058F64E /* USStatesColorMap */ = {
-			isa = PBXGroup;
-			children = (
-				8AFAD22E19A03F430058F64E /* stately.ttf */,
-				8AFAD22F19A03F430058F64E /* USStatesColorMap.h */,
-				8AFAD23019A03F430058F64E /* USStatesColorMap.m */,
-				8AFAD23119A03F430058F64E /* USStatesColorMapHeader.h */,
-			);
-			path = USStatesColorMap;
-			sourceTree = "<group>";
-		};
-		8AFAD23419A045980058F64E /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8AFAD23519A045980058F64E /* ViewController.h */,
-				8AFAD23619A045980058F64E /* ViewController.m */,
-				8AFAD23819A045980058F64E /* ViewController_iPhone.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		8AFAD23C19A045D40058F64E /* MapCustomizationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8AFAD23D19A045D40058F64E /* MapCustomizationViewController.h */,
-				8AFAD23E19A045D40058F64E /* MapCustomizationViewController.m */,
-				8AFAD24019A045D40058F64E /* MapCustomizationViewController_iPhone.xib */,
-			);
-			path = MapCustomizationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -691,7 +698,6 @@
 				8A3EAFDE19ABAEA900551539 /* Nebraska.jpg in Resources */,
 				8AA7328F199E484E00E2B83E /* play.png in Resources */,
 				8A354B16199E4AF900A30CE0 /* learn.png in Resources */,
-				8AFAD23B19A045980058F64E /* ViewController_iPhone.xib in Resources */,
 				8A3EAFDA19ABADD600551539 /* Arkansas.jpg in Resources */,
 				8A5BB2E719AAD66C00B0ABB3 /* Alaska.jpg in Resources */,
 				8A02876719ACFB0700829188 /* Rhode Island.jpg in Resources */,
@@ -708,16 +714,15 @@
 				8AA7328A199E3C1A00E2B83E /* close.png in Resources */,
 				8AA73286199DB6CD00E2B83E /* search.png in Resources */,
 				8AA73270199D988B00E2B83E /* Data.png in Resources */,
-				8AFAD23219A03F430058F64E /* stately.ttf in Resources */,
 				8A02876F19AD021700829188 /* Washington.jpg in Resources */,
 				8A5BB2F519AADB1300B0ABB3 /* Oregon.jpg in Resources */,
-				8AFAD24319A045D40058F64E /* MapCustomizationViewController_iPhone.xib in Resources */,
 				8A02877119AD043200829188 /* New Hampshire.jpg in Resources */,
 				8A02876119ACE4E600829188 /* Mississippi.jpg in Resources */,
 				8A3EAFD419ABACCD00551539 /* Missouri.jpg in Resources */,
 				8AE0225D19A4DAA3003BD003 /* select3.png in Resources */,
 				8A5BB2DD19AAA01500B0ABB3 /* Hawaii.jpg in Resources */,
 				8A9BCA9119ACD26C00A6C316 /* Florida.jpg in Resources */,
+				8AE87DD119B0D65C00EC93F0 /* ViewController_iPhone.xib in Resources */,
 				8AA73283199D9AE900E2B83E /* SampleSheetViewController.xib in Resources */,
 				8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */,
 				8A5BB2E319AAD5B900B0ABB3 /* Colorado.jpg in Resources */,
@@ -741,6 +746,7 @@
 				8A5BB2DB19AA9EFE00B0ABB3 /* North Carolina.jpg in Resources */,
 				8AE0225B19A4D40E003BD003 /* select2.png in Resources */,
 				8A5BB2E119AAA1DD00B0ABB3 /* Kentucky.jpg in Resources */,
+				8AE87DD819B0D66700EC93F0 /* stately.ttf in Resources */,
 				8A3EAFD819ABAD5C00551539 /* Kansas.jpg in Resources */,
 				8AFAD1FE199EEC0E0058F64E /* back.png in Resources */,
 				8A67036E19944771000037DF /* InfoPlist.strings in Resources */,
@@ -788,28 +794,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AAE965319A7661A009090AA /* ScoreSummary.m in Sources */,
-				8AFAD23319A03F430058F64E /* USStatesColorMap.m in Sources */,
 				8AFAD225199FCA120058F64E /* MDCParallaxView.m in Sources */,
 				8AFAD222199FC9C00058F64E /* ImageViewController.m in Sources */,
 				8AFAD216199F18130058F64E /* DataStore.h in Sources */,
+				8AE87DDC19B0D6E900EC93F0 /* MapCustomizationViewController.m in Sources */,
 				8AFAD217199F18130058F64E /* DataStore.m in Sources */,
 				8AFAD218199F18130058F64E /* StateClass.h in Sources */,
+				8AE87DD919B0D66700EC93F0 /* USStatesColorMap.m in Sources */,
 				8AFAD219199F18130058F64E /* StateClass.m in Sources */,
 				8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
 				8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */,
 				8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */,
-				8AFAD23919A045980058F64E /* ViewController.m in Sources */,
 				8AA73282199D9AE900E2B83E /* SampleSheetViewController.m in Sources */,
 				8A670395199447C3000037DF /* USAimagesViewController.m in Sources */,
 				8AA73281199D9AE900E2B83E /* UIImage+screenshot.m in Sources */,
 				8AFAD1FC199EE2AB0058F64E /* USAViewStateVC.m in Sources */,
 				8AFAD24619A12FA10058F64E /* GamePlayVC.m in Sources */,
 				8A67037419944771000037DF /* USAAppDelegate.m in Sources */,
-				8AFAD24119A045D40058F64E /* MapCustomizationViewController.m in Sources */,
 				8AA7327F199D9AE900E2B83E /* NAModalSheet.m in Sources */,
 				8AFAD21C199F19020058F64E /* NSArray+RandomSort.m in Sources */,
 				8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */,
+				8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */,
 				8AA73280199D9AE900E2B83E /* UIImage+BoxBlur.m in Sources */,
 				8A67037019944771000037DF /* main.m in Sources */,
 			);
@@ -933,6 +939,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "USA/USA-Prefix.pch";
 				INFOPLIST_FILE = "USA/USA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -949,6 +956,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "USA/USA-Prefix.pch";
 				INFOPLIST_FILE = "USA/USA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
