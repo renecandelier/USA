@@ -140,6 +140,23 @@ NSInteger const NumOfStates = 51;
     
 }
 
+-(void) loadMap{
+    [self fillMapWithBlackColor];
+    
+    //int map = arc4random_uniform(50);
+    
+    [self setBlackColorForStateByName:rightAnswer];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //Get the first Question
+    [self fillMapWithBlackColor];
+    [self getStateName];
+    
+    [self loadMap];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -148,13 +165,9 @@ NSInteger const NumOfStates = 51;
     [UIView animateWithDuration:0.4 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         swipeImageView.center = CGPointMake(x, y);
     } completion:nil];
-    //    [UIView animateWithDuration:3.0 animations:^{
-    //        swipeImageView.center = CGPointMake(x, y);
-    //    }];
     
     
-    //Get the first Question
-    [self getStateName];
+   
     
     score = 0;
     currentQuestion = 0;
@@ -175,7 +188,7 @@ NSInteger const NumOfStates = 51;
     
     //Adding the Swipe view
     
-    swipeImageView =[[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30,150,60,60)];
+    swipeImageView =[[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30,SCREEN_HEIGHT-220,35,35)];
     [swipeImageView setImage:[UIImage imageNamed:@"select3.png"]];
     //Getting the X Y for the Swipe Button
     x =swipeImageView.center.x;
@@ -211,12 +224,15 @@ NSInteger const NumOfStates = 51;
     [self.view addSubview:backButton];
     //--------------------------------Question
         //Random Answers.
-    lableforAnswerA = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, 230, 250, 40)];
-    lableforAnswerB = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, 300, 250, 40)];
-    lableforAnswerC = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, 370, 250, 40)];
-    lableforAnswerD = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, 440, 250, 40)];
-    
-    
+    lableforAnswerA = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, SCREEN_HEIGHT-170, 250, 40)];
+    lableforAnswerB = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, SCREEN_HEIGHT-130, 250, 40)];
+    lableforAnswerC = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, SCREEN_HEIGHT-90, 250, 40)];
+    lableforAnswerD = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, SCREEN_HEIGHT-50, 250, 40)];
+    lableforAnswerA.textColor = [UIColor darkGrayColor];
+    lableforAnswerB.textColor = [UIColor darkGrayColor];
+    lableforAnswerC.textColor = [UIColor darkGrayColor];
+    lableforAnswerD.textColor = [UIColor darkGrayColor];
+
     [lableforAnswerA setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
     [lableforAnswerB setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
     [lableforAnswerC setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
@@ -237,14 +253,14 @@ NSInteger const NumOfStates = 51;
     //--------------BUTTONS fo ANSWERS
     
     //Make the Option A Circle
-    optionA = [[UIView alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT-260, 30, 30)];
+    optionA = [[UIView alloc] initWithFrame:CGRectMake(40, SCREEN_HEIGHT-170, 35, 35)];
     optionA.layer.masksToBounds = YES;
     optionA.layer.cornerRadius = optionA.bounds.size.width/2;
     optionA.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:optionA];
     
     //Make the Option B Circle
-    optionB = [[UIView alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT-200, 30, 30)];
+    optionB = [[UIView alloc] initWithFrame:CGRectMake(40, SCREEN_HEIGHT-130, 35, 35)];
     optionB.layer.masksToBounds = YES;
     optionB.layer.cornerRadius = optionB.bounds.size.width/2;
     optionB.backgroundColor = [UIColor darkGrayColor];
@@ -252,14 +268,14 @@ NSInteger const NumOfStates = 51;
     
     
     //Make the Option C Circle
-    optionC = [[UIView alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT-140, 30, 30)];
+    optionC = [[UIView alloc] initWithFrame:CGRectMake(40, SCREEN_HEIGHT-90, 35, 35)];
     optionC.layer.masksToBounds = YES;
     optionC.layer.cornerRadius = optionC.bounds.size.width/2;
     optionC.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:optionC];
     
     //Make the Option D Circle
-    optionD = [[UIView alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT-80, 30, 30)];
+    optionD = [[UIView alloc] initWithFrame:CGRectMake(40, SCREEN_HEIGHT-50, 35, 35)];
     optionD.layer.masksToBounds = YES;
     optionD.layer.cornerRadius = optionD.bounds.size.width/2;
     optionD.backgroundColor = [UIColor darkGrayColor];
@@ -280,7 +296,6 @@ NSInteger const NumOfStates = 51;
     //[self.view addSubview:scoreLabel];
 
     
-    [self nextStateFill];
 
     
     
@@ -358,7 +373,7 @@ NSInteger const NumOfStates = 51;
     randomLabel = arc4random_uniform(4);
     
     //Setting the Rigt Answer with the Capitol
-    rightAnswer = currentState.StateCapitol;
+    rightAnswer = currentState.Statename;
     
     
     //CurrentQuestion is Right Ansewr ALL INT 0-49
@@ -408,13 +423,13 @@ NSInteger const NumOfStates = 51;
             lableforAnswerA.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             currentState = randomStatesArray[falseOption2];
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             currentState = randomStatesArray[falseOption3];
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             return;
             break;
             
@@ -424,13 +439,13 @@ NSInteger const NumOfStates = 51;
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", rightAnswer];
             currentState = randomStatesArray[falseOption1];
             
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             currentState = randomStatesArray[falseOption2];
             
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             currentState = randomStatesArray[falseOption3];
             
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             return;
             break;
             
@@ -442,13 +457,13 @@ NSInteger const NumOfStates = 51;
             lableforAnswerC.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             currentState = randomStatesArray[falseOption2];
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             currentState = randomStatesArray[falseOption3];
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             return;
             break;
             
@@ -459,13 +474,13 @@ NSInteger const NumOfStates = 51;
             lableforAnswerD.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             currentState = randomStatesArray[falseOption2];
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             currentState = randomStatesArray[falseOption3];
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
             
             return;
             break;
@@ -475,6 +490,7 @@ NSInteger const NumOfStates = 51;
             
     }
     
+   
     
     
 }
@@ -482,7 +498,7 @@ NSInteger const NumOfStates = 51;
 -(void) nextButtonClicked{
     currentQuestion++;
     [self getStateName];
-    
+    [self loadMap];
     [self checkForGameOver];
 }
 
@@ -626,17 +642,8 @@ NSInteger const NumOfStates = 51;
 
 
 
-- (IBAction)nextButton:(id)sender {
-    [self nextStateFill];
-}
 
--(void) nextStateFill{
- [self fillMapWithBlackColor];
-    
-    int map = arc4random_uniform(50);
-    
-    [self setBlackColorForStateByName:self.statesNames[map]];
-}
+
 
 - (void)backButtonClicked {
     [self dismissViewControllerAnimated:NO completion:nil];
