@@ -26,30 +26,26 @@
     
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+
+//        self.tableView.delegate = self;
+//        
+//        self.tableView.dataSource = self;
         
-        // Get current question
+//        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT-20)];
+//        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+//        
+//        [self.view addSubview:self.tableView];
         
-         //NSString * state =[NSString stringWithFormat:@"What is the capital of %@?",currentState.Statename];
-       // NSLog(@"%@", state);
 
         
         self.statesArray = [@[
-                    [@{@"state":@"Florida",
-                       @"nickname":@"The Sunshine State",
-                       @"abbreviation":@"FL"
-                       } mutableCopy],
-
-
-                    [@{@"state":@"Georgia",
-                       @"nickname":@"The Peach State",
-                       @"abbreviation":@"GA"
-                       } mutableCopy]
+                    [@{} mutableCopy]
 
 
                     
@@ -64,22 +60,6 @@
     return self;
 }
 
-//-(NSDictionary *)getStateDictionary
-//{
-//    if (self.stateDictionary == nil)
-//    {
-//        self.stateDictionary = [[NSMutableDictionary alloc] init];
-//        
-//        for (int i=0; i < [self.stateArray count]; i++)
-//        {
-//            StateClass *state = self.stateArray[i];
-//            [self.stateDictionary setObject:state forKey:state.StateAbbreviation];
-//        }
-//    }
-//    
-//    return self.stateDictionary;
-//}
-
 
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -93,8 +73,6 @@
     self.tableView.tableHeaderView = headerView;
     headerView.backgroundColor = [UIColor darkGrayColor];
 
-    
-    //headerView.backgroundColor = [UIColor colorWithRed:0.976f green:0.098f blue:0.329f alpha:1.0f];
     //Setting the search box
     searchTextbox = [[UITextField alloc]initWithFrame:CGRectMake(60, 15, 200, 40)];
     [searchTextbox setBorderStyle:UITextBorderStyleNone];
@@ -108,23 +86,10 @@
     
     
     
-    //Add image to search button
-    searchButton = [[UIButton alloc]initWithFrame:CGRectMake(270, 15, 40, 40.0)];
-    UIImage *searchbuttonImage = [UIImage imageNamed:@"searchButton.png"];
-    [searchButton setBackgroundImage:searchbuttonImage forState:UIControlStateNormal];
-    [searchButton addTarget:self action:@selector(searchButtonClicked) forControlEvents:UIControlEventTouchUpInside
-     ];
-    //Circle Radius
-    searchButton.layer.cornerRadius = 40.0/2.0;
-    //[searchButton addTarget:self action:@selector(fillin) forControlEvents:UIControlEventTouchUpInside];
+   
     
     
     //Back Button
-    
-    
-    //searchButton.backgroundColor = [UIColor colorWithRed:0.667f green:0.655f blue:0.639f alpha:1.0f];
-    
-    
     
     //Add image to search button
     backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
@@ -145,20 +110,13 @@
     //Setting the separators to color Black
     [self.tableView setSeparatorColor:[UIColor darkGrayColor]];
     
-    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //Adding the Objects to the View
-    [headerView addSubview:searchTextbox];
-    [headerView addSubview:searchButton];
     [headerView addSubview:backButton];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+   
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)viewDidLoad
@@ -202,9 +160,40 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    
+//    
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    
+//   // if (cell == nil) {
+//        
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//        
+//   // }
+    
+    
+    
+    
+    
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
+    
+    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+//    static NSString *CellIdentifer = @"cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifer];
+//    
+//    // Using a cell identifier will allow your app to reuse cells as they come and go from the screen.
+//    if (cell == nil)
+//    {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifer];
+//    }
+    
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     
     

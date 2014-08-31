@@ -84,30 +84,6 @@
 }
 
 
--(void)viewDidLoad{
-    
-    [super viewDidLoad];
-    
-
-}
-
-//++++++++++++++++++
-
-//-(void) hideColorChoices{
-//    for (UIButton * colorButton in colorButtons) {
-//        NSInteger index = [colorButtons indexOfObject:colorButton];
-//        
-//        [UIView animateWithDuration:0.2 delay:0.05 * index options:UIViewAnimationOptionAllowUserInteraction animations:^{
-//            colorButton.center = chooseColor.center;
-//        } completion:^(BOOL finished) {
-//            [colorButton removeFromSuperview];
-//        }];
-//    }
-//    
-//    [colorButtons removeAllObjects];
-//    
-//}
-
 -(void) showColorChoice{
     
   
@@ -146,7 +122,7 @@
         colorButton.layer.masksToBounds = YES;
         
         
-        [UIView animateWithDuration:0.2 delay:0.05*col options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        [UIView animateWithDuration:0.2 delay:0.5*col options:UIViewAnimationOptionAllowUserInteraction animations:^{
             colorButton.center = CGPointMake(moveX, moveY);
         }completion:^(BOOL finished){
             
@@ -170,34 +146,15 @@
     if (self) {
         
         [self showColorChoice];
-        //[chooseColor addTarget:self action:@selector(showColorChoice) forControlEvents:UIControlEventTouchUpInside];
         
-        
-        
-        //++++++++++++++++++++
-      
-        
-        
-        
-        
-        randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
-        //Setting the Question
+       randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
+
         //Get the current
         currentState = randomStatesArray[currentQuestion];
         
+      //--------------------------------TOP CONTENT
         
-        
-        
-        
-        //Getting the array
-
-        //--------------------------------TOP CONTENT
-        
-        
-        
-       
-   
-        //Adding the Swipe view
+         //Adding the Swipe view
         
         swipeImageView =[[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30,150,60,60)];
         [swipeImageView setImage:[UIImage imageNamed:@"select3.png"]];
@@ -261,12 +218,6 @@
         [questionLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
          questionLable.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:questionLable];
-
-        
-       
-        
-       
-        
         //--------------BUTTONS fo ANSWERS
         
         //Make the Option A Circle
@@ -324,18 +275,13 @@
     swipeImageView.center = [touch locationInView:self.view];
     }
 
-
-
-
 - (void) getStateName{
     //Setting the Question
     currentState = randomStatesArray[currentQuestion];
-
     
-        questionLable.text =[NSString stringWithFormat:@"%@ is the capital of?", currentState.StateCapitol];
+    questionLable.text =[NSString stringWithFormat:@"%@ is the capital of?", currentState.StateCapitol];
         
-        
-       
+    
     //right
     randomLabel = arc4random_uniform(4);
     
@@ -379,16 +325,12 @@
         
     };
     
-    
-    
-    
-    
     switch (randomLabel) {
         case 0:
             
             //Right Answer A
             
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
@@ -404,7 +346,7 @@
         case 1:
             //Right Answer B
 
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", rightAnswer];
             currentState = randomStatesArray[falseOption1];
             
             lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.Statename];
@@ -422,7 +364,7 @@
             
             //Right Answer C
             
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", rightAnswer];
            
             currentState = randomStatesArray[falseOption1];
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
@@ -439,7 +381,7 @@
         case 3:
             
             //Right Answer D
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.Statename];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.Statename];
@@ -575,10 +517,6 @@
 
 
 -(void) decreaseScore{
-    
-    
-    
-    
     for (UILabel * circle in arrayofButtons) {
         if (circle.tag ==currentQuestion){
             circle.backgroundColor = [UIColor redColor];
@@ -628,11 +566,7 @@
     
     //// CODE FOR SWIPE
     
-    swipeImageView.center = CGPointMake(x-200, y);
-    //        [UIView animateWithDuration:3.0 animations:^{
-    //            swipeImageView.center = CGPointMake(x, y);
-    //        }];
-    
+    swipeImageView.center = CGPointMake(x-200, y);    
     
     [UIView animateWithDuration:0.4 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         swipeImageView.center = CGPointMake(x, y);
@@ -642,7 +576,7 @@
     [self getStateName];
     
     score=0;
-    
+    currentQuestion = 0;
 }
 
 -(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}

@@ -33,7 +33,8 @@
     //Array for random states
     NSArray*  randomStatesArray;
     
-    
+    NSTimer *timer;
+
 
     
 }
@@ -46,14 +47,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        
-      
-
-        
-        
-        
-        
         
         randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
        
@@ -87,7 +80,7 @@
         imageView.image = [UIImage imageNamed:[self.welcomePhotos objectAtIndex:0]];
         
         [self transitionPhotos];
-        [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(transitionPhotos) userInfo:nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(transitionPhotos) userInfo:nil repeats:YES];
         [citiesLable sizeToFit];
 
         citiesLable= [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT- 70, 200, 80)];
@@ -138,7 +131,11 @@
 
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [timer invalidate];
+    timer = [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(transitionPhotos) userInfo:nil repeats:YES];
     [self transitionPhotos];
+    
+    
     
 }
 

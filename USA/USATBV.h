@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface USATBV : UITableViewController
+
 @property (nonatomic) NSMutableArray * statesArray;
 
 @property(nonatomic) NSString * stateName;
+
 @end

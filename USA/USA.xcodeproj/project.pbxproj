@@ -22,6 +22,8 @@
 		8A02877319AD05CC00829188 /* Vermont.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877219AD05CC00829188 /* Vermont.jpg */; };
 		8A02877519AD068700829188 /* West Virginia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877419AD068700829188 /* West Virginia.jpg */; };
 		8A02877719AD07AF00829188 /* Iowa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877619AD07AF00829188 /* Iowa.jpg */; };
+		8A2218ED19B3A6A100CD8118 /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2218E919B3A6A000CD8118 /* stately.ttf */; };
+		8A2218EE19B3A6A100CD8118 /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */; };
 		8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2410B919AD0D7700A172C4 /* Maryland.jpg */; };
 		8A354B16199E4AF900A30CE0 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A354B15199E4AF900A30CE0 /* learn.png */; };
 		8A354B19199EC23500A30CE0 /* USATBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A354B18199EC23500A30CE0 /* USATBV.m */; };
@@ -104,8 +106,6 @@
 		8AE87DCA19B0BEC500EC93F0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAD22B19A03EE30058F64E /* CoreText.framework */; };
 		8AE87DD119B0D65C00EC93F0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */; };
 		8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DD019B0D65C00EC93F0 /* ViewController.m */; };
-		8AE87DD819B0D66700EC93F0 /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AE87DD419B0D66700EC93F0 /* stately.ttf */; };
-		8AE87DD919B0D66700EC93F0 /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DD619B0D66700EC93F0 /* USStatesColorMap.m */; };
 		8AE87DDC19B0D6E900EC93F0 /* MapCustomizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */; };
 		8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEFDC8F19AD797B000A43FE /* MapGame.m */; };
 		8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1F8199EDEE40058F64E /* searchButton.png */; };
@@ -151,6 +151,10 @@
 		8A02877219AD05CC00829188 /* Vermont.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vermont.jpg; sourceTree = "<group>"; };
 		8A02877419AD068700829188 /* West Virginia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "West Virginia.jpg"; sourceTree = "<group>"; };
 		8A02877619AD07AF00829188 /* Iowa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Iowa.jpg; sourceTree = "<group>"; };
+		8A2218E919B3A6A000CD8118 /* stately.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stately.ttf; sourceTree = "<group>"; };
+		8A2218EA19B3A6A000CD8118 /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
+		8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
+		8A2218EC19B3A6A000CD8118 /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
 		8A2410B919AD0D7700A172C4 /* Maryland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maryland.jpg; sourceTree = "<group>"; };
 		8A354B15199E4AF900A30CE0 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		8A354B17199EC23500A30CE0 /* USATBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATBV.h; sourceTree = "<group>"; };
@@ -244,10 +248,6 @@
 		8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
 		8AE87DCF19B0D65C00EC93F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8AE87DD019B0D65C00EC93F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8AE87DD419B0D66700EC93F0 /* stately.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stately.ttf; sourceTree = "<group>"; };
-		8AE87DD519B0D66700EC93F0 /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
-		8AE87DD619B0D66700EC93F0 /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
-		8AE87DD719B0D66700EC93F0 /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
 		8AE87DDA19B0D6E900EC93F0 /* MapCustomizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomizationViewController.h; sourceTree = "<group>"; };
 		8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCustomizationViewController.m; sourceTree = "<group>"; };
 		8AEFDC8E19AD797B000A43FE /* MapGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGame.h; sourceTree = "<group>"; };
@@ -302,6 +302,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A2218E819B3A6A000CD8118 /* USStatesColorMap */ = {
+			isa = PBXGroup;
+			children = (
+				8A2218E919B3A6A000CD8118 /* stately.ttf */,
+				8A2218EA19B3A6A000CD8118 /* USStatesColorMap.h */,
+				8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */,
+				8A2218EC19B3A6A000CD8118 /* USStatesColorMapHeader.h */,
+			);
+			path = USStatesColorMap;
+			sourceTree = "<group>";
+		};
 		8A5BB2D119AA312B00B0ABB3 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,7 +562,7 @@
 		8AE87DCD19B0D64B00EC93F0 /* Color MAP */ = {
 			isa = PBXGroup;
 			children = (
-				8AE87DD319B0D66700EC93F0 /* USStatesColorMap */,
+				8A2218E819B3A6A000CD8118 /* USStatesColorMap */,
 				8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */,
 				8AE87DDA19B0D6E900EC93F0 /* MapCustomizationViewController.h */,
 				8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */,
@@ -559,17 +570,6 @@
 				8AE87DD019B0D65C00EC93F0 /* ViewController.m */,
 			);
 			name = "Color MAP";
-			sourceTree = "<group>";
-		};
-		8AE87DD319B0D66700EC93F0 /* USStatesColorMap */ = {
-			isa = PBXGroup;
-			children = (
-				8AE87DD419B0D66700EC93F0 /* stately.ttf */,
-				8AE87DD519B0D66700EC93F0 /* USStatesColorMap.h */,
-				8AE87DD619B0D66700EC93F0 /* USStatesColorMap.m */,
-				8AE87DD719B0D66700EC93F0 /* USStatesColorMapHeader.h */,
-			);
-			path = USStatesColorMap;
 			sourceTree = "<group>";
 		};
 		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
@@ -746,7 +746,7 @@
 				8A5BB2DB19AA9EFE00B0ABB3 /* North Carolina.jpg in Resources */,
 				8AE0225B19A4D40E003BD003 /* select2.png in Resources */,
 				8A5BB2E119AAA1DD00B0ABB3 /* Kentucky.jpg in Resources */,
-				8AE87DD819B0D66700EC93F0 /* stately.ttf in Resources */,
+				8A2218ED19B3A6A100CD8118 /* stately.ttf in Resources */,
 				8A3EAFD819ABAD5C00551539 /* Kansas.jpg in Resources */,
 				8AFAD1FE199EEC0E0058F64E /* back.png in Resources */,
 				8A67036E19944771000037DF /* InfoPlist.strings in Resources */,
@@ -800,7 +800,6 @@
 				8AE87DDC19B0D6E900EC93F0 /* MapCustomizationViewController.m in Sources */,
 				8AFAD217199F18130058F64E /* DataStore.m in Sources */,
 				8AFAD218199F18130058F64E /* StateClass.h in Sources */,
-				8AE87DD919B0D66700EC93F0 /* USStatesColorMap.m in Sources */,
 				8AFAD219199F18130058F64E /* StateClass.m in Sources */,
 				8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
@@ -814,6 +813,7 @@
 				8A67037419944771000037DF /* USAAppDelegate.m in Sources */,
 				8AA7327F199D9AE900E2B83E /* NAModalSheet.m in Sources */,
 				8AFAD21C199F19020058F64E /* NSArray+RandomSort.m in Sources */,
+				8A2218EE19B3A6A100CD8118 /* USStatesColorMap.m in Sources */,
 				8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */,
 				8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */,
 				8AA73280199D9AE900E2B83E /* UIImage+BoxBlur.m in Sources */,

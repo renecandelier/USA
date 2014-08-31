@@ -16,7 +16,6 @@
 
 - (IBAction)customizeMap:(id)sender;
 - (IBAction)nextButton:(id)sender;
-- (IBAction)backButton:(id)sender;
 
 @property (nonatomic) NSMutableArray * statesNames;
 

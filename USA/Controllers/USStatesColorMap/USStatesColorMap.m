@@ -248,7 +248,7 @@ NSString const *statesLettersString = @"ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmno
 	
 	if (error != nil) {
 		NSError* err = (__bridge NSError*)error;
-		NSLog(@"error code %d desc: %@", err.code, [err description]);
+		//NSLog(@"error code %d desc: %@", err.code, [err description]);
 	}
 }
 
@@ -265,7 +265,7 @@ NSString const *statesLettersString = @"ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmno
 
 -(int)indexForStateName:(NSString*)stateName {
 	NSNumber* stateIndex = [_statesNames objectForKey:stateName];
-	NSAssert(stateIndex != nil, @"Invalid state name: \"%@\"", stateName);
+	//NSAssert(stateIndex != nil, @"Invalid state name: \"%@\"", stateName);
 	return [stateIndex intValue];
 }
 

@@ -75,20 +75,64 @@
     StateClass *currentState;
     
     
-    
-    NSString * capital;
-    
-    NSString * state;
+    //For color buttons
+    NSArray *colors;
+    NSMutableArray * arrayofButtons;
+    UIButton * chooseColor;
 }
 
 
--(void)viewDidLoad{
+-(void) showColorChoice{
     
-    [super viewDidLoad];
+    
+    arrayofButtons = [@[] mutableCopy];
+    
+    colors = @[[UIColor redColor], [UIColor cyanColor], [UIColor yellowColor], [UIColor blackColor], [UIColor greenColor], [UIColor brownColor], [UIColor orangeColor], [UIColor magentaColor], [UIColor purpleColor], [UIColor blueColor]];
+    
+    chooseColor = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-10)/2.0, SCREEN_HEIGHT-40, 10, 10)];
+    
+    chooseColor.layer.cornerRadius = 5;
+    
+    chooseColor.backgroundColor = [UIColor whiteColor];
+    
+    
+    for(int col = 0; col<=9; col++){
+        
+        float radius = 22;
+        float mpi = M_PI/180;
+        float angle = 360/10;
+        float radians = angle * mpi;
+        
+        float moveX = chooseColor.center.x + sinf(radians * col)* radius;
+        float moveY = chooseColor.center.y + cosf(radians * col)* radius;
+        
+        
+        UILabel * colorButton = [[UILabel alloc]initWithFrame:CGRectMake(moveX, moveY, 10, 10)];
+        colorButton.tag =col;
+        
+        [arrayofButtons addObject:colorButton];
+        
+        
+        colorButton.center = chooseColor.center;
+        colorButton.backgroundColor = [UIColor darkGrayColor];
+        
+        colorButton.layer.cornerRadius = 5;
+        colorButton.layer.masksToBounds = YES;
+        
+        
+        [UIView animateWithDuration:0.2 delay:0.5*col options:UIViewAnimationOptionAllowUserInteraction animations:^{
+            colorButton.center = CGPointMake(moveX, moveY);
+        }completion:^(BOOL finished){
+            
+        }];
+        
+        [self.view addSubview:colorButton];
+        
+        
+    }
+    
     
 }
-
-
 
 
 
@@ -97,7 +141,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        score=0;
+        [self showColorChoice];
         
         self.view.backgroundColor = [UIColor whiteColor];
 
@@ -115,9 +159,6 @@
         //Getting the array
         
         //--------------------------------TOP CONTENT
-        
-        
-        
         
         
         //Adding the Swipe view
@@ -306,7 +347,7 @@
             
             //Right Answer A
             
-            lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerA.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
@@ -322,7 +363,7 @@
         case 1:
             //Right Answer B
             
-            lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerB.text =[NSString stringWithFormat:@"%@", rightAnswer];
             currentState = randomStatesArray[falseOption1];
             
             lableforAnswerA.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
@@ -340,7 +381,7 @@
             
             //Right Answer C
             
-            lableforAnswerC.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerC.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
@@ -357,7 +398,7 @@
         case 3:
             
             //Right Answer D
-            lableforAnswerD.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
+            lableforAnswerD.text =[NSString stringWithFormat:@"%@", rightAnswer];
             
             currentState = randomStatesArray[falseOption1];
             lableforAnswerB.text =[NSString stringWithFormat:@"%@", currentState.StateCapitol];
@@ -414,6 +455,8 @@
             
             
             [self inscreaseScore];
+        }else{
+            [self decreaseScore];
         }
         
         
@@ -430,6 +473,8 @@
             [self inscreaseScore];
             
             NSLog(@"B is correct");
+        }else{
+            [self decreaseScore];
         }
         
         
@@ -443,6 +488,8 @@
             [self inscreaseScore];
             
             NSLog(@"C is correct");
+        }else{
+            [self decreaseScore];
         }
         
         
@@ -455,6 +502,8 @@
         if ([lableforAnswerD.text isEqual:rightAnswer]) {
             [self inscreaseScore];
             NSLog(@"D is correct");
+        }else{
+            [self decreaseScore];
         }
         
         [self returnSwitchToOriginalLocation];
@@ -471,7 +520,7 @@
 
 
 -(void) checkForGameOver{
-    if (currentQuestion ==9) {
+    if (currentQuestion ==10) {
         ScoreSummary *summaryVC= [[ScoreSummary alloc] init];
         
         summaryVC.score =scoreLabel.text;
@@ -480,11 +529,26 @@
     }
 }
 
+-(void) decreaseScore{
+    for (UILabel * circle in arrayofButtons) {
+        if (circle.tag ==currentQuestion){
+            circle.backgroundColor = [UIColor redColor];
+        }
+        
+    }
+    
+}
+
 -(void) inscreaseScore{
     
     score++;
     scoreLabel.text = [NSString stringWithFormat:@"Score: %d",score*10];
-    
+    for (UILabel * circle in arrayofButtons) {
+        if (circle.tag ==currentQuestion){
+            circle.backgroundColor = [UIColor greenColor];
+        }
+        
+    }
 }
 
 
@@ -507,15 +571,23 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    swipeImageView.center = CGPointMake(x-450, y);
     
-    [UIView animateWithDuration:3.0 animations:^{
+    swipeImageView.center = CGPointMake(x-200, y);
+    
+    [UIView animateWithDuration:0.4 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         swipeImageView.center = CGPointMake(x, y);
-    }];
+    } completion:nil];
+//    [UIView animateWithDuration:3.0 animations:^{
+//        swipeImageView.center = CGPointMake(x, y);
+//    }];
     
     
     //Get the first Question
     [self getStateName];
+    
+    score = 0;
+    currentQuestion = 0;
+
 }
 
 -(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
