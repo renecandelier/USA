@@ -65,15 +65,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        
-        
-        
-        
-        self.view.backgroundColor = [UIColor whiteColor];
-        USATBV * state = [[USATBV alloc]init];
-       NSLog(@"%@",[NSString stringWithFormat:@"%@.jpg",state.stateName]);
-
+                self.view.backgroundColor = [UIColor whiteColor];
 
     }
     return self;
@@ -114,7 +106,6 @@
 
 -(void)setStateName:(NSString *)stateName{
     _stateName = stateName;
-    NSLog(@"%@",[NSString stringWithFormat:@"%@.jpg",self.stateName]);
     
     backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.stateName]];
     

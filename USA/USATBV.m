@@ -114,7 +114,14 @@
     //Adding the Objects to the View
     [headerView addSubview:backButton];
     
-   
+    UILabel * learnTopLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
+    [learnTopLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
+    
+    learnTopLabel.textColor = [UIColor whiteColor];
+    learnTopLabel.textAlignment = NSTextAlignmentCenter;
+    learnTopLabel.text = @"Learn";
+    
+    [headerView addSubview:learnTopLabel];
     
     //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }

@@ -11,10 +11,13 @@
 #import "DataStore.h"
 #import "NSArray+RandomSort.h"
 #import "ScoreSummary.h"
+#import "KLCPopup.h"
 
 @interface StatesGameVC ()
 @property NSMutableArray *stateArray;
-
+@property (nonatomic, strong) UIPopoverController* popover;
+- (void)dismissButtonPressed:(id)sender;
+- (void)fieldCancelButtonPressed:(id)sender;
 
 @end
 
@@ -143,9 +146,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        
-       randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
+               randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
 
         //Get the current
         currentState = randomStatesArray[currentQuestion];
@@ -274,6 +275,77 @@
         
         
         [self showColorChoice];
+        
+        /////////////000000-------------------------------
+        // Generate content view to present
+        UIView* contentView = [[UIView alloc] init];
+        contentView.translatesAutoresizingMaskIntoConstraints = NO;
+        contentView.backgroundColor = [UIColor redColor];
+        contentView.layer.cornerRadius = 12.0;
+        
+        UILabel* dismissLabel = [[UILabel alloc] init];
+        dismissLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        dismissLabel.backgroundColor = [UIColor clearColor];
+        dismissLabel.textColor = [UIColor whiteColor];
+        dismissLabel.font = [UIFont boldSystemFontOfSize:72.0];
+        dismissLabel.text = @"Hi.";
+        
+        UIButton* dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        dismissButton.translatesAutoresizingMaskIntoConstraints = NO;
+        dismissButton.contentEdgeInsets = UIEdgeInsetsMake(10, 20, 10, 20);
+        dismissButton.backgroundColor = [UIColor blackColor];
+        [dismissButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [dismissButton setTitleColor:[[dismissButton titleColorForState:UIControlStateNormal] colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
+        dismissButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
+        [dismissButton setTitle:@"Bye" forState:UIControlStateNormal];
+        dismissButton.layer.cornerRadius = 6.0;
+        [dismissButton addTarget:self action:@selector(dismissButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [contentView addSubview:dismissLabel];
+        [contentView addSubview:dismissButton];
+        
+        NSDictionary* views = NSDictionaryOfVariableBindings(contentView, dismissButton, dismissLabel);
+        
+        [contentView addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(16)-[dismissLabel]-(10)-[dismissButton]-(24)-|"
+                                                 options:NSLayoutFormatAlignAllCenterX
+                                                 metrics:nil
+                                                   views:views]];
+        
+        [contentView addConstraints:
+         [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(36)-[dismissLabel]-(36)-|"
+                                                 options:0
+                                                 metrics:nil
+                                                   views:views]];
+        
+        // Show in popup
+        KLCPopupLayout layout = KLCPopupLayoutMake((KLCPopupHorizontalLayout)@"Dismiss type",
+                                                   (KLCPopupVerticalLayout)@"Dismiss type");
+        
+        KLCPopup* popup = [KLCPopup popupWithContentView:contentView
+                                                showType:(KLCPopupShowType)@"Dismiss type"
+                                             dismissType:(KLCPopupDismissType)@"Dismiss type"
+                                                maskType:(KLCPopupMaskType)@"Background mask"
+                                dismissOnBackgroundTouch:NO
+                                   dismissOnContentTouch:YES];
+        
+        ////if (_shouldDismissAfterDelay) {
+        // [popup showWithLayout:layout duration:2.0];
+        //  } else {
+        [popup showWithLayout:layout];
+        // }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ///0000000000000=============================================
+        
+
 
         
     }

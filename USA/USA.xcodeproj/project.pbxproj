@@ -24,6 +24,7 @@
 		8A02877719AD07AF00829188 /* Iowa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877619AD07AF00829188 /* Iowa.jpg */; };
 		8A2218ED19B3A6A100CD8118 /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2218E919B3A6A000CD8118 /* stately.ttf */; };
 		8A2218EE19B3A6A100CD8118 /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */; };
+		8A2218F219B404E500CD8118 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218F119B404E500CD8118 /* KLCPopup.m */; };
 		8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2410B919AD0D7700A172C4 /* Maryland.jpg */; };
 		8A354B16199E4AF900A30CE0 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A354B15199E4AF900A30CE0 /* learn.png */; };
 		8A354B19199EC23500A30CE0 /* USATBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A354B18199EC23500A30CE0 /* USATBV.m */; };
@@ -107,7 +108,6 @@
 		8AE87DD119B0D65C00EC93F0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */; };
 		8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DD019B0D65C00EC93F0 /* ViewController.m */; };
 		8AE87DDC19B0D6E900EC93F0 /* MapCustomizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */; };
-		8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEFDC8F19AD797B000A43FE /* MapGame.m */; };
 		8AFAD1F9199EDEE40058F64E /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1F8199EDEE40058F64E /* searchButton.png */; };
 		8AFAD1FC199EE2AB0058F64E /* USAViewStateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */; };
 		8AFAD1FE199EEC0E0058F64E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAD1FD199EEC0E0058F64E /* back.png */; };
@@ -155,6 +155,8 @@
 		8A2218EA19B3A6A000CD8118 /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
 		8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
 		8A2218EC19B3A6A000CD8118 /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
+		8A2218F019B404E500CD8118 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
+		8A2218F119B404E500CD8118 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		8A2410B919AD0D7700A172C4 /* Maryland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maryland.jpg; sourceTree = "<group>"; };
 		8A354B15199E4AF900A30CE0 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		8A354B17199EC23500A30CE0 /* USATBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATBV.h; sourceTree = "<group>"; };
@@ -246,12 +248,10 @@
 		8AE0225A19A4D40E003BD003 /* select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select2.png; sourceTree = "<group>"; };
 		8AE0225C19A4DAA3003BD003 /* select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select3.png; sourceTree = "<group>"; };
 		8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
-		8AE87DCF19B0D65C00EC93F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8AE87DD019B0D65C00EC93F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AE87DCF19B0D65C00EC93F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controllers/ViewController.h; sourceTree = "<group>"; };
+		8AE87DD019B0D65C00EC93F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controllers/ViewController.m; sourceTree = "<group>"; };
 		8AE87DDA19B0D6E900EC93F0 /* MapCustomizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomizationViewController.h; sourceTree = "<group>"; };
 		8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCustomizationViewController.m; sourceTree = "<group>"; };
-		8AEFDC8E19AD797B000A43FE /* MapGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGame.h; sourceTree = "<group>"; };
-		8AEFDC8F19AD797B000A43FE /* MapGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGame.m; sourceTree = "<group>"; };
 		8AFAD1F8199EDEE40058F64E /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
 		8AFAD1FA199EE2AB0058F64E /* USAViewStateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewStateVC.h; sourceTree = "<group>"; };
 		8AFAD1FB199EE2AB0058F64E /* USAViewStateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAViewStateVC.m; sourceTree = "<group>"; };
@@ -313,6 +313,15 @@
 			path = USStatesColorMap;
 			sourceTree = "<group>";
 		};
+		8A2218EF19B404E500CD8118 /* KLCPopup */ = {
+			isa = PBXGroup;
+			children = (
+				8A2218F019B404E500CD8118 /* KLCPopup.h */,
+				8A2218F119B404E500CD8118 /* KLCPopup.m */,
+			);
+			path = KLCPopup;
+			sourceTree = "<group>";
+		};
 		8A5BB2D119AA312B00B0ABB3 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,10 +344,10 @@
 				8AFAD24819A1409F0058F64E /* StatesGameVC.m */,
 				8A5BB30019AB60D000B0ABB3 /* CapitalGame.h */,
 				8A5BB30119AB60D000B0ABB3 /* CapitalGame.m */,
+				8AE87DCF19B0D65C00EC93F0 /* ViewController.h */,
+				8AE87DD019B0D65C00EC93F0 /* ViewController.m */,
 				8AAE965119A7661A009090AA /* ScoreSummary.h */,
 				8AAE965219A7661A009090AA /* ScoreSummary.m */,
-				8AEFDC8E19AD797B000A43FE /* MapGame.h */,
-				8AEFDC8F19AD797B000A43FE /* MapGame.m */,
 			);
 			name = Play;
 			sourceTree = "<group>";
@@ -566,8 +575,6 @@
 				8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */,
 				8AE87DDA19B0D6E900EC93F0 /* MapCustomizationViewController.h */,
 				8AE87DDB19B0D6E900EC93F0 /* MapCustomizationViewController.m */,
-				8AE87DCF19B0D65C00EC93F0 /* ViewController.h */,
-				8AE87DD019B0D65C00EC93F0 /* ViewController.m */,
 			);
 			name = "Color MAP";
 			sourceTree = "<group>";
@@ -575,6 +582,7 @@
 		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8A2218EF19B404E500CD8118 /* KLCPopup */,
 				8AE87DCD19B0D64B00EC93F0 /* Color MAP */,
 				8AA73273199D9AE900E2B83E /* NAModalSheet */,
 				8AE87DCC19B0D5E600EC93F0 /* Info Scroll Parallax */,
@@ -804,7 +812,7 @@
 				8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
 				8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */,
-				8AEFDC9019AD797B000A43FE /* MapGame.m in Sources */,
+				8A2218F219B404E500CD8118 /* KLCPopup.m in Sources */,
 				8AA73282199D9AE900E2B83E /* SampleSheetViewController.m in Sources */,
 				8A670395199447C3000037DF /* USAimagesViewController.m in Sources */,
 				8AA73281199D9AE900E2B83E /* UIImage+screenshot.m in Sources */,

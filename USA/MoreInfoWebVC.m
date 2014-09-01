@@ -8,7 +8,7 @@
 
 #import "MoreInfoWebVC.h"
 
-@interface MoreInfoWebVC ()
+@interface MoreInfoWebVC ()<UIWebViewDelegate>
 
 @end
 
@@ -17,6 +17,19 @@
     
     //Back Button
     UIButton * backButton;
+    
+UIActivityIndicatorView*activityind;
+}
+
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    
+    [activityind startAnimating];
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    [activityind stopAnimating];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,9 +40,28 @@
         webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 70, SCREEN_WIDTH, SCREEN_HEIGHT-70)];
         UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
         
+        webView.delegate = self;
+        
+        
+        activityind=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+       activityind.center = CGPointMake(SCREEN_WIDTH-30, headerView.frame.size.height/2);
+
+        
+        [activityind startAnimating];
+
+        
         [self.view addSubview:headerView];
+
         headerView.backgroundColor = [UIColor darkGrayColor];
         
+        UILabel * moreInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
+        [moreInfoLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
+        
+        moreInfoLabel.textColor = [UIColor whiteColor];
+        moreInfoLabel.textAlignment = NSTextAlignmentCenter;
+        moreInfoLabel.text = @"More Info";
+        
+        [headerView addSubview:moreInfoLabel];
         
         backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
         
@@ -42,7 +74,8 @@
         
         [self.view addSubview:webView];
         [self.view addSubview:backButton];
-        
+        [self.view addSubview:activityind];
+
         self.view.backgroundColor = [UIColor whiteColor];
 
         
