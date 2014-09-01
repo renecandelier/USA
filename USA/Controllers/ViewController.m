@@ -99,7 +99,7 @@ NSInteger const NumOfStates = 51;
 
     chooseColor.layer.cornerRadius = 5;
     
-    chooseColor.backgroundColor = [UIColor whiteColor];
+    chooseColor.backgroundColor = [UIColor darkGrayColor];
     
     
     for(int col = 0; col<=9; col++){
@@ -153,6 +153,12 @@ NSInteger const NumOfStates = 51;
     //Get the first Question
     [self fillMapWithBlackColor];
     [self getStateName];
+    //SWIPE BUTTON
+    swipeImageView.center = CGPointMake(x-200, y);
+    
+    [UIView animateWithDuration:0.4 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        swipeImageView.center = CGPointMake(x, y);
+    } completion:nil];
     
     [self loadMap];
 }
@@ -160,11 +166,18 @@ NSInteger const NumOfStates = 51;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    swipeImageView.center = CGPointMake(x-200, y);
     
-    [UIView animateWithDuration:0.4 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-        swipeImageView.center = CGPointMake(x, y);
-    } completion:nil];
+    //Question Label
+    UILabel * questionLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-200, SCREEN_HEIGHT-250, 400, 40)];
+    [questionLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
+    questionLable.textAlignment = NSTextAlignmentCenter;
+    
+    questionLable.textColor = [UIColor darkGrayColor];
+    questionLable.text = @"What state is highlighted?";
+    [self.view addSubview:questionLable];
+    
+    
+    
     
     
    
@@ -188,7 +201,7 @@ NSInteger const NumOfStates = 51;
     
     //Adding the Swipe view
     
-    swipeImageView =[[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30,SCREEN_HEIGHT-220,35,35)];
+    swipeImageView =[[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30,SCREEN_HEIGHT-210,35,35)];
     [swipeImageView setImage:[UIImage imageNamed:@"select3.png"]];
     //Getting the X Y for the Swipe Button
     x =swipeImageView.center.x;
@@ -243,14 +256,7 @@ NSInteger const NumOfStates = 51;
     [self.view addSubview:lableforAnswerC];
     [self.view addSubview:lableforAnswerD];
     
-   
-    
-    
-    
-    
-    
-    
-    //--------------BUTTONS fo ANSWERS
+       //--------------BUTTONS fo ANSWERS
     
     //Make the Option A Circle
     optionA = [[UIView alloc] initWithFrame:CGRectMake(40, SCREEN_HEIGHT-170, 35, 35)];
@@ -294,67 +300,6 @@ NSInteger const NumOfStates = 51;
     scoreLabel.textAlignment = NSTextAlignmentCenter;
     scoreLabel.text = @"Score: 0";
     //[self.view addSubview:scoreLabel];
-
-    
-
-    
-    
-    
-    
-    self.statesNames = [@[
-                          @"Alabama",
-                          @"Alaska",
-                          @"Arkansas",
-                          @"Arizona",
-                          @"California",
-                          @"Colorado",
-                          @"Connecticut",
-                          @"Delaware",
-                          @"Florida",
-                          @"Georgia",
-                          @"Hawaii",
-                          @"Idaho",
-                          @"Illinois",
-                          @"Indiana",
-                          @"Iowa",
-                          @"Kansas",
-                          @"Kentucky",
-                          @"Louisiana",
-                          @"Maine",
-                          @"Maryland",
-                          @"Massachusetts",
-                          @"Michigan",
-                          @"Minnesota",
-                          @"Mississippi",
-                          @"Missouri",
-                          @"Montana",
-                          @"Nebraska",
-                          @"Nevada",
-                          @"New Hampshire",
-                          @"New Jersey",
-                          @"New Mexico",
-                          @"New York",
-                          @"North Carolina",
-                          @"North Dakota",
-                          @"Ohio",
-                          @"Oklahoma",
-                          @"Oregon",
-                          @"Pennsylvania",
-                          @"Rhode Island",
-                          @"South Carolina",
-                          @"South Dakota",
-                          @"Tennessee",
-                          @"Texas",
-                          @"Utah",
-                          @"Virginia",
-                          @"Vermont",
-                          @"Washington",
-                          @"West Virginia",
-                          @"Wisconsin",
-                          @"Wyoming",
-                          @"District of Columbia"
-                          ]mutableCopy];
-    
     
     
     [self showColorChoice];

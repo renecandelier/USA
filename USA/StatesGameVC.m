@@ -88,19 +88,18 @@
     
   
     arrayofButtons = [@[] mutableCopy];
+    
+//    chooseColor = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-10)/2.0, SCREEN_HEIGHT-40, 10, 10)];
 
-    colors = @[[UIColor redColor], [UIColor cyanColor], [UIColor yellowColor], [UIColor blackColor], [UIColor greenColor], [UIColor brownColor], [UIColor orangeColor], [UIColor magentaColor], [UIColor purpleColor], [UIColor blueColor]];
-    
-    chooseColor = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-10)/2.0, SCREEN_HEIGHT-40, 10, 10)];
-    
+    chooseColor = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-40, 30, 10, 10)];
     chooseColor.layer.cornerRadius = 5;
     
-    chooseColor.backgroundColor = [UIColor whiteColor];
+    chooseColor.backgroundColor = [UIColor darkGrayColor];
     
     
     for(int col = 0; col<=9; col++){
         
-        float radius = 22;
+        float radius = 19;
         float mpi = M_PI/180;
         float angle = 360/10;
         float radians = angle * mpi;
@@ -109,14 +108,14 @@
         float moveY = chooseColor.center.y + cosf(radians * col)* radius;
 
         
-        UILabel * colorButton = [[UILabel alloc]initWithFrame:CGRectMake(moveX, moveY, 10, 10)];
+        UILabel * colorButton = [[UILabel alloc]initWithFrame:CGRectMake(moveX, moveY, 9, 9)];
         colorButton.tag =col;
         
         [arrayofButtons addObject:colorButton];
         
         
         colorButton.center = chooseColor.center;
-        colorButton.backgroundColor = [UIColor darkGrayColor];
+        colorButton.backgroundColor = [UIColor whiteColor];
         
         colorButton.layer.cornerRadius = 5;
         colorButton.layer.masksToBounds = YES;
@@ -145,7 +144,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        [self showColorChoice];
         
        randomStatesArray = [[[DataStore sharedInstance] getStates]shuffle];
 
@@ -210,6 +208,11 @@
         [lableforAnswerC setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
         [lableforAnswerD setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
         
+        lableforAnswerA.textColor = [UIColor darkGrayColor];
+        lableforAnswerB.textColor = [UIColor darkGrayColor];
+        lableforAnswerC.textColor = [UIColor darkGrayColor];
+        lableforAnswerD.textColor = [UIColor darkGrayColor];
+        
         [self.view addSubview:lableforAnswerA];
         [self.view addSubview:lableforAnswerB];
         [self.view addSubview:lableforAnswerC];
@@ -217,6 +220,8 @@
 
         [questionLable setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
          questionLable.textAlignment = NSTextAlignmentCenter;
+        questionLable.textColor = [UIColor darkGrayColor];
+
         [self.view addSubview:questionLable];
         //--------------BUTTONS fo ANSWERS
         
@@ -266,6 +271,11 @@
         self.view.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:chooseColor];
 
+        
+        
+        [self showColorChoice];
+
+        
     }
     return self;
 }

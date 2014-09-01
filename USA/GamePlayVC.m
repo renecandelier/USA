@@ -150,7 +150,7 @@
          ];
         
         
-        [self.view addSubview:randomGame];
+       // [self.view addSubview:randomGame];
         
         
         //------Top Score Button
