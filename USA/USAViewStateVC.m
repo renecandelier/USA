@@ -88,19 +88,12 @@
     
     //******************** SET THE TEXT FOR THE STATE FACTS ****************************************
     
-    //backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",stateNameLabel.text]];
-
-    
-    StateAbbreviation.text = [NSString stringWithFormat:@"Abbreviation: %@", currentState.StateAbbreviation];
-    StateBird.text = [NSString stringWithFormat:@"Bird: %@", currentState.StateBird];
-    StateCapitol.text = [NSString stringWithFormat:@"Capital: %@", currentState.StateCapitol];
-    StateFlower.text = [NSString stringWithFormat:@"Flower: %@", currentState.StateFlower];
-    StateNickname.text = [NSString stringWithFormat:@"Nickname: %@", currentState.StateNickname];
-    StateTree.text = [NSString stringWithFormat:@"Tree: %@", currentState.StateTree];
-
-//Load Image
-
-    
+    StateAbbreviation.text = [NSString stringWithFormat:@"Abbreviation  %@", currentState.StateAbbreviation];
+    StateBird.text =         [NSString stringWithFormat:@"Bird              %@", currentState.StateBird];
+    StateCapitol.text =      [NSString stringWithFormat:@"Capital          %@", currentState.StateCapitol];
+    StateFlower.text =       [NSString stringWithFormat:@"Flower           %@", currentState.StateFlower];
+    StateNickname.text =     [NSString stringWithFormat:@"Nickname     %@", currentState.StateNickname];
+    StateTree.text =         [NSString stringWithFormat:@"Tree              %@", currentState.StateTree];
 
 }
 
@@ -131,10 +124,6 @@
     
     [self.view addSubview:parallaxView];
     
-    
-    
-
-
     //----------------------Back button
     backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
     
@@ -176,7 +165,7 @@
     
     //------More INFO BUTTON
     
-    moreInfoButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-260, 200, 40)];
+    moreInfoButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-250, 200, 40)];
     
     //moreInfoButton.backgroundColor = [UIColor blueColor];
     [moreInfoButton setTitle: @"MORE INFO" forState: UIControlStateNormal];
@@ -192,73 +181,104 @@
     [moreInfoButton addTarget:self action:@selector(moreInfoButtonClicked) forControlEvents:UIControlEventTouchUpInside
      ];
     
-    
     [stateContentView addSubview:moreInfoButton];
 
     
     //------------------- State FACTS
     
-    StateAbbreviation = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, SCREEN_WIDTH, 20)];
+
+    
+    StateAbbreviation = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, SCREEN_WIDTH, 25)];
     StateAbbreviation.textAlignment = NSTextAlignmentLeft;
     StateAbbreviation.font = [UIFont systemFontOfSize:14.0f];
     StateAbbreviation.textColor = [UIColor darkGrayColor];
-    [StateAbbreviation setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    [StateAbbreviation setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18]];
 
     
     [stateContentView addSubview:StateAbbreviation];
     
-    //BIRD
-    StateBird = [[UILabel alloc] initWithFrame:CGRectMake(5, 60, SCREEN_WIDTH, 20)];
-    StateBird.textAlignment = NSTextAlignmentLeft;
-    StateBird.font = [UIFont systemFontOfSize:14.0f];
-    StateBird.textColor = [UIColor darkGrayColor];
-    [StateBird setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
-    
-    
-    [stateContentView addSubview:StateBird];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(20,70, 260, 1)];
+    lineView.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    [stateContentView addSubview:lineView];
     
     //Capitol
-    StateCapitol = [[UILabel alloc] initWithFrame:CGRectMake(5, 90, SCREEN_WIDTH, 20)];
+    StateCapitol = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, SCREEN_WIDTH, 25)];
     StateCapitol.textAlignment = NSTextAlignmentLeft;
     StateCapitol.font = [UIFont systemFontOfSize:14.0f];
     StateCapitol.textColor = [UIColor darkGrayColor];
-    [StateCapitol setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    [StateCapitol setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18]];
     
     
     [stateContentView addSubview:StateCapitol];
     
+    [stateContentView addSubview:StateAbbreviation];
+    
+    UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(20,120, 260, 1)];
+    lineView2.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    [stateContentView addSubview:lineView2];
+    
     
     //Nickname
-    StateNickname = [[UILabel alloc] initWithFrame:CGRectMake(5, 120, SCREEN_WIDTH, 20)];
+    StateNickname = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, SCREEN_WIDTH, 25)];
     StateNickname.textAlignment = NSTextAlignmentLeft;
     StateNickname.font = [UIFont systemFontOfSize:14.0f];
     StateNickname.textColor = [UIColor darkGrayColor];
-    [StateNickname setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    [StateNickname setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18]];
     
     
     [stateContentView addSubview:StateNickname];
     
+    [stateContentView addSubview:StateAbbreviation];
+    
+    UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(20,170, 260, 1)];
+    lineView3.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    [stateContentView addSubview:lineView3];
+    
+    
+    
     //TREE
-    StateTree = [[UILabel alloc] initWithFrame:CGRectMake(5, 150, SCREEN_WIDTH, 20)];
+    StateTree = [[UILabel alloc] initWithFrame:CGRectMake(20, 180, SCREEN_WIDTH, 25)];
     StateTree.textAlignment = NSTextAlignmentLeft;
     StateTree.font = [UIFont systemFontOfSize:14.0f];
     StateTree.textColor = [UIColor darkGrayColor];
-    [StateTree setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    [StateTree setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18]];
     
     
     [stateContentView addSubview:StateTree];
     
+    [stateContentView addSubview:StateAbbreviation];
+    
+    UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(20,220, 260, 1)];
+    lineView4.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    [stateContentView addSubview:lineView4];
+    
+    
+    
     //FLOWER
-    StateFlower = [[UILabel alloc] initWithFrame:CGRectMake(5, 180, SCREEN_WIDTH, 20)];
+    StateFlower = [[UILabel alloc] initWithFrame:CGRectMake(20, 230, SCREEN_WIDTH, 25)];
     StateFlower.textAlignment = NSTextAlignmentLeft;
     StateFlower.font = [UIFont systemFontOfSize:14.0f];
     StateFlower.textColor = [UIColor darkGrayColor];
-    [StateFlower setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:15]];
+    [StateFlower setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18]];
     
     [stateContentView addSubview:StateFlower];
     
-   
+    [stateContentView addSubview:StateAbbreviation];
     
+    UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(20,270, 260, 1)];
+    lineView5.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    [stateContentView addSubview:lineView5];
+    
+   
+    //BIRD
+    StateBird = [[UILabel alloc] initWithFrame:CGRectMake(20, 280, SCREEN_WIDTH, 25)];
+    StateBird.textAlignment = NSTextAlignmentLeft;
+    StateBird.font = [UIFont systemFontOfSize:14.0f];
+    StateBird.textColor = [UIColor darkGrayColor];
+    [StateBird setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:18]];
+    
+    
+    [stateContentView addSubview:StateBird];
 
 }
 
@@ -287,21 +307,5 @@
     NSLog(@"TAP!!!!%@:%@", [self class], NSStringFromSelector(_cmd));
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ScorePopUp;
+@class NAModalSheet;
 @interface StatesGameVC : UIViewController
+@property (nonatomic, weak) NAModalSheet *modalSheet;
 
+@property (weak, nonatomic) ScorePopUp *PopUpForScore;
 @end

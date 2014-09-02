@@ -26,6 +26,8 @@
 		8A2218EE19B3A6A100CD8118 /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */; };
 		8A2218F219B404E500CD8118 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218F119B404E500CD8118 /* KLCPopup.m */; };
 		8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2410B919AD0D7700A172C4 /* Maryland.jpg */; };
+		8A2D004C19B61ADE0035177C /* ScorePopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D004B19B61ADE0035177C /* ScorePopUp.m */; };
+		8A2D005019B6225C0035177C /* ScorePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D004F19B6225C0035177C /* ScorePopUp.xib */; };
 		8A354B16199E4AF900A30CE0 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A354B15199E4AF900A30CE0 /* learn.png */; };
 		8A354B19199EC23500A30CE0 /* USATBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A354B18199EC23500A30CE0 /* USATBV.m */; };
 		8A3EAFB319ABA93C00551539 /* Wisconsin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFB219ABA93C00551539 /* Wisconsin.jpg */; };
@@ -158,6 +160,9 @@
 		8A2218F019B404E500CD8118 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		8A2218F119B404E500CD8118 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		8A2410B919AD0D7700A172C4 /* Maryland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maryland.jpg; sourceTree = "<group>"; };
+		8A2D004A19B61ADE0035177C /* ScorePopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScorePopUp.h; sourceTree = "<group>"; };
+		8A2D004B19B61ADE0035177C /* ScorePopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScorePopUp.m; sourceTree = "<group>"; };
+		8A2D004F19B6225C0035177C /* ScorePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScorePopUp.xib; sourceTree = "<group>"; };
 		8A354B15199E4AF900A30CE0 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		8A354B17199EC23500A30CE0 /* USATBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATBV.h; sourceTree = "<group>"; };
 		8A354B18199EC23500A30CE0 /* USATBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATBV.m; sourceTree = "<group>"; };
@@ -320,6 +325,30 @@
 				8A2218F119B404E500CD8118 /* KLCPopup.m */,
 			);
 			path = KLCPopup;
+			sourceTree = "<group>";
+		};
+		8A2D004819B61A310035177C /* Dictionary & Array  */ = {
+			isa = PBXGroup;
+			children = (
+				8AFAD21D199FA75B0058F64E /* USA States.plist */,
+				8AFAD212199F18130058F64E /* DataStore.h */,
+				8AFAD213199F18130058F64E /* DataStore.m */,
+				8AFAD214199F18130058F64E /* StateClass.h */,
+				8AFAD215199F18130058F64E /* StateClass.m */,
+				8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */,
+				8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */,
+			);
+			name = "Dictionary & Array ";
+			sourceTree = "<group>";
+		};
+		8A2D004919B61A920035177C /* Score Pop Up */ = {
+			isa = PBXGroup;
+			children = (
+				8A2D004A19B61ADE0035177C /* ScorePopUp.h */,
+				8A2D004B19B61ADE0035177C /* ScorePopUp.m */,
+				8A2D004F19B6225C0035177C /* ScorePopUp.xib */,
+			);
+			name = "Score Pop Up";
 			sourceTree = "<group>";
 		};
 		8A5BB2D119AA312B00B0ABB3 /* Learn */ = {
@@ -582,6 +611,7 @@
 		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8A2D004919B61A920035177C /* Score Pop Up */,
 				8A2218EF19B404E500CD8118 /* KLCPopup */,
 				8AE87DCD19B0D64B00EC93F0 /* Color MAP */,
 				8AA73273199D9AE900E2B83E /* NAModalSheet */,
@@ -605,13 +635,7 @@
 		8AFAD227199FE0830058F64E /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				8AFAD21D199FA75B0058F64E /* USA States.plist */,
-				8AFAD212199F18130058F64E /* DataStore.h */,
-				8AFAD213199F18130058F64E /* DataStore.m */,
-				8AFAD214199F18130058F64E /* StateClass.h */,
-				8AFAD215199F18130058F64E /* StateClass.m */,
-				8AFAD21A199F19020058F64E /* NSArray+RandomSort.h */,
-				8AFAD21B199F19020058F64E /* NSArray+RandomSort.m */,
+				8A2D004819B61A310035177C /* Dictionary & Array  */,
 				8AFAD21F199FC9C00058F64E /* Controller Extras */,
 				8AFAD226199FE0530058F64E /* Images */,
 				8A67036919944771000037DF /* USA */,
@@ -747,6 +771,7 @@
 				8A5BB2F319AAD87A00B0ABB3 /* Ohio.jpg in Resources */,
 				8AA73227199D392400E2B83E /* Florida.jpg in Resources */,
 				8A3EAFD019ABABFC00551539 /* Idaho.jpg in Resources */,
+				8A2D005019B6225C0035177C /* ScorePopUp.xib in Resources */,
 				8A3EAFB719ABA97500551539 /* New Jersey.jpg in Resources */,
 				8AA73288199DBC7900E2B83E /* rate.png in Resources */,
 				8A02876319ACF91700829188 /* Minnesota.jpg in Resources */,
@@ -824,6 +849,7 @@
 				8A2218EE19B3A6A100CD8118 /* USStatesColorMap.m in Sources */,
 				8AFAD22A199FF5FC0058F64E /* MoreInfoWebVC.m in Sources */,
 				8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */,
+				8A2D004C19B61ADE0035177C /* ScorePopUp.m in Sources */,
 				8AA73280199D9AE900E2B83E /* UIImage+BoxBlur.m in Sources */,
 				8A67037019944771000037DF /* main.m in Sources */,
 			);
