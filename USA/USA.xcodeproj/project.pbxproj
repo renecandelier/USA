@@ -24,7 +24,6 @@
 		8A02877719AD07AF00829188 /* Iowa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A02877619AD07AF00829188 /* Iowa.jpg */; };
 		8A2218ED19B3A6A100CD8118 /* stately.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2218E919B3A6A000CD8118 /* stately.ttf */; };
 		8A2218EE19B3A6A100CD8118 /* USStatesColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */; };
-		8A2218F219B404E500CD8118 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2218F119B404E500CD8118 /* KLCPopup.m */; };
 		8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2410B919AD0D7700A172C4 /* Maryland.jpg */; };
 		8A2D004C19B61ADE0035177C /* ScorePopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D004B19B61ADE0035177C /* ScorePopUp.m */; };
 		8A2D005019B6225C0035177C /* ScorePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D004F19B6225C0035177C /* ScorePopUp.xib */; };
@@ -157,8 +156,6 @@
 		8A2218EA19B3A6A000CD8118 /* USStatesColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMap.h; sourceTree = "<group>"; };
 		8A2218EB19B3A6A000CD8118 /* USStatesColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStatesColorMap.m; sourceTree = "<group>"; };
 		8A2218EC19B3A6A000CD8118 /* USStatesColorMapHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStatesColorMapHeader.h; sourceTree = "<group>"; };
-		8A2218F019B404E500CD8118 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
-		8A2218F119B404E500CD8118 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		8A2410B919AD0D7700A172C4 /* Maryland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maryland.jpg; sourceTree = "<group>"; };
 		8A2D004A19B61ADE0035177C /* ScorePopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScorePopUp.h; sourceTree = "<group>"; };
 		8A2D004B19B61ADE0035177C /* ScorePopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScorePopUp.m; sourceTree = "<group>"; };
@@ -316,15 +313,6 @@
 				8A2218EC19B3A6A000CD8118 /* USStatesColorMapHeader.h */,
 			);
 			path = USStatesColorMap;
-			sourceTree = "<group>";
-		};
-		8A2218EF19B404E500CD8118 /* KLCPopup */ = {
-			isa = PBXGroup;
-			children = (
-				8A2218F019B404E500CD8118 /* KLCPopup.h */,
-				8A2218F119B404E500CD8118 /* KLCPopup.m */,
-			);
-			path = KLCPopup;
 			sourceTree = "<group>";
 		};
 		8A2D004819B61A310035177C /* Dictionary & Array  */ = {
@@ -612,7 +600,6 @@
 			isa = PBXGroup;
 			children = (
 				8A2D004919B61A920035177C /* Score Pop Up */,
-				8A2218EF19B404E500CD8118 /* KLCPopup */,
 				8AE87DCD19B0D64B00EC93F0 /* Color MAP */,
 				8AA73273199D9AE900E2B83E /* NAModalSheet */,
 				8AE87DCC19B0D5E600EC93F0 /* Info Scroll Parallax */,
@@ -837,7 +824,6 @@
 				8A5BB30219AB60D000B0ABB3 /* CapitalGame.m in Sources */,
 				8A354B19199EC23500A30CE0 /* USATBV.m in Sources */,
 				8AFAD24919A1409F0058F64E /* StatesGameVC.m in Sources */,
-				8A2218F219B404E500CD8118 /* KLCPopup.m in Sources */,
 				8AA73282199D9AE900E2B83E /* SampleSheetViewController.m in Sources */,
 				8A670395199447C3000037DF /* USAimagesViewController.m in Sources */,
 				8AA73281199D9AE900E2B83E /* UIImage+screenshot.m in Sources */,

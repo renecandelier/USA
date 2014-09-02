@@ -40,7 +40,7 @@
     [super viewDidLoad];
     if (self.opaque)
     {
-        self.view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1];
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     
     
