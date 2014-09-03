@@ -76,12 +76,13 @@
         
         [statesGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
-        [statesGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [statesGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        statesGame.layer.borderWidth = 1.0f;
+        statesGame.layer.borderWidth = 2.0f;
+        statesGame.layer.borderColor = [UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f].CGColor;
         statesGame.layer.cornerRadius = 5;
-        
-        
+        statesGame.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
+
         [statesGame addTarget:self action:@selector(statesGamePlay) forControlEvents:UIControlEventTouchUpInside
          ];
         
@@ -96,9 +97,12 @@
         
         [capitalGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
-        [capitalGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [capitalGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        capitalGame.layer.borderWidth = 1.0f;
+        capitalGame.layer.borderWidth = 2.0f;
+        capitalGame.layer.borderColor = [UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f].CGColor;
+        capitalGame.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
+
         capitalGame.layer.cornerRadius = 5;
         
         
@@ -118,10 +122,12 @@
         
         [mapGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
-        [mapGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [mapGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        mapGame.layer.borderWidth = 1.0f;
+        mapGame.layer.borderWidth = 2.0f;
+        mapGame.layer.borderColor = [UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f].CGColor;
         mapGame.layer.cornerRadius = 5;
+        mapGame.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
         
         
         [mapGame addTarget:self action:@selector(mapGameButtonClicked) forControlEvents:UIControlEventTouchUpInside
@@ -140,9 +146,10 @@
         
         [randomGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
-        [randomGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [randomGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
         randomGame.layer.borderWidth = 1.0f;
+        randomGame.layer.borderColor = [UIColor colorWithRed:0.318f green:0.114f blue:0.431f alpha:1.0f].CGColor;
         randomGame.layer.cornerRadius = 5;
         
         
@@ -162,9 +169,11 @@
         
         [topScores.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
-        [topScores setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [topScores setTitleColor:[UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f] forState:UIControlStateNormal];
         
         topScores.layer.borderWidth = 1.0f;
+        topScores.layer.borderColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f].CGColor;
+
         topScores.layer.cornerRadius = 5;
         
         
