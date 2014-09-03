@@ -23,48 +23,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        
-        //------Retry Button
-        
-        UIButton * retryButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-260, 200, 40)];
-        
-        //moreInfoButton.backgroundColor = [UIColor blueColor];
-        [retryButton setTitle: @"RETRY" forState: UIControlStateNormal];
-        
-        [retryButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
-        
-        [retryButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        
-        retryButton.layer.borderWidth = 0.5f;
-        retryButton.layer.cornerRadius = 5;
-        
-        
-        [retryButton addTarget:self action:@selector(retryButtonclicked) forControlEvents:UIControlEventTouchUpInside
-         ];
-        
-        
-        [self.view addSubview:retryButton];
-        
-        //-------------Main Menu
-        UIButton * mainMenuButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-160, 200, 40)];
-        
-        //moreInfoButton.backgroundColor = [UIColor blueColor];
-        [mainMenuButton setTitle: @"HOME" forState: UIControlStateNormal];
-        
-        [mainMenuButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
-        
-        [mainMenuButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        
-        mainMenuButton.layer.borderWidth = 0.5f;
-        mainMenuButton.layer.cornerRadius = 5;
-        
-        
-        [mainMenuButton addTarget:self action:@selector(menuButtonclicked) forControlEvents:UIControlEventTouchUpInside
-         ];
-        
-        
-        [self.view addSubview:mainMenuButton];
     }
     return self;
 }
@@ -76,10 +34,6 @@
 }
 
 - (void) retryButtonclicked{
-    //StatesGameVC *startGameAgain= [[StatesGameVC alloc] init];
-    
-    //[self presentViewController:startGameAgain animated:YES completion:nil];
-
 GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
 
 [self presentViewController:gameMenu animated:YES completion:nil];
@@ -91,10 +45,7 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
-    
+    self.view.backgroundColor = [UIColor darkGrayColor];
 
 }
 
@@ -102,35 +53,90 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
 -(void)setScore:(NSString *)score{
     _score = score;
     //Score Label
-
-    scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-150, 100, 300, 40)];
     
-    [scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20]];
+    
+    
+    int theScore = [score intValue];
+    
+    UIView * scoreView = [[UIView alloc]initWithFrame:CGRectMake(15, 130, SCREEN_WIDTH-30, SCREEN_HEIGHT -260)];
+    
+    
+    scoreView.backgroundColor = [UIColor whiteColor];
+    
+    
+    scoreView.layer.cornerRadius = 15;
+    scoreView.layer.masksToBounds = YES;
+    
+    [self.view addSubview:scoreView];
+    
+    //--------------------
+    
+    UILabel * inspiringLabel = [[UILabel alloc] initWithFrame:CGRectMake(scoreView.bounds.size.width/2-100, 10, 200, 100)];
+    
+    [inspiringLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
+    inspiringLabel.textAlignment = NSTextAlignmentCenter;
+    inspiringLabel.text =[NSString stringWithFormat:@"%@",self.score];
+    
+    
+   
+    
+    [scoreView addSubview:inspiringLabel];
+    
+    
+    
+    UIButton * goHomeButton = [[UIButton alloc]initWithFrame:CGRectMake(30,scoreView.bounds.size.height-90,60,60)];
+    
+    [goHomeButton setBackgroundImage:[UIImage imageNamed:@"home.png"] forState:UIControlStateNormal];
+    
+    [goHomeButton addTarget:self action:@selector(menuButtonclicked) forControlEvents:UIControlEventTouchUpInside];
+    
+    [scoreView addSubview:goHomeButton];
+    
+    
+    UIButton * retryButton = [[UIButton alloc]initWithFrame:CGRectMake(scoreView.bounds.size.width-90,scoreView.bounds.size.height-90,60,60)];
+    
+    [retryButton setBackgroundImage:[UIImage imageNamed:@"retry.png"] forState:UIControlStateNormal];
+    
+    [retryButton addTarget:self action:@selector(retryButtonclicked) forControlEvents:UIControlEventTouchUpInside];
+    
+    [scoreView addSubview:retryButton];
+    
+        
+    //SCORE
+
+    scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(scoreView.bounds.size.width/2-50, 100, 100, 100)];
+    
+    [scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:45]];
     scoreLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:scoreLabel];
-    scoreLabel.text =[NSString stringWithFormat:@"Score: %@",self.score];
+    scoreLabel.text =[NSString stringWithFormat:@"%@",self.score];
+    
+
+    scoreLabel.layer.cornerRadius = 50.0;
+    scoreLabel.layer.masksToBounds = YES;
+    scoreLabel.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    
+    scoreLabel.layer.borderWidth = 2.0;
+
+    [scoreView addSubview:scoreLabel];
+    
+    if (theScore>=70) {
+        inspiringLabel.text = @"Great Job!";
+        scoreLabel.textColor = [UIColor colorWithRed:0.427f green:0.996f blue:0.729f alpha:1.0f];
+        inspiringLabel.textColor = [UIColor colorWithRed:0.196f green:0.749f blue:0.333f alpha:1.0f];
 
 
+        
+    } else{
+        inspiringLabel.text = @"Oh No!";
+        scoreLabel.textColor = [UIColor colorWithRed:0.855f green:0.145f blue:0.278f alpha:1.0f];
+        inspiringLabel.textColor = [UIColor colorWithRed:0.855f green:0.145f blue:0.278f alpha:1.0f];
+
+        
+    }
 
 }
 
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

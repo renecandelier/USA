@@ -11,7 +11,7 @@
 #import "NAModalSheet.h"
 #import "USATBV.h"
 #import "USAViewStateVC.h"
-
+#import <Crashlytics/Crashlytics.h>
 //Get Random States
 #import "StateClass.h"
 #import "DataStore.h"
@@ -120,7 +120,6 @@
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                         
-                        //citiesLable.text = self.citiesArray [photoCount];
                         citiesLable.text = currentState.Statename;
                         imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",citiesLable.text]]; }
      

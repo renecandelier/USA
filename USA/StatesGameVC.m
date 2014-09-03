@@ -12,13 +12,11 @@
 #import "NSArray+RandomSort.h"
 #import "ScoreSummary.h"
 #import "ScorePopUp.h"
-#import "NAModalSheet.h"
+
 
 @interface StatesGameVC ()
 @property NSMutableArray *stateArray;
-@property (nonatomic, strong) UIPopoverController* popover;
-- (void)dismissButtonPressed:(id)sender;
-- (void)fieldCancelButtonPressed:(id)sender;
+
 
 @end
 
@@ -166,7 +164,7 @@
         //Top header View
         
         UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
-        headerView.backgroundColor = [UIColor darkGrayColor];
+        headerView.backgroundColor = [UIColor colorWithRed:0.290f green:0.596f blue:0.969f alpha:1.0f];
        // headerView = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
         [self.view addSubview:headerView];
         
@@ -267,7 +265,7 @@
         [scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25]];
         scoreLabel.textColor = [UIColor darkGrayColor];
         scoreLabel.textAlignment = NSTextAlignmentCenter;
-        scoreLabel.text = @"Score: 0";
+        scoreLabel.text = @"0";
         //[self.view addSubview:scoreLabel];
         
         self.view.backgroundColor = [UIColor whiteColor];
@@ -518,22 +516,11 @@
 
 -(void) checkForGameOver{
     if (currentQuestion ==10) {
-//        ScoreSummary *summaryVC= [[ScoreSummary alloc] init];
-//        
-//        summaryVC.score =scoreLabel.text;
-//        [self presentViewController:summaryVC animated:YES completion:nil];
-        ScorePopUp *svc = [[ScorePopUp alloc] init];
+        ScoreSummary *summaryVC= [[ScoreSummary alloc] init];
         
-        self.PopUpForScore =svc;
-        
-        NAModalSheet *sheet = [[NAModalSheet alloc] initWithViewController:svc presentationStyle:NAModalSheetPresentationStyleFadeInCentered];
-        sheet.cornerRadiusWhenCentered = 24.0;
-        sheet.delegate = self;
-        svc.modalSheet = sheet;
-        
-        [sheet presentWithCompletion:^{
-            
-        }];
+        summaryVC.score =scoreLabel.text;
+        [self presentViewController:summaryVC animated:NO completion:nil];
+
     }
 }
 
@@ -552,7 +539,7 @@
 -(void) inscreaseScore{
     
     score++;
-    scoreLabel.text = [NSString stringWithFormat:@"Score: %d",score*10];
+    scoreLabel.text = [NSString stringWithFormat:@"%d",score*10];
     
     
     for (UILabel * circle in arrayofButtons) {

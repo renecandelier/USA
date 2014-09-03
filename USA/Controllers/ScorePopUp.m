@@ -65,7 +65,7 @@
     
 }
 
-- (IBAction)playButton:(id)sender {
+- (IBAction)homeButton:(id)sender {
     
     GamePlayVC *searchViewController = [[GamePlayVC alloc] init];
     [self presentViewController:searchViewController animated:YES completion:nil];

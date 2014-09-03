@@ -54,7 +54,7 @@
         UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
         
         [self.view addSubview:headerView];
-        headerView.backgroundColor = [UIColor darkGrayColor];
+        headerView.backgroundColor = [UIColor colorWithRed:0.710f green:0.267f blue:0.961f alpha:1.0f];
         
         
         letsPlayLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
@@ -70,15 +70,15 @@
         //--------------------------------Main Content
         //------States Game Button
         
-        statesGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-120, 200, 40)];
+        statesGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-120, 200, 45)];
         
         [statesGame setTitle: @"States" forState: UIControlStateNormal];
         
-        [statesGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+        [statesGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
         [statesGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         
-        statesGame.layer.borderWidth = 0.5f;
+        statesGame.layer.borderWidth = 1.0f;
         statesGame.layer.cornerRadius = 5;
         
         
@@ -90,15 +90,15 @@
         
         //------Capital Game Button
 
-        capitalGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-60, 200, 40)];
+        capitalGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-40, 200, 45)];
         
         [capitalGame setTitle: @"Capitals" forState: UIControlStateNormal];
         
-        [capitalGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+        [capitalGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
         [capitalGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         
-        capitalGame.layer.borderWidth = 0.5f;
+        capitalGame.layer.borderWidth = 1.0f;
         capitalGame.layer.cornerRadius = 5;
         
         
@@ -112,15 +112,15 @@
         //------Map Game Button
 
         
-        mapGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2, 200, 40)];
+        mapGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2+40, 200, 45)];
         
         [mapGame setTitle: @"Map" forState: UIControlStateNormal];
         
-        [mapGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+        [mapGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
         [mapGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         
-        mapGame.layer.borderWidth = 0.5f;
+        mapGame.layer.borderWidth = 1.0f;
         mapGame.layer.cornerRadius = 5;
         
         
@@ -134,15 +134,15 @@
         //------Top Score Button
         
         
-        randomGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2+60, 200, 40)];
+        randomGame = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2+60, 200, 45)];
         
         [randomGame setTitle: @"Random" forState: UIControlStateNormal];
         
-        [randomGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+        [randomGame.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
         [randomGame setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         
-        randomGame.layer.borderWidth = 0.5f;
+        randomGame.layer.borderWidth = 1.0f;
         randomGame.layer.cornerRadius = 5;
         
         
@@ -156,15 +156,15 @@
         //------Top Score Button
         
         
-        topScores = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-80, 200, 40)];
+        topScores = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-80, 200, 45)];
         
-        [topScores setTitle: @"Top Scores" forState: UIControlStateNormal];
+        [topScores setTitle: @"Rate" forState: UIControlStateNormal];
         
-        [topScores.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
+        [topScores.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
         
         [topScores setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         
-        topScores.layer.borderWidth = 0.5f;
+        topScores.layer.borderWidth = 1.0f;
         topScores.layer.cornerRadius = 5;
         
         
@@ -184,20 +184,20 @@
     
   
 ViewController *mapVC= [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    [self presentViewController:mapVC animated:YES completion:nil];
+    [self presentViewController:mapVC animated:NO completion:nil];
 }
 
 -(void) capitalGamePlay{
     CapitalGame *capitalGameViewController = [[CapitalGame alloc] init];
     
-    [self presentViewController:capitalGameViewController animated:YES completion:nil];
+    [self presentViewController:capitalGameViewController animated:NO completion:nil];
 }
 
 
 -(void) statesGamePlay{
     StatesGameVC *stateGameViewController = [[StatesGameVC alloc] init];
 
-    [self presentViewController:stateGameViewController animated:YES completion:nil];
+    [self presentViewController:stateGameViewController animated:NO completion:nil];
 }
 
 -(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}

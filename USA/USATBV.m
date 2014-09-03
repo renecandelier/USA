@@ -71,7 +71,7 @@
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
 
     self.tableView.tableHeaderView = headerView;
-    headerView.backgroundColor = [UIColor darkGrayColor];
+    headerView.backgroundColor = [UIColor colorWithRed:0.290f green:0.596f blue:0.969f alpha:1.0f];
 
     //Setting the search box
     searchTextbox = [[UITextField alloc]initWithFrame:CGRectMake(60, 15, 200, 40)];

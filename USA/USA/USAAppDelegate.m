@@ -11,7 +11,7 @@
 #import "USATBV.h"
 #import "NAModalSheet.h"
 #import "ViewController.h"
-
+#import <Crashlytics/Crashlytics.h>
 @implementation USAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,6 +19,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [Crashlytics startWithAPIKey:@"64284aefe483aaeff73b28ea384f3ac50038ddbe"];
     
       self.window.rootViewController = [[USAimagesViewController alloc]init];
     //self.window.rootViewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];

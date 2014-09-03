@@ -12,7 +12,7 @@
 @interface ScorePopUp : UIViewController
 - (IBAction)learnButton:(id)sender;
 
-- (IBAction)playButton:(id)sender;
+- (IBAction)homeButton:(id)sender;
 @property (nonatomic, weak) NAModalSheet *modalSheet;
 @property (nonatomic, assign) BOOL opaque;
 @property (weak, nonatomic) IBOutlet UIImageView *image;

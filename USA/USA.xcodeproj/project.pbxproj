@@ -27,6 +27,8 @@
 		8A2410BA19AD0D7700A172C4 /* Maryland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2410B919AD0D7700A172C4 /* Maryland.jpg */; };
 		8A2D004C19B61ADE0035177C /* ScorePopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D004B19B61ADE0035177C /* ScorePopUp.m */; };
 		8A2D005019B6225C0035177C /* ScorePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D004F19B6225C0035177C /* ScorePopUp.xib */; };
+		8A2D008519B6A7DC0035177C /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D008419B6A7DC0035177C /* home.png */; };
+		8A2D008719B6C13A0035177C /* retry.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D008619B6C13A0035177C /* retry.png */; };
 		8A354B16199E4AF900A30CE0 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A354B15199E4AF900A30CE0 /* learn.png */; };
 		8A354B19199EC23500A30CE0 /* USATBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A354B18199EC23500A30CE0 /* USATBV.m */; };
 		8A3EAFB319ABA93C00551539 /* Wisconsin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EAFB219ABA93C00551539 /* Wisconsin.jpg */; };
@@ -100,6 +102,7 @@
 		8AA7328A199E3C1A00E2B83E /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73289199E3C1A00E2B83E /* close.png */; };
 		8AA7328F199E484E00E2B83E /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA7328E199E484E00E2B83E /* play.png */; };
 		8AA73291199E48FD00E2B83E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73290199E48FD00E2B83E /* settings.png */; };
+		8AACF6D019B774C200BD350F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AACF6CF19B774C200BD350F /* Crashlytics.framework */; };
 		8AAE965319A7661A009090AA /* ScoreSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE965219A7661A009090AA /* ScoreSummary.m */; };
 		8AE0225719A41A71003BD003 /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225619A41A71003BD003 /* swipe_button.png */; };
 		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
@@ -160,6 +163,8 @@
 		8A2D004A19B61ADE0035177C /* ScorePopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScorePopUp.h; sourceTree = "<group>"; };
 		8A2D004B19B61ADE0035177C /* ScorePopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScorePopUp.m; sourceTree = "<group>"; };
 		8A2D004F19B6225C0035177C /* ScorePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScorePopUp.xib; sourceTree = "<group>"; };
+		8A2D008419B6A7DC0035177C /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		8A2D008619B6C13A0035177C /* retry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retry.png; sourceTree = "<group>"; };
 		8A354B15199E4AF900A30CE0 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		8A354B17199EC23500A30CE0 /* USATBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATBV.h; sourceTree = "<group>"; };
 		8A354B18199EC23500A30CE0 /* USATBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATBV.m; sourceTree = "<group>"; };
@@ -243,6 +248,7 @@
 		8AA73289199E3C1A00E2B83E /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		8AA7328E199E484E00E2B83E /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		8AA73290199E48FD00E2B83E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		8AACF6CF19B774C200BD350F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8AAE965119A7661A009090AA /* ScoreSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreSummary.h; sourceTree = "<group>"; };
 		8AAE965219A7661A009090AA /* ScoreSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreSummary.m; sourceTree = "<group>"; };
 		8AE0225619A41A71003BD003 /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AE87DCA19B0BEC500EC93F0 /* CoreText.framework in Frameworks */,
+				8AACF6D019B774C200BD350F /* Crashlytics.framework in Frameworks */,
 				8A67036619944771000037DF /* CoreGraphics.framework in Frameworks */,
 				8A67036819944771000037DF /* UIKit.framework in Frameworks */,
 				8A67036419944771000037DF /* Foundation.framework in Frameworks */,
@@ -339,6 +346,16 @@
 			name = "Score Pop Up";
 			sourceTree = "<group>";
 		};
+		8A2D008319B647470035177C /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				8AA73273199D9AE900E2B83E /* NAModalSheet */,
+				8A2D004919B61A920035177C /* Score Pop Up */,
+				8AE87DCB19B0D5D100EC93F0 /* Menu Pop Up */,
+			);
+			name = Popup;
+			sourceTree = "<group>";
+		};
 		8A5BB2D119AA312B00B0ABB3 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +404,8 @@
 				8AE0225C19A4DAA3003BD003 /* select3.png */,
 				8A5BB2D619AA590B00B0ABB3 /* New York City.jpg */,
 				8A3EAFB219ABA93C00551539 /* Wisconsin.jpg */,
+				8A2D008419B6A7DC0035177C /* home.png */,
+				8A2D008619B6C13A0035177C /* retry.png */,
 				8A6703921994477E000037DF /* Controllers */,
 				8AFAD227199FE0830058F64E /* Extras */,
 			);
@@ -599,11 +618,9 @@
 		8AFAD21F199FC9C00058F64E /* Controller Extras */ = {
 			isa = PBXGroup;
 			children = (
-				8A2D004919B61A920035177C /* Score Pop Up */,
+				8A2D008319B647470035177C /* Popup */,
 				8AE87DCD19B0D64B00EC93F0 /* Color MAP */,
-				8AA73273199D9AE900E2B83E /* NAModalSheet */,
 				8AE87DCC19B0D5E600EC93F0 /* Info Scroll Parallax */,
-				8AE87DCB19B0D5D100EC93F0 /* Menu Pop Up */,
 			);
 			name = "Controller Extras";
 			path = Controllers;
@@ -622,6 +639,7 @@
 		8AFAD227199FE0830058F64E /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8AACF6CF19B774C200BD350F /* Crashlytics.framework */,
 				8A2D004819B61A310035177C /* Dictionary & Array  */,
 				8AFAD21F199FC9C00058F64E /* Controller Extras */,
 				8AFAD226199FE0530058F64E /* Images */,
@@ -643,6 +661,7 @@
 				8A67035C19944771000037DF /* Sources */,
 				8A67035D19944771000037DF /* Frameworks */,
 				8A67035E19944771000037DF /* Resources */,
+				8AACF6CE19B7748900BD350F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -756,6 +775,7 @@
 				8A02875B19ACDFFF00829188 /* Tennessee.jpg in Resources */,
 				8A5BB2FF19AADE9C00B0ABB3 /* Utah.jpg in Resources */,
 				8A5BB2F319AAD87A00B0ABB3 /* Ohio.jpg in Resources */,
+				8A2D008519B6A7DC0035177C /* home.png in Resources */,
 				8AA73227199D392400E2B83E /* Florida.jpg in Resources */,
 				8A3EAFD019ABABFC00551539 /* Idaho.jpg in Resources */,
 				8A2D005019B6225C0035177C /* ScorePopUp.xib in Resources */,
@@ -777,6 +797,7 @@
 				8A5BB2FD19AADE1700B0ABB3 /* Oklahoma.jpg in Resources */,
 				8A5BB2D819AA590B00B0ABB3 /* Arizona.jpg in Resources */,
 				8A3EAFCC19ABAB9400551539 /* Kentucky.jpg in Resources */,
+				8A2D008719B6C13A0035177C /* retry.png in Resources */,
 				8A5BB2F919AADC3A00B0ABB3 /* Mississippi.jpg in Resources */,
 				8A02875F19ACE48000829188 /* Connecticut.jpg in Resources */,
 				8A9BCA9019ACD26C00A6C316 /* California.jpg in Resources */,
@@ -807,6 +828,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AACF6CE19B7748900BD350F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 64284aefe483aaeff73b28ea384f3ac50038ddbe 4717138d6c791bb245989277508920b1f554438dfbb12c4041d913fd5e0b1d31";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A67035C19944771000037DF /* Sources */ = {
@@ -956,6 +993,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "USA/USA-Prefix.pch";
 				INFOPLIST_FILE = "USA/USA-Info.plist";
@@ -973,6 +1014,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "USA/USA-Prefix.pch";
 				INFOPLIST_FILE = "USA/USA-Info.plist";
