@@ -31,7 +31,7 @@
     
     UIButton * capitalGame;
     
-    UIButton * topScores;
+    UIButton * rateButton;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -56,7 +56,7 @@
         UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
         
         [self.view addSubview:headerView];
-        headerView.backgroundColor = [UIColor colorWithRed:0.710f green:0.267f blue:0.961f alpha:1.0f];
+        headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
         
         
         letsPlayLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
@@ -157,25 +157,27 @@
         //------Top Score Button
         
         
-        topScores = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-80, 200, 45)];
+        rateButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-80, 200, 45)];
         
-        [topScores setTitle: @"Rate" forState: UIControlStateNormal];
+        [rateButton setTitle: @"Rate" forState: UIControlStateNormal];
         
-        [topScores.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
+        [rateButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0]];
         
-        [topScores setTitleColor:[UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f] forState:UIControlStateNormal];
+        rateButton.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
         
-        topScores.layer.borderWidth = 2.0f;
-        topScores.layer.borderColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f].CGColor;
+        [rateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        //rateButton.layer.borderWidth = 2.0f;
+        //rateButton.layer.borderColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f].CGColor;
 
-        topScores.layer.cornerRadius = 5;
+        rateButton.layer.cornerRadius = 5;
         
         
-        [topScores addTarget:self action:@selector(statesGamePlay) forControlEvents:UIControlEventTouchUpInside
+        [rateButton addTarget:self action:@selector(rateButtonClicked) forControlEvents:UIControlEventTouchUpInside
          ];
         
         
-        [self.view addSubview:topScores];
+        [self.view addSubview:rateButton];
 
         
         
@@ -201,6 +203,11 @@ ViewController *mapVC= [[ViewController alloc] initWithNibName:@"ViewController_
     StatesGameVC *stateGameViewController = [[StatesGameVC alloc] init];
 
     [self presentViewController:stateGameViewController animated:NO completion:nil];
+}
+
+-(void) rateButtonClicked{
+    [[UIApplication sharedApplication]
+     openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id836781461"]];
 }
 
 -(void)backButtonClicked{

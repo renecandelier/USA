@@ -13,7 +13,6 @@
 #import "DataStore.h"
 #import "NSArray+RandomSort.h"
 #import "MoreInfoWebVC.h"
-
 #import "USATBV.h"
 
 
@@ -100,6 +99,11 @@
 -(void)setStateName:(NSString *)stateName{
     _stateName = stateName;
     
+    
+    
+    
+    
+    
     backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.stateName]];
     
     CGRect backgroundRect = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -125,6 +129,14 @@
     [self.view addSubview:parallaxView];
     
     //----------------------Back button
+    
+    
+    UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
+    
+    headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:0.9f];
+    [self.view addSubview:headerView];
+   
+    
     backButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 15, 40, 40)];
     
     UIImage *backButtonImage = [UIImage imageNamed:@"back.png"];
@@ -146,6 +158,8 @@
     stateNameLabel.text = self.stateName;
 
     [self.view addSubview:stateNameLabel];
+    
+    
 
 }
 
@@ -161,7 +175,9 @@
    //------------View for the State Information
     stateContentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-200)];
     stateContentView.backgroundColor = [UIColor whiteColor];
+    int space;
     
+    space =20;
     
     //------More INFO BUTTON
     
@@ -172,9 +188,9 @@
     
     [moreInfoButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]];
     
-    [moreInfoButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-
-    moreInfoButton.layer.borderWidth = 0.5f;
+    [moreInfoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    moreInfoButton.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
+    //moreInfoButton.layer.borderWidth = 0.5f;
     moreInfoButton.layer.cornerRadius = 5;
     
     
@@ -188,7 +204,7 @@
     
 
     
-    StateAbbreviation = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, SCREEN_WIDTH, 25)];
+    StateAbbreviation = [[UILabel alloc] initWithFrame:CGRectMake(20, 30-space, SCREEN_WIDTH, 25)];
     StateAbbreviation.textAlignment = NSTextAlignmentLeft;
     StateAbbreviation.font = [UIFont systemFontOfSize:14.0f];
     StateAbbreviation.textColor = [UIColor darkGrayColor];
@@ -197,12 +213,12 @@
     
     [stateContentView addSubview:StateAbbreviation];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(20,70, 260, 1)];
-    lineView.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(20,70-space, 260, 1)];
+    lineView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:0.3f];
     [stateContentView addSubview:lineView];
     
     //Capitol
-    StateCapitol = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, SCREEN_WIDTH, 25)];
+    StateCapitol = [[UILabel alloc] initWithFrame:CGRectMake(20, 80-space, SCREEN_WIDTH, 25)];
     StateCapitol.textAlignment = NSTextAlignmentLeft;
     StateCapitol.font = [UIFont systemFontOfSize:14.0f];
     StateCapitol.textColor = [UIColor darkGrayColor];
@@ -213,13 +229,13 @@
     
     [stateContentView addSubview:StateAbbreviation];
     
-    UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(20,120, 260, 1)];
-    lineView2.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(20,120-space, 260, 1)];
+    lineView2.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:0.3f];
     [stateContentView addSubview:lineView2];
     
     
     //Nickname
-    StateNickname = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, SCREEN_WIDTH, 25)];
+    StateNickname = [[UILabel alloc] initWithFrame:CGRectMake(20, 130-space, SCREEN_WIDTH, 25)];
     StateNickname.textAlignment = NSTextAlignmentLeft;
     StateNickname.font = [UIFont systemFontOfSize:14.0f];
     StateNickname.textColor = [UIColor darkGrayColor];
@@ -230,14 +246,14 @@
     
     [stateContentView addSubview:StateAbbreviation];
     
-    UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(20,170, 260, 1)];
-    lineView3.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(20,170-space, 260, 1)];
+    lineView3.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:0.3f];
     [stateContentView addSubview:lineView3];
     
     
     
     //TREE
-    StateTree = [[UILabel alloc] initWithFrame:CGRectMake(20, 180, SCREEN_WIDTH, 25)];
+    StateTree = [[UILabel alloc] initWithFrame:CGRectMake(20, 180-space, SCREEN_WIDTH, 25)];
     StateTree.textAlignment = NSTextAlignmentLeft;
     StateTree.font = [UIFont systemFontOfSize:14.0f];
     StateTree.textColor = [UIColor darkGrayColor];
@@ -248,14 +264,14 @@
     
     [stateContentView addSubview:StateAbbreviation];
     
-    UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(20,220, 260, 1)];
-    lineView4.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(20,220-space, 260, 1)];
+    lineView4.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:0.3f];
     [stateContentView addSubview:lineView4];
     
     
     
     //FLOWER
-    StateFlower = [[UILabel alloc] initWithFrame:CGRectMake(20, 230, SCREEN_WIDTH, 25)];
+    StateFlower = [[UILabel alloc] initWithFrame:CGRectMake(20, 230-space, SCREEN_WIDTH, 25)];
     StateFlower.textAlignment = NSTextAlignmentLeft;
     StateFlower.font = [UIFont systemFontOfSize:14.0f];
     StateFlower.textColor = [UIColor darkGrayColor];
@@ -265,13 +281,13 @@
     
     [stateContentView addSubview:StateAbbreviation];
     
-    UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(20,270, 260, 1)];
-    lineView5.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+    UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(20,270-space, 260, 1)];
+    lineView5.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:0.3f];
     [stateContentView addSubview:lineView5];
     
    
     //BIRD
-    StateBird = [[UILabel alloc] initWithFrame:CGRectMake(20, 280, SCREEN_WIDTH, 25)];
+    StateBird = [[UILabel alloc] initWithFrame:CGRectMake(20, 280-space, SCREEN_WIDTH, 25)];
     StateBird.textAlignment = NSTextAlignmentLeft;
     StateBird.font = [UIFont systemFontOfSize:14.0f];
     StateBird.textColor = [UIColor darkGrayColor];

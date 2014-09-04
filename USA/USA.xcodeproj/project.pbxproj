@@ -104,6 +104,7 @@
 		8AA73291199E48FD00E2B83E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA73290199E48FD00E2B83E /* settings.png */; };
 		8AACF6D019B774C200BD350F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AACF6CF19B774C200BD350F /* Crashlytics.framework */; };
 		8AACF6D519B7DD3A00BD350F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AACF6D419B7DD3900BD350F /* Settings.m */; };
+		8AACF70619B8944100BD350F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AACF70519B8944100BD350F /* MessageUI.framework */; };
 		8AAE965319A7661A009090AA /* ScoreSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE965219A7661A009090AA /* ScoreSummary.m */; };
 		8AE0225719A41A71003BD003 /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225619A41A71003BD003 /* swipe_button.png */; };
 		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
@@ -252,6 +253,7 @@
 		8AACF6CF19B774C200BD350F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8AACF6D319B7DD3900BD350F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		8AACF6D419B7DD3900BD350F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		8AACF70519B8944100BD350F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8AAE965119A7661A009090AA /* ScoreSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreSummary.h; sourceTree = "<group>"; };
 		8AAE965219A7661A009090AA /* ScoreSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreSummary.m; sourceTree = "<group>"; };
 		8AE0225619A41A71003BD003 /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AACF70619B8944100BD350F /* MessageUI.framework in Frameworks */,
 				8AE87DCA19B0BEC500EC93F0 /* CoreText.framework in Frameworks */,
 				8AACF6D019B774C200BD350F /* Crashlytics.framework in Frameworks */,
 				8A67036619944771000037DF /* CoreGraphics.framework in Frameworks */,
@@ -652,6 +655,7 @@
 		8AFAD227199FE0830058F64E /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				8AACF70519B8944100BD350F /* MessageUI.framework */,
 				8AACF6CF19B774C200BD350F /* Crashlytics.framework */,
 				8A2D004819B61A310035177C /* Dictionary & Array  */,
 				8AFAD21F199FC9C00058F64E /* Controller Extras */,

@@ -8,8 +8,9 @@
 
 #import "Settings.h"
 #import "USAimagesViewController.h"
+#import <MessageUI/MessageUI.h> 
 
-@interface Settings ()
+@interface Settings ()<UITextFieldDelegate, UITextViewDelegate,MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -50,6 +51,32 @@
     [headerView addSubview:letsPlayLable];
     [self.view addSubview:backButton];
     
+    
+    UIButton * Feedback = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT-120, 200, 45)];
+    
+    [Feedback setTitle: @"Feedback" forState: UIControlStateNormal];
+    
+    [Feedback.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0]];
+    
+    [Feedback setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    Feedback.layer.cornerRadius = 5;
+    Feedback.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
+    
+    [Feedback addTarget:self action:@selector(feedbackButton) forControlEvents:UIControlEventTouchUpInside
+     ];
+    
+    
+    [self.view addSubview:Feedback];
+
+    
+    UILabel * versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-90, SCREEN_HEIGHT-70, 180, 60)];
+    [versionLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25]];
+    versionLabel.textColor = [UIColor darkGrayColor];
+    versionLabel.textAlignment = NSTextAlignmentCenter;
+    versionLabel.text = @"Version 1.0";
+    [self.view addSubview:versionLabel];
+    
 
 }
 
@@ -58,5 +85,61 @@
     USAimagesViewController *goToMenu= [[USAimagesViewController alloc] init];
     [self presentViewController:goToMenu animated:NO completion:nil];
 }
+
+- (void)feedbackButton{
+    // Email Subject
+    NSString *emailTitle = @"Feedback - USA";
+    // Email Content
+    NSString *messageBody = @"";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"info@NovusMobile.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    
+    if ([UIMenuController sharedMenuController]) {
+        
+        [UIMenuController sharedMenuController].menuVisible = NO;
+        
+    }
+    
+    return NO;
+}
+
 
 @end

@@ -38,11 +38,13 @@ UIActivityIndicatorView*activityind;
     if (self) {
         // Custom initialization
         webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 70, SCREEN_WIDTH, SCREEN_HEIGHT-70)];
-        UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
         
         webView.delegate = self;
         
-        
+        UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
+
+        headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
+        [self.view addSubview:headerView];
         activityind=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
        activityind.center = CGPointMake(SCREEN_WIDTH-30, headerView.frame.size.height/2);
 
@@ -50,9 +52,7 @@ UIActivityIndicatorView*activityind;
         [activityind startAnimating];
 
         
-        [self.view addSubview:headerView];
-
-        headerView.backgroundColor = [UIColor darkGrayColor];
+        
         
         UILabel * moreInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 15, 160, headerView.frame.size.height/2)];
         [moreInfoLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];

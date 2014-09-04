@@ -211,7 +211,7 @@ NSInteger const NumOfStates = 51;
     //Top header View
     
     headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
-    headerView.backgroundColor = [UIColor colorWithRed:0.290f green:0.596f blue:0.969f alpha:1.0f];
+    headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
    
     [self.view addSubview:headerView];
     

@@ -71,7 +71,7 @@
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
 
     self.tableView.tableHeaderView = headerView;
-    headerView.backgroundColor = [UIColor colorWithRed:0.290f green:0.596f blue:0.969f alpha:1.0f];
+    headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
 
     //Setting the search box
     searchTextbox = [[UITextField alloc]initWithFrame:CGRectMake(60, 15, 200, 40)];
@@ -102,13 +102,8 @@
     backButton.layer.cornerRadius = 40.0/2.0;
 
     
-    
-    
-    
-    
-    
     //Setting the separators to color Black
-    [self.tableView setSeparatorColor:[UIColor darkGrayColor]];
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f]];
     
     
     //Adding the Objects to the View
