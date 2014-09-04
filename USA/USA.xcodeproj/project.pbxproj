@@ -106,10 +106,11 @@
 		8AACF6D519B7DD3A00BD350F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AACF6D419B7DD3900BD350F /* Settings.m */; };
 		8AACF70619B8944100BD350F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AACF70519B8944100BD350F /* MessageUI.framework */; };
 		8AAE965319A7661A009090AA /* ScoreSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE965219A7661A009090AA /* ScoreSummary.m */; };
+		8AD0DBD119B8DE62004B4D78 /* select3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD0DBD019B8DE62004B4D78 /* select3.png */; };
 		8AE0225719A41A71003BD003 /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225619A41A71003BD003 /* swipe_button.png */; };
 		8AE0225919A4D07A003BD003 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225819A4D07A003BD003 /* select.png */; };
 		8AE0225B19A4D40E003BD003 /* select2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225A19A4D40E003BD003 /* select2.png */; };
-		8AE0225D19A4DAA3003BD003 /* select3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225C19A4DAA3003BD003 /* select3.png */; };
+		8AE0225D19A4DAA3003BD003 /* select4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0225C19A4DAA3003BD003 /* select4.png */; };
 		8AE87DCA19B0BEC500EC93F0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAD22B19A03EE30058F64E /* CoreText.framework */; };
 		8AE87DD119B0D65C00EC93F0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */; };
 		8AE87DD219B0D65C00EC93F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87DD019B0D65C00EC93F0 /* ViewController.m */; };
@@ -256,10 +257,11 @@
 		8AACF70519B8944100BD350F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8AAE965119A7661A009090AA /* ScoreSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreSummary.h; sourceTree = "<group>"; };
 		8AAE965219A7661A009090AA /* ScoreSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreSummary.m; sourceTree = "<group>"; };
+		8AD0DBD019B8DE62004B4D78 /* select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select3.png; sourceTree = "<group>"; };
 		8AE0225619A41A71003BD003 /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
 		8AE0225819A4D07A003BD003 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		8AE0225A19A4D40E003BD003 /* select2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select2.png; sourceTree = "<group>"; };
-		8AE0225C19A4DAA3003BD003 /* select3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select3.png; sourceTree = "<group>"; };
+		8AE0225C19A4DAA3003BD003 /* select4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select4.png; sourceTree = "<group>"; };
 		8AE87DCE19B0D65C00EC93F0 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
 		8AE87DCF19B0D65C00EC93F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controllers/ViewController.h; sourceTree = "<group>"; };
 		8AE87DD019B0D65C00EC93F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controllers/ViewController.m; sourceTree = "<group>"; };
@@ -407,7 +409,8 @@
 				8AE0225619A41A71003BD003 /* swipe_button.png */,
 				8AE0225819A4D07A003BD003 /* select.png */,
 				8AE0225A19A4D40E003BD003 /* select2.png */,
-				8AE0225C19A4DAA3003BD003 /* select3.png */,
+				8AE0225C19A4DAA3003BD003 /* select4.png */,
+				8AD0DBD019B8DE62004B4D78 /* select3.png */,
 				8A5BB2D619AA590B00B0ABB3 /* New York City.jpg */,
 				8A3EAFB219ABA93C00551539 /* Wisconsin.jpg */,
 				8A2D008419B6A7DC0035177C /* home.png */,
@@ -774,7 +777,7 @@
 				8A02877119AD043200829188 /* New Hampshire.jpg in Resources */,
 				8A02876119ACE4E600829188 /* Mississippi.jpg in Resources */,
 				8A3EAFD419ABACCD00551539 /* Missouri.jpg in Resources */,
-				8AE0225D19A4DAA3003BD003 /* select3.png in Resources */,
+				8AE0225D19A4DAA3003BD003 /* select4.png in Resources */,
 				8A5BB2DD19AAA01500B0ABB3 /* Hawaii.jpg in Resources */,
 				8A9BCA9119ACD26C00A6C316 /* Florida.jpg in Resources */,
 				8AE87DD119B0D65C00EC93F0 /* ViewController_iPhone.xib in Resources */,
@@ -817,6 +820,7 @@
 				8A2D008719B6C13A0035177C /* retry.png in Resources */,
 				8A5BB2F919AADC3A00B0ABB3 /* Mississippi.jpg in Resources */,
 				8A02875F19ACE48000829188 /* Connecticut.jpg in Resources */,
+				8AD0DBD119B8DE62004B4D78 /* select3.png in Resources */,
 				8A9BCA9019ACD26C00A6C316 /* California.jpg in Resources */,
 				8A5BB2D919AA590B00B0ABB3 /* New York City.jpg in Resources */,
 				8AA73229199D39B100E2B83E /* Illinois.jpg in Resources */,
