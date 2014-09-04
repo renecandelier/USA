@@ -12,6 +12,8 @@
 #import "CapitalGame.h"
 #import "ViewController.h"
 
+#import "USAimagesViewController.h"
+
 @interface GamePlayVC ()
 
 @end
@@ -78,8 +80,6 @@
         
         [statesGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        statesGame.layer.borderWidth = 2.0f;
-        statesGame.layer.borderColor = [UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f].CGColor;
         statesGame.layer.cornerRadius = 5;
         statesGame.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
 
@@ -99,8 +99,6 @@
         
         [capitalGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        capitalGame.layer.borderWidth = 2.0f;
-        capitalGame.layer.borderColor = [UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f].CGColor;
         capitalGame.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
 
         capitalGame.layer.cornerRadius = 5;
@@ -124,8 +122,6 @@
         
         [mapGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        mapGame.layer.borderWidth = 2.0f;
-        mapGame.layer.borderColor = [UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f].CGColor;
         mapGame.layer.cornerRadius = 5;
         mapGame.backgroundColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
         
@@ -148,8 +144,6 @@
         
         [randomGame setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
-        randomGame.layer.borderWidth = 1.0f;
-        randomGame.layer.borderColor = [UIColor colorWithRed:0.318f green:0.114f blue:0.431f alpha:1.0f].CGColor;
         randomGame.layer.cornerRadius = 5;
         
         
@@ -171,7 +165,7 @@
         
         [topScores setTitleColor:[UIColor colorWithRed:0.486f green:0.180f blue:0.659f alpha:1.0f] forState:UIControlStateNormal];
         
-        topScores.layer.borderWidth = 1.0f;
+        topScores.layer.borderWidth = 2.0f;
         topScores.layer.borderColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f].CGColor;
 
         topScores.layer.cornerRadius = 5;
@@ -209,29 +203,11 @@ ViewController *mapVC= [[ViewController alloc] initWithNibName:@"ViewController_
     [self presentViewController:stateGameViewController animated:NO completion:nil];
 }
 
--(void)backButtonClicked{[self dismissViewControllerAnimated:NO completion:nil];}
+-(void)backButtonClicked{
+    USAimagesViewController *goToMenu= [[USAimagesViewController alloc] init];
+    [self presentViewController:goToMenu animated:NO completion:nil];
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

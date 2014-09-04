@@ -16,7 +16,7 @@
 - (IBAction)playButton:(id)sender;
 @property (nonatomic, weak) NAModalSheet *modalSheet;
 @property (nonatomic, assign) BOOL opaque;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (nonatomic, weak) NSString *imagename;
-@property (weak, nonatomic) IBOutlet UILabel *imageslabel;
+
+- (IBAction)rateButton:(id)sender;
+- (IBAction)settingsButton:(id)sender;
 @end

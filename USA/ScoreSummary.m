@@ -45,7 +45,7 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.290f green:0.596f blue:0.969f alpha:1.0f];
 
 }
 
@@ -71,20 +71,21 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
     
     //--------------------
     
-    UILabel * inspiringLabel = [[UILabel alloc] initWithFrame:CGRectMake(scoreView.bounds.size.width/2-100, 10, 200, 100)];
+    UILabel * inspiringLabel = [[UILabel alloc] initWithFrame:CGRectMake(scoreView.bounds.size.width/2-100, 5, 200, 100)];
     
-    [inspiringLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:30]];
+    [inspiringLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:40]];
     inspiringLabel.textAlignment = NSTextAlignmentCenter;
     inspiringLabel.text =[NSString stringWithFormat:@"%@",self.score];
     
-    
+    inspiringLabel.textColor = [UIColor colorWithRed:0.694f green:0.243f blue:0.953f alpha:1.0f];
+
    
     
     [scoreView addSubview:inspiringLabel];
     
     
     
-    UIButton * goHomeButton = [[UIButton alloc]initWithFrame:CGRectMake(30,scoreView.bounds.size.height-90,60,60)];
+    UIButton * goHomeButton = [[UIButton alloc]initWithFrame:CGRectMake(30,scoreView.bounds.size.height-70,60,60)];
     
     [goHomeButton setBackgroundImage:[UIImage imageNamed:@"home.png"] forState:UIControlStateNormal];
     
@@ -93,7 +94,7 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
     [scoreView addSubview:goHomeButton];
     
     
-    UIButton * retryButton = [[UIButton alloc]initWithFrame:CGRectMake(scoreView.bounds.size.width-90,scoreView.bounds.size.height-90,60,60)];
+    UIButton * retryButton = [[UIButton alloc]initWithFrame:CGRectMake(scoreView.bounds.size.width-90,scoreView.bounds.size.height-70,60,60)];
     
     [retryButton setBackgroundImage:[UIImage imageNamed:@"retry.png"] forState:UIControlStateNormal];
     
@@ -104,16 +105,16 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
         
     //SCORE
 
-    scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(scoreView.bounds.size.width/2-50, 100, 100, 100)];
+    scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(scoreView.bounds.size.width/2-65, 100, 130, 130)];
     
-    [scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:45]];
+    [scoreLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:65]];
     scoreLabel.textAlignment = NSTextAlignmentCenter;
     scoreLabel.text =[NSString stringWithFormat:@"%@",self.score];
     
 
-    scoreLabel.layer.cornerRadius = 50.0;
+    scoreLabel.layer.cornerRadius = 65.0;
     scoreLabel.layer.masksToBounds = YES;
-    scoreLabel.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    scoreLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     scoreLabel.layer.borderWidth = 2.0;
 
@@ -121,15 +122,13 @@ GamePlayVC *gameMenu= [[GamePlayVC alloc] init];
     
     if (theScore>=70) {
         inspiringLabel.text = @"Great Job!";
-        scoreLabel.textColor = [UIColor colorWithRed:0.427f green:0.996f blue:0.729f alpha:1.0f];
-        inspiringLabel.textColor = [UIColor colorWithRed:0.196f green:0.749f blue:0.333f alpha:1.0f];
-
+        scoreLabel.textColor = [UIColor colorWithRed:0.361f green:0.902f blue:0.361f alpha:1.0f];
+        
 
         
     } else{
         inspiringLabel.text = @"Oh No!";
-        scoreLabel.textColor = [UIColor colorWithRed:0.855f green:0.145f blue:0.278f alpha:1.0f];
-        inspiringLabel.textColor = [UIColor colorWithRed:0.855f green:0.145f blue:0.278f alpha:1.0f];
+        scoreLabel.textColor = [UIColor redColor];
 
         
     }

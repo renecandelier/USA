@@ -11,6 +11,7 @@
 #import "USATBV.h"
 #import "USATBV.h"
 #import "GamePlayVC.h"
+#import "Settings.h"
 
 
 @interface SampleSheetViewController ()
@@ -18,7 +19,6 @@
 @end
 
 @implementation SampleSheetViewController
-@synthesize imagename;
 - (instancetype)init
 {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
@@ -31,7 +31,6 @@
         
         
         [self.modalSheet adjustContentSize:s animated:YES];
-        self.imageslabel.text= self.imagename;
         
         //[self.image setImage:[UIImage imageWithContentsOfFile:@"truck.png"]];
         //
@@ -65,13 +64,24 @@
 
 - (IBAction)learnButton:(id)sender {
     USATBV *searchViewController = [[USATBV alloc] init];
-    [self presentViewController:searchViewController animated:YES completion:nil];
+    [self presentViewController:searchViewController animated:NO completion:nil];
     
 }
 
 - (IBAction)playButton:(id)sender {
     
     GamePlayVC *searchViewController = [[GamePlayVC alloc] init];
-    [self presentViewController:searchViewController animated:YES completion:nil];
+    [self presentViewController:searchViewController animated:NO completion:nil];
+}
+- (IBAction)rateButton:(id)sender {
+    
+    [[UIApplication sharedApplication]
+     openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id836781461"]];
+    }
+
+- (IBAction)settingsButton:(id)sender {
+    
+    Settings *settingsVC = [[Settings alloc] init];
+    [self presentViewController:settingsVC animated:NO completion:nil];
 }
 @end
