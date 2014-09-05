@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8A67035F19944771000037DF"
                BuildableName = "USA.app"
                BlueprintName = "USA"
-               ReferencedContainer = "container:USA.xcodeproj">
+               ReferencedContainer = "container:U S A.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "8A67037A19944771000037DF"
                BuildableName = "USATests.xctest"
                BlueprintName = "USATests"
-               ReferencedContainer = "container:USA.xcodeproj">
+               ReferencedContainer = "container:U S A.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "8A67035F19944771000037DF"
             BuildableName = "USA.app"
             BlueprintName = "USA"
-            ReferencedContainer = "container:USA.xcodeproj">
+            ReferencedContainer = "container:U S A.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "8A67035F19944771000037DF"
             BuildableName = "USA.app"
             BlueprintName = "USA"
-            ReferencedContainer = "container:USA.xcodeproj">
+            ReferencedContainer = "container:U S A.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "8A67035F19944771000037DF"
             BuildableName = "USA.app"
             BlueprintName = "USA"
-            ReferencedContainer = "container:USA.xcodeproj">
+            ReferencedContainer = "container:U S A.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
