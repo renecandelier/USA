@@ -7,8 +7,7 @@
 //
 
 #import "USAimagesViewController.h"
-#import "SampleSheetViewController.h"
-#import "NAModalSheet.h"
+
 #import "USATBV.h"
 #import "USAViewStateVC.h"
 #import <Crashlytics/Crashlytics.h>
@@ -18,7 +17,12 @@
 #import "NSArray+RandomSort.h"
 
 
-@interface USAimagesViewController (){
+@interface USAimagesViewController ()
+
+
+
+
+{
 
     
     int photoCount;
@@ -36,12 +40,13 @@
     NSTimer *timer;
 
 
-    
+
 }
 
 @end
 
 @implementation USAimagesViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SampleSheetViewController;
-@class NAModalSheet;
+#import "NAModalSheet.h"
+#import "SampleSheetViewController.h"
+
 @interface USAimagesViewController : UIViewController
 @property (nonatomic)  NSArray * welcomePhotos;
 @property (nonatomic)  NSArray * citiesArray;
 
-@property (nonatomic, weak) NAModalSheet *modalSheet;
+@property (nonatomic) NAModalSheet *modalSheet;
 
-@property (weak, nonatomic) SampleSheetViewController *PopUpForScore;
+@property (nonatomic) SampleSheetViewController *PopUpForScore;
 
 @end

@@ -74,7 +74,7 @@
     [versionLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:25]];
     versionLabel.textColor = [UIColor darkGrayColor];
     versionLabel.textAlignment = NSTextAlignmentCenter;
-    versionLabel.text = @"Version 1.0";
+    versionLabel.text = @"Version 1.2";
     [self.view addSubview:versionLabel];
     
 
